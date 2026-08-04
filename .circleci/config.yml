@@ -1,0 +1,27 @@
+version: 2.1
+
+# TODO(Gary): confirm orb version. Matched arr-dashboard's @5; original spec asked for @4.
+# Reconcile against https://github.com/trymedallion/internal-tool-deploy-orb
+orbs:
+  internal-tool-deploy: medallion/internal-tool-deploy@5
+
+workflows:
+  deploy:
+    jobs:
+      - internal-tool-deploy/deploy:
+          name: plan-production
+          environment: production            # required: which environment this job deploys
+          context: internal-tool-deploy      # supplies the deploy key + OIDC token
+          filters:
+            branches:
+              ignore: main
+      - internal-tool-deploy/deploy:
+          name: apply-production
+          environment: production
+          apply: true
+          context: internal-tool-deploy
+          filters:
+            branches:
+              only: main
+          # TODO(Gary): if the orb exposes additional job params (root_ref, tf_image,
+          # role_arn, config_file), confirm the defaults here.

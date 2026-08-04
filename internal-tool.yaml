@@ -1,0 +1,9 @@
+repo_url:      https://github.com/smckeough/fpna-bva-dashboards
+subdomain:     fpna              # TODO(Gary): confirm subdomain
+runtime:       node              # TODO(Gary): confirm runtime name expected by the orb
+port:          "3000"            # TODO(Gary): confirm port
+google_group:  fpna-bva-dashboards@medallion.co
+build_command: "npm install; npm run build"    # TODO(Gary): confirm build cmd
+start_command: npm run start -- -p 3000        # TODO(Gary): confirm start cmd
+# TODO(Gary): if the orb schema requires node_version, set it here
+# node_version: "20"

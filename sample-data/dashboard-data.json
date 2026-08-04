@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "reportMonth": "June 2026",
+    "monthSerial": 6,
+    "source": "(NEW) June 2026 Department HC & Opex Template",
+    "costLens": "overIsRed",
+    "quarantine": ["Legal"],
+    "reviewFlags": [
+      { "name": "Marketing", "flags": ["REVIEW_LARGE_VARIANCE"] }
+    ]
+  },
+  "departments": [
+    {
+      "name": "Engineering",
+      "sourceTab": "Engineering",
+      "group": "R&D",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": { "actual": 128, "budget": 132, "variance": -4 },
+        "cogs": {
+          "mtd": { "actual": 145000, "budget": 150000, "varPct": -0.0333 },
+          "qtd": { "actual": 430000, "budget": 450000, "varPct": -0.0444 },
+          "ytd": { "actual": 870000, "budget": 900000, "varPct": -0.0333 }
+        },
+        "people": {
+          "mtd": { "actual": 2140000, "budget": 2200000, "varPct": -0.0273 },
+          "qtd": { "actual": 6320000, "budget": 6600000, "varPct": -0.0424 },
+          "ytd": { "actual": 12800000, "budget": 13200000, "varPct": -0.0303 }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 320000, "budget": 300000, "varPct": 0.0667 },
+          "qtd": { "actual": 940000, "budget": 900000, "varPct": 0.0444 },
+          "ytd": { "actual": 1880000, "budget": 1800000, "varPct": 0.0444 }
+        },
+        "opex": {
+          "mtd": { "actual": 2460000, "budget": 2500000, "varPct": -0.016 },
+          "qtd": { "actual": 7260000, "budget": 7500000, "varPct": -0.032 },
+          "ytd": { "actual": 14680000, "budget": 15000000, "varPct": -0.0213 }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 2605000, "budget": 2650000, "varPct": -0.017 },
+          "qtd": { "actual": 7690000, "budget": 7950000, "varPct": -0.0327 },
+          "ytd": { "actual": 15550000, "budget": 15900000, "varPct": -0.022 }
+        }
+      }
+    },
+    {
+      "name": "Product",
+      "sourceTab": "Product",
+      "group": "R&D",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": { "actual": 22, "budget": 24, "variance": -2 },
+        "cogs": {
+          "mtd": { "actual": 0, "budget": 0, "varPct": null },
+          "qtd": { "actual": 0, "budget": 0, "varPct": null },
+          "ytd": { "actual": 0, "budget": 0, "varPct": null }
+        },
+        "people": {
+          "mtd": { "actual": 410000, "budget": 440000, "varPct": -0.0682 },
+          "qtd": { "actual": 1220000, "budget": 1320000, "varPct": -0.0758 },
+          "ytd": { "actual": 2460000, "budget": 2640000, "varPct": -0.0682 }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 55000, "budget": 50000, "varPct": 0.1 },
+          "qtd": { "actual": 160000, "budget": 150000, "varPct": 0.0667 },
+          "ytd": { "actual": 320000, "budget": 300000, "varPct": 0.0667 }
+        },
+        "opex": {
+          "mtd": { "actual": 465000, "budget": 490000, "varPct": -0.051 },
+          "qtd": { "actual": 1380000, "budget": 1470000, "varPct": -0.0612 },
+          "ytd": { "actual": 2780000, "budget": 2940000, "varPct": -0.0544 }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 465000, "budget": 490000, "varPct": -0.051 },
+          "qtd": { "actual": 1380000, "budget": 1470000, "varPct": -0.0612 },
+          "ytd": { "actual": 2780000, "budget": 2940000, "varPct": -0.0544 }
+        }
+      }
+    },
+    {
+      "name": "Sales",
+      "sourceTab": "Sales",
+      "group": "GTM",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": { "actual": 41, "budget": 40, "variance": 1 },
+        "cogs": {
+          "mtd": { "actual": 210000, "budget": 200000, "varPct": 0.05 },
+          "qtd": { "actual": 620000, "budget": 600000, "varPct": 0.0333 },
+          "ytd": { "actual": 1240000, "budget": 1200000, "varPct": 0.0333 }
+        },
+        "people": {
+          "mtd": { "actual": 780000, "budget": 750000, "varPct": 0.04 },
+          "qtd": { "actual": 2320000, "budget": 2250000, "varPct": 0.0311 },
+          "ytd": { "actual": 4680000, "budget": 4500000, "varPct": 0.04 }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 140000, "budget": 120000, "varPct": 0.1667 },
+          "qtd": { "actual": 405000, "budget": 360000, "varPct": 0.125 },
+          "ytd": { "actual": 830000, "budget": 720000, "varPct": 0.1528 }
+        },
+        "opex": {
+          "mtd": { "actual": 920000, "budget": 870000, "varPct": 0.0575 },
+          "qtd": { "actual": 2725000, "budget": 2610000, "varPct": 0.0441 },
+          "ytd": { "actual": 5510000, "budget": 5220000, "varPct": 0.0556 }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 1130000, "budget": 1070000, "varPct": 0.0561 },
+          "qtd": { "actual": 3345000, "budget": 3210000, "varPct": 0.0421 },
+          "ytd": { "actual": 6750000, "budget": 6420000, "varPct": 0.0514 }
+        }
+      }
+    },
+    {
+      "name": "Marketing",
+      "sourceTab": "Marketing",
+      "group": "GTM",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": ["REVIEW_LARGE_VARIANCE"],
+      "metrics": {
+        "headcount": { "actual": 15, "budget": 18, "variance": -3 },
+        "cogs": {
+          "mtd": { "actual": 0, "budget": 0, "varPct": null },
+          "qtd": { "actual": 0, "budget": 0, "varPct": null },
+          "ytd": { "actual": 0, "budget": 0, "varPct": null }
+        },
+        "people": {
+          "mtd": { "actual": 240000, "budget": 300000, "varPct": -0.2 },
+          "qtd": { "actual": 720000, "budget": 900000, "varPct": -0.2 },
+          "ytd": { "actual": 1440000, "budget": 1800000, "varPct": -0.2 }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 480000, "budget": 350000, "varPct": 0.3714 },
+          "qtd": { "actual": 1380000, "budget": 1050000, "varPct": 0.3143 },
+          "ytd": { "actual": 2750000, "budget": 2100000, "varPct": 0.3095 }
+        },
+        "opex": {
+          "mtd": { "actual": 720000, "budget": 650000, "varPct": 0.1077 },
+          "qtd": { "actual": 2100000, "budget": 1950000, "varPct": 0.0769 },
+          "ytd": { "actual": 4190000, "budget": 3900000, "varPct": 0.0744 }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 720000, "budget": 650000, "varPct": 0.1077 },
+          "qtd": { "actual": 2100000, "budget": 1950000, "varPct": 0.0769 },
+          "ytd": { "actual": 4190000, "budget": 3900000, "varPct": 0.0744 }
+        }
+      }
+    },
+    {
+      "name": "Legal",
+      "sourceTab": "Legal",
+      "group": "G&A",
+      "type": "Department",
+      "budgetLoaded": false,
+      "flags": ["BUDGET_NOT_LOADED"],
+      "metrics": {
+        "headcount": { "actual": 6, "budget": null, "variance": null },
+        "cogs": {
+          "mtd": { "actual": 0, "budget": null, "varPct": null },
+          "qtd": { "actual": 0, "budget": null, "varPct": null },
+          "ytd": { "actual": 0, "budget": null, "varPct": null }
+        },
+        "people": {
+          "mtd": { "actual": 128000, "budget": null, "varPct": null },
+          "qtd": { "actual": 380000, "budget": null, "varPct": null },
+          "ytd": { "actual": 760000, "budget": null, "varPct": null }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 42000, "budget": null, "varPct": null },
+          "qtd": { "actual": 124000, "budget": null, "varPct": null },
+          "ytd": { "actual": 250000, "budget": null, "varPct": null }
+        },
+        "opex": {
+          "mtd": { "actual": 170000, "budget": null, "varPct": null },
+          "qtd": { "actual": 504000, "budget": null, "varPct": null },
+          "ytd": { "actual": 1010000, "budget": null, "varPct": null }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 170000, "budget": null, "varPct": null },
+          "qtd": { "actual": 504000, "budget": null, "varPct": null },
+          "ytd": { "actual": 1010000, "budget": null, "varPct": null }
+        }
+      }
+    }
+  ],
+  "leaders": [
+    {
+      "name": "CTO",
+      "sourceTab": "CTO Rollup",
+      "group": "R&D",
+      "type": "Leader",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": { "actual": 150, "budget": 156, "variance": -6 },
+        "cogs": {
+          "mtd": { "actual": 145000, "budget": 150000, "varPct": -0.0333 },
+          "qtd": { "actual": 430000, "budget": 450000, "varPct": -0.0444 },
+          "ytd": { "actual": 870000, "budget": 900000, "varPct": -0.0333 }
+        },
+        "people": {
+          "mtd": { "actual": 2550000, "budget": 2640000, "varPct": -0.0341 },
+          "qtd": { "actual": 7540000, "budget": 7920000, "varPct": -0.048 },
+          "ytd": { "actual": 15260000, "budget": 15840000, "varPct": -0.0366 }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 375000, "budget": 350000, "varPct": 0.0714 },
+          "qtd": { "actual": 1100000, "budget": 1050000, "varPct": 0.0476 },
+          "ytd": { "actual": 2200000, "budget": 2100000, "varPct": 0.0476 }
+        },
+        "opex": {
+          "mtd": { "actual": 2925000, "budget": 2990000, "varPct": -0.0217 },
+          "qtd": { "actual": 8640000, "budget": 8970000, "varPct": -0.0368 },
+          "ytd": { "actual": 17460000, "budget": 17940000, "varPct": -0.0268 }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 3070000, "budget": 3140000, "varPct": -0.0223 },
+          "qtd": { "actual": 9070000, "budget": 9420000, "varPct": -0.0372 },
+          "ytd": { "actual": 18330000, "budget": 18840000, "varPct": -0.0271 }
+        }
+      }
+    },
+    {
+      "name": "CRO",
+      "sourceTab": "CRO Rollup",
+      "group": "GTM",
+      "type": "Leader",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": { "actual": 56, "budget": 58, "variance": -2 },
+        "cogs": {
+          "mtd": { "actual": 210000, "budget": 200000, "varPct": 0.05 },
+          "qtd": { "actual": 620000, "budget": 600000, "varPct": 0.0333 },
+          "ytd": { "actual": 1240000, "budget": 1200000, "varPct": 0.0333 }
+        },
+        "people": {
+          "mtd": { "actual": 1020000, "budget": 1050000, "varPct": -0.0286 },
+          "qtd": { "actual": 3040000, "budget": 3150000, "varPct": -0.0349 },
+          "ytd": { "actual": 6120000, "budget": 6300000, "varPct": -0.0286 }
+        },
+        "nonPeople": {
+          "mtd": { "actual": 620000, "budget": 470000, "varPct": 0.3191 },
+          "qtd": { "actual": 1785000, "budget": 1410000, "varPct": 0.266 },
+          "ytd": { "actual": 3580000, "budget": 2820000, "varPct": 0.2695 }
+        },
+        "opex": {
+          "mtd": { "actual": 1640000, "budget": 1520000, "varPct": 0.0789 },
+          "qtd": { "actual": 4825000, "budget": 4560000, "varPct": 0.0581 },
+          "ytd": { "actual": 9700000, "budget": 9120000, "varPct": 0.0636 }
+        },
+        "cogsOpex": {
+          "mtd": { "actual": 1850000, "budget": 1720000, "varPct": 0.0756 },
+          "qtd": { "actual": 5445000, "budget": 5160000, "varPct": 0.0552 },
+          "ytd": { "actual": 10940000, "budget": 10320000, "varPct": 0.0601 }
+        }
+      }
+    }
+  ]
+}

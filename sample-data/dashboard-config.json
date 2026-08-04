@@ -1,0 +1,131 @@
+{
+  "version": "0.1.0",
+  "theme": { "brand": "medallion" },
+  "periods": [
+    { "key": "mtd", "label": "MTD" },
+    { "key": "qtd", "label": "QTD" },
+    { "key": "ytd", "label": "YTD" }
+  ],
+  "defaultPeriod": "mtd",
+  "palette": ["#2563eb", "#94a3b8", "#10b981", "#f97316", "#a855f7"],
+  "metricLabels": {
+    "headcount": "Headcount",
+    "cogs": "COGS",
+    "people": "People",
+    "nonPeople": "Non-People",
+    "opex": "OpEx",
+    "cogsOpex": "COGS + OpEx"
+  },
+  "costLens": {
+    "overIsRed": true,
+    "notes": "Positive var% = actual over budget = unfavorable (red). Negative var% = favorable (green)."
+  },
+  "templates": {
+    "standardDept": {
+      "subtitle": "Actuals vs budget across MTD / QTD / YTD",
+      "sections": [
+        { "type": "flagBanner" },
+        {
+          "type": "kpiCards",
+          "cards": [
+            { "label": "Headcount", "metric": "headcount", "kind": "headcount" },
+            { "label": "People", "metric": "people", "kind": "currency" },
+            { "label": "Non-People", "metric": "nonPeople", "kind": "currency" },
+            { "label": "OpEx", "metric": "opex", "kind": "currency" }
+          ]
+        },
+        {
+          "type": "varianceTable",
+          "title": "Variance",
+          "rows": ["headcount", "people", "nonPeople", "opex"],
+          "periods": ["mtd", "qtd", "ytd"],
+          "totalRows": ["opex"]
+        },
+        {
+          "type": "barChart",
+          "title": "Actual vs Budget",
+          "metrics": ["people", "nonPeople", "opex"],
+          "series": ["actual", "budget"]
+        }
+      ]
+    },
+    "leader": {
+      "subtitle": "Consolidated leader view — COGS + OpEx",
+      "sections": [
+        { "type": "flagBanner" },
+        {
+          "type": "kpiCards",
+          "cards": [
+            { "label": "Headcount", "metric": "headcount", "kind": "headcount" },
+            { "label": "COGS", "metric": "cogs", "kind": "currency" },
+            { "label": "OpEx", "metric": "opex", "kind": "currency" },
+            { "label": "COGS + OpEx", "metric": "cogsOpex", "kind": "currency" }
+          ]
+        },
+        {
+          "type": "varianceTable",
+          "title": "Variance",
+          "rows": ["headcount", "cogs", "people", "nonPeople", "opex", "cogsOpex"],
+          "periods": ["mtd", "qtd", "ytd"],
+          "totalRows": ["cogsOpex"]
+        },
+        {
+          "type": "barChart",
+          "title": "Actual vs Budget",
+          "metrics": ["cogs", "people", "nonPeople", "opex"],
+          "series": ["actual", "budget"]
+        }
+      ]
+    }
+  },
+  "dashboards": [
+    {
+      "id": "eng",
+      "route": "/eng",
+      "title": "Engineering",
+      "dataKey": "Engineering",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "product",
+      "route": "/product",
+      "title": "Product",
+      "dataKey": "Product",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "sales",
+      "route": "/sales",
+      "title": "Sales",
+      "dataKey": "Sales",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "marketing",
+      "route": "/marketing",
+      "title": "Marketing",
+      "dataKey": "Marketing",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "leader-cto",
+      "route": "/leaders/cto",
+      "title": "CTO Org",
+      "dataKey": "CTO",
+      "source": "leaders",
+      "template": "leader"
+    },
+    {
+      "id": "leader-cro",
+      "route": "/leaders/cro",
+      "title": "CRO Org",
+      "dataKey": "CRO",
+      "source": "leaders",
+      "template": "leader"
+    }
+  ]
+}
