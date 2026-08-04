@@ -53,7 +53,7 @@ export type DashboardData = {
   leaders: DashboardRecord[];
 };
 
-export type MetricKind = 'currency' | 'headcount' | 'percent' | 'number';
+export type MetricKind = 'currency' | 'headcount' | 'count' | 'percent' | 'number';
 
 export type SectionKpiCard = {
   label: string;

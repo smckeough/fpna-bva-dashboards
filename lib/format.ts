@@ -18,10 +18,13 @@ export function fmtValue(v: number | null | undefined, kind: MetricKind): string
     case 'currency':
       return usd0.format(v);
     case 'headcount':
+    case 'count':
     case 'number':
       return num0.format(v);
     case 'percent':
       return `${num1.format(v * 100)}%`;
+    default:
+      return num0.format(v);
   }
 }
 

@@ -1,97 +1,285 @@
 {
-  "version": "0.1.0",
-  "theme": { "brand": "medallion" },
-  "periods": [
-    { "key": "mtd", "label": "MTD" },
-    { "key": "qtd", "label": "QTD" },
-    { "key": "ytd", "label": "YTD" }
-  ],
-  "defaultPeriod": "mtd",
-  "palette": ["#2563eb", "#94a3b8", "#10b981", "#f97316", "#a855f7"],
-  "metricLabels": {
-    "headcount": "Headcount",
-    "cogs": "COGS",
-    "people": "People",
-    "nonPeople": "Non-People",
-    "opex": "OpEx",
-    "cogsOpex": "COGS + OpEx"
+  "version": 1,
+  "updated": "2026-06 (June 2026 close)",
+  "theme": {
+    "ink": "#0f2540",
+    "slate": "#5b6b7f",
+    "blue": "#1f6fb2",
+    "blueDark": "#15537f",
+    "good": "#1f8a54",
+    "bad": "#c0392b",
+    "line": "#e3e8ef",
+    "bg": "#f5f7fa"
   },
   "costLens": {
-    "overIsRed": true,
-    "notes": "Positive var% = actual over budget = unfavorable (red). Negative var% = favorable (green)."
+    "overBudgetColor": "bad",
+    "underBudgetColor": "good",
+    "note": "varPct>0 = over budget (unfavorable)"
+  },
+  "periods": [
+    {
+      "key": "mtd",
+      "label": "Month (MTD)"
+    },
+    {
+      "key": "qtd",
+      "label": "Quarter (QTD)"
+    },
+    {
+      "key": "ytd",
+      "label": "Year (YTD)"
+    }
+  ],
+  "defaultPeriod": "mtd",
+  "palette": [
+    "flagBanner",
+    "kpiCards",
+    "varianceTable",
+    "barChart",
+    "lineChart",
+    "trendSparkline",
+    "commentary"
+  ],
+  "metricLabels": {
+    "headcount": "Headcount",
+    "cogs": "Total COGS",
+    "people": "Total People Cost",
+    "nonPeople": "Non-People Opex",
+    "opex": "Total Opex",
+    "cogsOpex": "Total COGS + Opex"
   },
   "templates": {
     "standardDept": {
-      "subtitle": "Actuals vs budget across MTD / QTD / YTD",
+      "subtitle": "Opex Budget vs Actual \u2014 FY2026",
       "sections": [
-        { "type": "flagBanner" },
+        {
+          "type": "flagBanner",
+          "source": "flags"
+        },
         {
           "type": "kpiCards",
           "cards": [
-            { "label": "Headcount", "metric": "headcount", "kind": "headcount" },
-            { "label": "People", "metric": "people", "kind": "currency" },
-            { "label": "Non-People", "metric": "nonPeople", "kind": "currency" },
-            { "label": "OpEx", "metric": "opex", "kind": "currency" }
+            {
+              "label": "Headcount",
+              "metric": "headcount",
+              "kind": "count",
+              "period": "mtd"
+            },
+            {
+              "label": "Total Opex",
+              "metric": "opex",
+              "kind": "currency",
+              "period": "mtd"
+            },
+            {
+              "label": "Total People",
+              "metric": "people",
+              "kind": "currency",
+              "period": "mtd"
+            },
+            {
+              "label": "Non-People Opex",
+              "metric": "nonPeople",
+              "kind": "currency",
+              "period": "mtd"
+            }
           ]
         },
         {
           "type": "varianceTable",
-          "title": "Variance",
-          "rows": ["headcount", "people", "nonPeople", "opex"],
-          "periods": ["mtd", "qtd", "ytd"],
-          "totalRows": ["opex"]
+          "rows": [
+            "cogs",
+            "people",
+            "nonPeople",
+            "opex",
+            "cogsOpex"
+          ],
+          "periods": [
+            "mtd",
+            "qtd",
+            "ytd"
+          ],
+          "totalRows": [
+            "opex",
+            "cogsOpex"
+          ]
         },
         {
           "type": "barChart",
           "title": "Actual vs Budget",
-          "metrics": ["people", "nonPeople", "opex"],
-          "series": ["actual", "budget"]
+          "metrics": [
+            "cogs",
+            "people",
+            "nonPeople",
+            "opex"
+          ],
+          "period": "ytd",
+          "series": [
+            "actual",
+            "budget"
+          ]
         }
       ]
     },
     "leader": {
-      "subtitle": "Consolidated leader view — COGS + OpEx",
+      "subtitle": "Function Rollup \u2014 Opex Budget vs Actual \u2014 FY2026",
       "sections": [
-        { "type": "flagBanner" },
+        {
+          "type": "flagBanner",
+          "source": "flags"
+        },
         {
           "type": "kpiCards",
           "cards": [
-            { "label": "Headcount", "metric": "headcount", "kind": "headcount" },
-            { "label": "COGS", "metric": "cogs", "kind": "currency" },
-            { "label": "OpEx", "metric": "opex", "kind": "currency" },
-            { "label": "COGS + OpEx", "metric": "cogsOpex", "kind": "currency" }
+            {
+              "label": "Total Headcount",
+              "metric": "headcount",
+              "kind": "count",
+              "period": "mtd"
+            },
+            {
+              "label": "Total Opex",
+              "metric": "opex",
+              "kind": "currency",
+              "period": "mtd"
+            },
+            {
+              "label": "Total People",
+              "metric": "people",
+              "kind": "currency",
+              "period": "mtd"
+            },
+            {
+              "label": "Total COGS + Opex",
+              "metric": "cogsOpex",
+              "kind": "currency",
+              "period": "mtd"
+            }
           ]
         },
         {
           "type": "varianceTable",
-          "title": "Variance",
-          "rows": ["headcount", "cogs", "people", "nonPeople", "opex", "cogsOpex"],
-          "periods": ["mtd", "qtd", "ytd"],
-          "totalRows": ["cogsOpex"]
+          "rows": [
+            "cogs",
+            "people",
+            "nonPeople",
+            "opex",
+            "cogsOpex"
+          ],
+          "periods": [
+            "mtd",
+            "qtd",
+            "ytd"
+          ],
+          "totalRows": [
+            "opex",
+            "cogsOpex"
+          ]
         },
         {
           "type": "barChart",
           "title": "Actual vs Budget",
-          "metrics": ["cogs", "people", "nonPeople", "opex"],
-          "series": ["actual", "budget"]
+          "metrics": [
+            "cogs",
+            "people",
+            "nonPeople",
+            "opex"
+          ],
+          "period": "ytd",
+          "series": [
+            "actual",
+            "budget"
+          ]
         }
       ]
     }
   },
   "dashboards": [
     {
-      "id": "eng",
-      "route": "/eng",
-      "title": "Engineering",
-      "dataKey": "Engineering",
+      "id": "licensing",
+      "route": "/licensing",
+      "title": "Licensing",
+      "dataKey": "Licensing",
       "source": "departments",
       "template": "standardDept"
     },
     {
-      "id": "product",
-      "route": "/product",
-      "title": "Product",
-      "dataKey": "Product",
+      "id": "payer-enrollment",
+      "route": "/payer-enrollment",
+      "title": "Payer Enrollment",
+      "dataKey": "Payer Enrollment",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "credentialing",
+      "route": "/credentialing",
+      "title": "Credentialing",
+      "dataKey": "Credentialing",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "intake",
+      "route": "/intake",
+      "title": "Intake",
+      "dataKey": "Intake",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "quality-assurance",
+      "route": "/quality-assurance",
+      "title": "Quality Assurance",
+      "dataKey": "Quality Assurance",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "ongoing-monitoring",
+      "route": "/ongoing-monitoring",
+      "title": "Ongoing Monitoring",
+      "dataKey": "Ongoing Monitoring",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "operations-management",
+      "route": "/operations-management",
+      "title": "Operations Management",
+      "dataKey": "Operations Management",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "india-operations-mgmt",
+      "route": "/india-operations-mgmt",
+      "title": "India Operations Mgmt",
+      "dataKey": "India Operations Mgmt",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "business-operations",
+      "route": "/business-operations",
+      "title": "Business Operations",
+      "dataKey": "Business Operations",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "customer-support",
+      "route": "/customer-support",
+      "title": "Customer Support",
+      "dataKey": "Customer Support",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "customer-success",
+      "route": "/customer-success",
+      "title": "Customer Success",
+      "dataKey": "Customer Success",
       "source": "departments",
       "template": "standardDept"
     },
@@ -104,6 +292,30 @@
       "template": "standardDept"
     },
     {
+      "id": "bdr",
+      "route": "/bdr",
+      "title": "BDR",
+      "dataKey": "BDR",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "solutions-consultants",
+      "route": "/solutions-consultants",
+      "title": "Solutions Consultants",
+      "dataKey": "Solutions Consultants",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "revenue-operations",
+      "route": "/revenue-operations",
+      "title": "Revenue Operations",
+      "dataKey": "Revenue Operations",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
       "id": "marketing",
       "route": "/marketing",
       "title": "Marketing",
@@ -112,18 +324,122 @@
       "template": "standardDept"
     },
     {
-      "id": "leader-cto",
-      "route": "/leaders/cto",
-      "title": "CTO Org",
-      "dataKey": "CTO",
+      "id": "product-and-design",
+      "route": "/product-and-design",
+      "title": "Product & Design",
+      "dataKey": "Product & Design",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "engineering",
+      "route": "/engineering",
+      "title": "Engineering",
+      "dataKey": "Engineering",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "product-operations",
+      "route": "/product-operations",
+      "title": "Product Operations",
+      "dataKey": "Product Operations",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "it",
+      "route": "/it",
+      "title": "IT",
+      "dataKey": "IT",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "implementation",
+      "route": "/implementation",
+      "title": "Implementation",
+      "dataKey": "Implementation",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "accounting-and-finance",
+      "route": "/accounting-and-finance",
+      "title": "Accounting & Finance",
+      "dataKey": "Accounting & Finance",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "analytics",
+      "route": "/analytics",
+      "title": "Analytics",
+      "dataKey": "Analytics",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "hr",
+      "route": "/hr",
+      "title": "HR",
+      "dataKey": "HR",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "executive",
+      "route": "/executive",
+      "title": "Executive",
+      "dataKey": "Executive",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "legal",
+      "route": "/legal",
+      "title": "Legal",
+      "dataKey": "Legal",
+      "source": "departments",
+      "template": "standardDept"
+    },
+    {
+      "id": "leader-armaan",
+      "route": "/leader/armaan",
+      "title": "Armaan \u2014 Portfolio",
+      "dataKey": "Armaan",
       "source": "leaders",
       "template": "leader"
     },
     {
-      "id": "leader-cro",
-      "route": "/leaders/cro",
-      "title": "CRO Org",
-      "dataKey": "CRO",
+      "id": "leader-kyle",
+      "route": "/leader/kyle",
+      "title": "Kyle \u2014 Portfolio",
+      "dataKey": "Kyle",
+      "source": "leaders",
+      "template": "leader"
+    },
+    {
+      "id": "leader-keith",
+      "route": "/leader/keith",
+      "title": "Keith \u2014 Portfolio",
+      "dataKey": "Keith",
+      "source": "leaders",
+      "template": "leader"
+    },
+    {
+      "id": "leader-nate",
+      "route": "/leader/nate",
+      "title": "Nate \u2014 Portfolio",
+      "dataKey": "Nate",
+      "source": "leaders",
+      "template": "leader"
+    },
+    {
+      "id": "leader-amanda",
+      "route": "/leader/amanda",
+      "title": "Amanda \u2014 Portfolio",
+      "dataKey": "Amanda",
       "source": "leaders",
       "template": "leader"
     }

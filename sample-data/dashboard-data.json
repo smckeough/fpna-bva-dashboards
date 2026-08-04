@@ -1,266 +1,3155 @@
 {
   "meta": {
     "reportMonth": "June 2026",
-    "monthSerial": 6,
-    "source": "(NEW) June 2026 Department HC & Opex Template",
-    "costLens": "overIsRed",
-    "quarantine": ["Legal"],
+    "monthSerial": 46203,
+    "source": "Medallion FP&A workbook \u2014 Dashboard Data (BvA tabs)",
+    "costLens": "varPct>0 = over budget (unfavorable); <0 = under budget (favorable)",
+    "quarantine": [
+      "Analytics"
+    ],
     "reviewFlags": [
-      { "name": "Marketing", "flags": ["REVIEW_LARGE_VARIANCE"] }
+      {
+        "name": "Quality Assurance",
+        "flags": [
+          "REVIEW_LARGE_VARIANCE"
+        ]
+      },
+      {
+        "name": "Ongoing Monitoring",
+        "flags": [
+          "REVIEW_LARGE_VARIANCE"
+        ]
+      },
+      {
+        "name": "Analytics",
+        "flags": [
+          "BUDGET_NOT_LOADED"
+        ]
+      },
+      {
+        "name": "Executive",
+        "flags": [
+          "REVIEW_LARGE_VARIANCE"
+        ]
+      },
+      {
+        "name": "Nate",
+        "flags": [
+          "HC_ACTUAL_MISSING"
+        ]
+      }
     ]
   },
   "departments": [
     {
-      "name": "Engineering",
-      "sourceTab": "Engineering",
-      "group": "R&D",
+      "name": "Licensing",
+      "sourceTab": "BvA Ops Lic",
+      "group": "Operations",
       "type": "Department",
       "budgetLoaded": true,
       "flags": [],
       "metrics": {
-        "headcount": { "actual": 128, "budget": 132, "variance": -4 },
+        "headcount": {
+          "actual": 67,
+          "budget": 134,
+          "variance": -67
+        },
         "cogs": {
-          "mtd": { "actual": 145000, "budget": 150000, "varPct": -0.0333 },
-          "qtd": { "actual": 430000, "budget": 450000, "varPct": -0.0444 },
-          "ytd": { "actual": 870000, "budget": 900000, "varPct": -0.0333 }
+          "mtd": {
+            "actual": 17487.58,
+            "budget": 29975,
+            "varPct": -0.416594495412844
+          },
+          "qtd": {
+            "actual": 47630,
+            "budget": 84223.06,
+            "varPct": -0.434477920892449
+          },
+          "ytd": {
+            "actual": 97504.67,
+            "budget": 144367.24,
+            "varPct": -0.324606676694796
+          }
         },
         "people": {
-          "mtd": { "actual": 2140000, "budget": 2200000, "varPct": -0.0273 },
-          "qtd": { "actual": 6320000, "budget": 6600000, "varPct": -0.0424 },
-          "ytd": { "actual": 12800000, "budget": 13200000, "varPct": -0.0303 }
+          "mtd": {
+            "actual": 149861.46,
+            "budget": 130895.448800917,
+            "varPct": 0.144894351735096
+          },
+          "qtd": {
+            "actual": 432951.62,
+            "budget": 391999.595130761,
+            "varPct": 0.104469559096301
+          },
+          "ytd": {
+            "actual": 874660.61,
+            "budget": 749207.262527262,
+            "varPct": 0.167448119829421
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 320000, "budget": 300000, "varPct": 0.0667 },
-          "qtd": { "actual": 940000, "budget": 900000, "varPct": 0.0444 },
-          "ytd": { "actual": 1880000, "budget": 1800000, "varPct": 0.0444 }
+          "mtd": {
+            "actual": 15206.41,
+            "budget": 14393.9906,
+            "varPct": 0.0564415680527122
+          },
+          "qtd": {
+            "actual": 40573.25,
+            "budget": 43038.5873,
+            "varPct": -0.057282021893874
+          },
+          "ytd": {
+            "actual": 88674.73,
+            "budget": 80502.9056,
+            "varPct": 0.101509682651753
+          }
         },
         "opex": {
-          "mtd": { "actual": 2460000, "budget": 2500000, "varPct": -0.016 },
-          "qtd": { "actual": 7260000, "budget": 7500000, "varPct": -0.032 },
-          "ytd": { "actual": 14680000, "budget": 15000000, "varPct": -0.0213 }
+          "mtd": {
+            "actual": 305528.12,
+            "budget": 221789.439400917,
+            "varPct": 0.377559368134357
+          },
+          "qtd": {
+            "actual": 774729.79,
+            "budget": 664538.182430761,
+            "varPct": 0.165816819082055
+          },
+          "ytd": {
+            "actual": 1561284.41,
+            "budget": 1324710.16812726,
+            "varPct": 0.178585661652451
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 2605000, "budget": 2650000, "varPct": -0.017 },
-          "qtd": { "actual": 7690000, "budget": 7950000, "varPct": -0.0327 },
-          "ytd": { "actual": 15550000, "budget": 15900000, "varPct": -0.022 }
+          "mtd": {
+            "actual": 323015.7,
+            "budget": 251764.439400917,
+            "varPct": 0.28300764305169
+          },
+          "qtd": {
+            "actual": 822359.79,
+            "budget": 748761.242430761,
+            "varPct": 0.0982937462552287
+          },
+          "ytd": {
+            "actual": 1658789.08,
+            "budget": 1469077.40812726,
+            "varPct": 0.12913660697742
+          }
         }
       }
     },
     {
-      "name": "Product",
-      "sourceTab": "Product",
-      "group": "R&D",
+      "name": "Payer Enrollment",
+      "sourceTab": "BvA Ops PE",
+      "group": "Operations",
       "type": "Department",
       "budgetLoaded": true,
       "flags": [],
       "metrics": {
-        "headcount": { "actual": 22, "budget": 24, "variance": -2 },
+        "headcount": {
+          "actual": 313,
+          "budget": 496,
+          "variance": -183
+        },
         "cogs": {
-          "mtd": { "actual": 0, "budget": 0, "varPct": null },
-          "qtd": { "actual": 0, "budget": 0, "varPct": null },
-          "ytd": { "actual": 0, "budget": 0, "varPct": null }
+          "mtd": {
+            "actual": 7742.42,
+            "budget": 9075,
+            "varPct": -0.146840771349862
+          },
+          "qtd": {
+            "actual": 23279.47,
+            "budget": 19575,
+            "varPct": 0.189244955300128
+          },
+          "ytd": {
+            "actual": 45200.94,
+            "budget": 23700,
+            "varPct": 0.907212658227848
+          }
         },
         "people": {
-          "mtd": { "actual": 410000, "budget": 440000, "varPct": -0.0682 },
-          "qtd": { "actual": 1220000, "budget": 1320000, "varPct": -0.0758 },
-          "ytd": { "actual": 2460000, "budget": 2640000, "varPct": -0.0682 }
+          "mtd": {
+            "actual": 385183.47,
+            "budget": 290728.807165689,
+            "varPct": 0.324889245600215
+          },
+          "qtd": {
+            "actual": 1152233.94,
+            "budget": 824262.86689619,
+            "varPct": 0.397896212817161
+          },
+          "ytd": {
+            "actual": 2223030.72,
+            "budget": 1476397.72591089,
+            "varPct": 0.505712641645032
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 55000, "budget": 50000, "varPct": 0.1 },
-          "qtd": { "actual": 160000, "budget": 150000, "varPct": 0.0667 },
-          "ytd": { "actual": 320000, "budget": 300000, "varPct": 0.0667 }
+          "mtd": {
+            "actual": 7174.24,
+            "budget": 1300,
+            "varPct": 4.51864615384615
+          },
+          "qtd": {
+            "actual": 14424.57,
+            "budget": 3800,
+            "varPct": 2.79593947368421
+          },
+          "ytd": {
+            "actual": 15182.34,
+            "budget": 16550,
+            "varPct": -0.0826380664652568
+          }
         },
         "opex": {
-          "mtd": { "actual": 465000, "budget": 490000, "varPct": -0.051 },
-          "qtd": { "actual": 1380000, "budget": 1470000, "varPct": -0.0612 },
-          "ytd": { "actual": 2780000, "budget": 2940000, "varPct": -0.0544 }
+          "mtd": {
+            "actual": 597170.81,
+            "budget": 502028.807165689,
+            "varPct": 0.189515026779948
+          },
+          "qtd": {
+            "actual": 1853654.38,
+            "budget": 1458062.86689619,
+            "varPct": 0.271313070297108
+          },
+          "ytd": {
+            "actual": 3668522.72,
+            "budget": 2608947.72591089,
+            "varPct": 0.406131170650103
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 465000, "budget": 490000, "varPct": -0.051 },
-          "qtd": { "actual": 1380000, "budget": 1470000, "varPct": -0.0612 },
-          "ytd": { "actual": 2780000, "budget": 2940000, "varPct": -0.0544 }
+          "mtd": {
+            "actual": 604913.23,
+            "budget": 511103.807165689,
+            "varPct": 0.183542797997394
+          },
+          "qtd": {
+            "actual": 1876933.85,
+            "budget": 1477637.86689619,
+            "varPct": 0.270225873368107
+          },
+          "ytd": {
+            "actual": 3713723.66,
+            "budget": 2632647.72591089,
+            "varPct": 0.410642078485858
+          }
+        }
+      }
+    },
+    {
+      "name": "Credentialing",
+      "sourceTab": "BvA Ops Cred",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 156,
+          "budget": 175,
+          "variance": -19
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 16103.85,
+            "budget": 27327.3333333333,
+            "varPct": -0.410705398746066
+          },
+          "qtd": {
+            "actual": 62014.27,
+            "budget": 82762,
+            "varPct": -0.250691500930379
+          },
+          "ytd": {
+            "actual": 156332.65,
+            "budget": 136094,
+            "varPct": 0.148710817523183
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 198962.88,
+            "budget": 144185.265746917,
+            "varPct": 0.379911317354941
+          },
+          "qtd": {
+            "actual": 617455.56,
+            "budget": 432555.79724075,
+            "varPct": 0.42745875546858
+          },
+          "ytd": {
+            "actual": 1269194.46,
+            "budget": 836622.107924376,
+            "varPct": 0.517046284073006
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 11376.29,
+            "budget": 1667.103752,
+            "varPct": 5.82398440190182
+          },
+          "qtd": {
+            "actual": 38871.28,
+            "budget": 5334.951325,
+            "varPct": 6.28615457424066
+          },
+          "ytd": {
+            "actual": 62820.28,
+            "budget": 15800.919143,
+            "varPct": 2.97573580571293
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 222789.13,
+            "budget": 220852.369498917,
+            "varPct": 0.00876948028892599
+          },
+          "qtd": {
+            "actual": 692831.24,
+            "budget": 662890.74856575,
+            "varPct": 0.0451665549700768
+          },
+          "ytd": {
+            "actual": 1434062.23,
+            "budget": 1318266.98706738,
+            "varPct": 0.0878389916978977
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 238892.98,
+            "budget": 248179.70283225,
+            "varPct": -0.0374193486665872
+          },
+          "qtd": {
+            "actual": 754845.51,
+            "budget": 745652.74856575,
+            "varPct": 0.0123284752211166
+          },
+          "ytd": {
+            "actual": 1590394.88,
+            "budget": 1454360.98706738,
+            "varPct": 0.0935351636507573
+          }
+        }
+      }
+    },
+    {
+      "name": "Intake",
+      "sourceTab": "BvA Ops Intake",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 6,
+          "budget": 6,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 450,
+            "varPct": -1
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 1350,
+            "varPct": -1
+          },
+          "ytd": {
+            "actual": 24.38,
+            "budget": 2700,
+            "varPct": -0.99097037037037
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 42139.26,
+            "budget": 39038.2001666667,
+            "varPct": 0.0794365472817373
+          },
+          "qtd": {
+            "actual": 125130.74,
+            "budget": 117114.6005,
+            "varPct": 0.0684469695988075
+          },
+          "ytd": {
+            "actual": 245477.93,
+            "budget": 234229.201,
+            "varPct": 0.0480244519128081
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 300,
+            "varPct": -1
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 900,
+            "varPct": -1
+          },
+          "ytd": {
+            "actual": 255.91,
+            "budget": 3300,
+            "varPct": -0.922451515151515
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 42139.26,
+            "budget": 39338.2001666667,
+            "varPct": 0.0712045752338926
+          },
+          "qtd": {
+            "actual": 125130.74,
+            "budget": 118014.6005,
+            "varPct": 0.0602988059939245
+          },
+          "ytd": {
+            "actual": 245733.84,
+            "budget": 237529.201,
+            "varPct": 0.0345416014766118
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 42139.26,
+            "budget": 39788.2001666667,
+            "varPct": 0.0590893738215128
+          },
+          "qtd": {
+            "actual": 125130.74,
+            "budget": 119364.6005,
+            "varPct": 0.0483069475861899
+          },
+          "ytd": {
+            "actual": 245758.22,
+            "budget": 240229.201,
+            "varPct": 0.0230155991735577
+          }
+        }
+      }
+    },
+    {
+      "name": "Quality Assurance",
+      "sourceTab": "BvA Ops QA",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [
+        "REVIEW_LARGE_VARIANCE"
+      ],
+      "metrics": {
+        "headcount": {
+          "actual": 15,
+          "budget": 15,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 1125,
+            "varPct": -1
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 3375,
+            "varPct": -1
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 6600,
+            "varPct": -1
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 0,
+            "budget": 90047.5235558334,
+            "varPct": -1
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 270142.5706675,
+            "varPct": -1
+          },
+          "ytd": {
+            "actual": 21611.43,
+            "budget": 527115.105817393,
+            "varPct": -0.959000548909545
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 3750,
+            "varPct": -1
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 0,
+            "budget": 90047.5235558334,
+            "varPct": -1
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 270142.5706675,
+            "varPct": -1
+          },
+          "ytd": {
+            "actual": 21611.43,
+            "budget": 530865.105817393,
+            "varPct": -0.959290166629573
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 0,
+            "budget": 91172.5235558334,
+            "varPct": -1
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 273517.5706675,
+            "varPct": -1
+          },
+          "ytd": {
+            "actual": 21611.43,
+            "budget": 537465.105817393,
+            "varPct": -0.959790077967699
+          }
+        }
+      }
+    },
+    {
+      "name": "Ongoing Monitoring",
+      "sourceTab": "BvA OGM",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [
+        "REVIEW_LARGE_VARIANCE"
+      ],
+      "metrics": {
+        "headcount": {
+          "actual": 0,
+          "budget": 3,
+          "variance": -3
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 59828.02,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 116316.92,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 169861.82,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": -2717,
+            "budget": 3484.7840740621,
+            "varPct": -1.77967528037767
+          },
+          "qtd": {
+            "actual": 24165.82,
+            "budget": 10303.8047707643,
+            "varPct": 1.3453297629015
+          },
+          "ytd": {
+            "actual": 81193.16,
+            "budget": 20451.0825996216,
+            "varPct": 2.97011549899576
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 57111.02,
+            "budget": 3484.7840740621,
+            "varPct": 15.3886825657543
+          },
+          "qtd": {
+            "actual": 140482.74,
+            "budget": 10303.8047707643,
+            "varPct": 12.634064612579
+          },
+          "ytd": {
+            "actual": 251054.98,
+            "budget": 20451.0825996216,
+            "varPct": 11.2758772684555
+          }
+        }
+      }
+    },
+    {
+      "name": "Operations Management",
+      "sourceTab": "BvA Ops Mgmt",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 1,
+          "budget": 1,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 10487.74,
+            "budget": 22626.525,
+            "varPct": -0.536484723129159
+          },
+          "qtd": {
+            "actual": 52568.36,
+            "budget": 67879.575,
+            "varPct": -0.225564391055778
+          },
+          "ytd": {
+            "actual": 115156.81,
+            "budget": 135759.15,
+            "varPct": -0.15175654826949
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 26647.86,
+            "budget": 25529.3202,
+            "varPct": 0.0438139281123513
+          },
+          "qtd": {
+            "actual": 58207.27,
+            "budget": 66589.1464,
+            "varPct": -0.125874513387665
+          },
+          "ytd": {
+            "actual": 92366.35,
+            "budget": 121909.4082,
+            "varPct": -0.242336162862285
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 37135.6,
+            "budget": 48155.8452,
+            "varPct": -0.228845432039058
+          },
+          "qtd": {
+            "actual": 110775.63,
+            "budget": 134468.7214,
+            "varPct": -0.176197788997494
+          },
+          "ytd": {
+            "actual": 207523.16,
+            "budget": 257668.5582,
+            "varPct": -0.194612018440673
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 37135.6,
+            "budget": 48155.8452,
+            "varPct": -0.228845432039058
+          },
+          "qtd": {
+            "actual": 110775.63,
+            "budget": 134468.7214,
+            "varPct": -0.176197788997494
+          },
+          "ytd": {
+            "actual": 207523.16,
+            "budget": 257668.5582,
+            "varPct": -0.194612018440673
+          }
+        }
+      }
+    },
+    {
+      "name": "India Operations Mgmt",
+      "sourceTab": "BvA Ops Mgmt - Offshore",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 1,
+          "budget": 0,
+          "variance": 1
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 5096.03,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 15224.44,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 41481.2,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 164544.69,
+            "budget": 175386.97,
+            "varPct": -0.0618191875941525
+          },
+          "qtd": {
+            "actual": 473303.21,
+            "budget": 519472.448333333,
+            "varPct": -0.088877164672471
+          },
+          "ytd": {
+            "actual": 863818.65,
+            "budget": 864980.055,
+            "varPct": -0.00134269569949785
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 169640.72,
+            "budget": 175386.97,
+            "varPct": -0.0327632662791312
+          },
+          "qtd": {
+            "actual": 488527.65,
+            "budget": 519472.448333333,
+            "varPct": -0.0595696623230281
+          },
+          "ytd": {
+            "actual": 905299.85,
+            "budget": 864980.055,
+            "varPct": 0.0466135545749666
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 169640.72,
+            "budget": 175386.97,
+            "varPct": -0.0327632662791312
+          },
+          "qtd": {
+            "actual": 488527.65,
+            "budget": 519472.448333333,
+            "varPct": -0.0595696623230281
+          },
+          "ytd": {
+            "actual": 905299.85,
+            "budget": 864980.055,
+            "varPct": 0.0466135545749666
+          }
+        }
+      }
+    },
+    {
+      "name": "Business Operations",
+      "sourceTab": "BvA Business Operations",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 6,
+          "budget": 5,
+          "variance": 1
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 129631.23,
+            "budget": 108291,
+            "varPct": 0.197063744909549
+          },
+          "qtd": {
+            "actual": 293573.01,
+            "budget": 278173,
+            "varPct": 0.0553612679879065
+          },
+          "ytd": {
+            "actual": 293573.01,
+            "budget": 365444,
+            "varPct": -0.196667587920448
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 129631.23,
+            "budget": 108291,
+            "varPct": 0.197063744909549
+          },
+          "qtd": {
+            "actual": 293573.01,
+            "budget": 278173,
+            "varPct": 0.0553612679879065
+          },
+          "ytd": {
+            "actual": 293573.01,
+            "budget": 365444,
+            "varPct": -0.196667587920448
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 129631.23,
+            "budget": 108291,
+            "varPct": 0.197063744909549
+          },
+          "qtd": {
+            "actual": 293573.01,
+            "budget": 278173,
+            "varPct": 0.0553612679879065
+          },
+          "ytd": {
+            "actual": 293573.01,
+            "budget": 365444,
+            "varPct": -0.196667587920448
+          }
+        }
+      }
+    },
+    {
+      "name": "Customer Support",
+      "sourceTab": "BvA Ops Customer Support & EM",
+      "group": "Operations",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 18,
+          "budget": 19,
+          "variance": -1
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 9874.22,
+            "budget": 7985,
+            "varPct": 0.236596117720727
+          },
+          "qtd": {
+            "actual": 31257.59,
+            "budget": 23705,
+            "varPct": 0.31860746677916
+          },
+          "ytd": {
+            "actual": 61420.18,
+            "budget": 87984,
+            "varPct": -0.301916484815421
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 188862.41,
+            "budget": 226159.550526111,
+            "varPct": -0.16491516913324
+          },
+          "qtd": {
+            "actual": 589604.49,
+            "budget": 591861.717671523,
+            "varPct": -0.00381377542106209
+          },
+          "ytd": {
+            "actual": 1247359.43,
+            "budget": 1148396.33591652,
+            "varPct": 0.0861750346882597
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 4804.54,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 190912.41,
+            "budget": 226159.550526111,
+            "varPct": -0.15585077191795
+          },
+          "qtd": {
+            "actual": 595656.49,
+            "budget": 591861.717671523,
+            "varPct": 0.00641158604311487
+          },
+          "ytd": {
+            "actual": 1263990.79,
+            "budget": 1148396.33591652,
+            "varPct": 0.10065728221888
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 200786.63,
+            "budget": 234144.550526111,
+            "varPct": -0.142467208616034
+          },
+          "qtd": {
+            "actual": 626914.08,
+            "budget": 615566.717671523,
+            "varPct": 0.0184340088616226
+          },
+          "ytd": {
+            "actual": 1325410.97,
+            "budget": 1236380.33591652,
+            "varPct": 0.0720090990588902
+          }
+        }
+      }
+    },
+    {
+      "name": "Customer Success",
+      "sourceTab": "BvA AM",
+      "group": "GTM",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 11,
+          "budget": 12,
+          "variance": -1
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 198584.37,
+            "budget": 241465.520056667,
+            "varPct": -0.177587052787509
+          },
+          "qtd": {
+            "actual": 589085.01,
+            "budget": 724396.56017,
+            "varPct": -0.186792093736952
+          },
+          "ytd": {
+            "actual": 1264516.67,
+            "budget": 1370384.10528624,
+            "varPct": -0.0772538406406313
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 3884.77,
+            "budget": 4687.0236,
+            "varPct": -0.171164830490719
+          },
+          "qtd": {
+            "actual": 10340.68,
+            "budget": 14087.7779,
+            "varPct": -0.265982181618579
+          },
+          "ytd": {
+            "actual": 29201.9,
+            "budget": 54633.1567,
+            "varPct": -0.465491255422918
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 202469.14,
+            "budget": 246152.543656667,
+            "varPct": -0.177464766391349
+          },
+          "qtd": {
+            "actual": 599425.69,
+            "budget": 738484.33807,
+            "varPct": -0.188302772179874
+          },
+          "ytd": {
+            "actual": 1293718.57,
+            "budget": 1425017.26198624,
+            "varPct": -0.092138316839214
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 202469.14,
+            "budget": 246152.543656667,
+            "varPct": -0.177464766391349
+          },
+          "qtd": {
+            "actual": 599425.69,
+            "budget": 738484.33807,
+            "varPct": -0.188302772179874
+          },
+          "ytd": {
+            "actual": 1293718.57,
+            "budget": 1425017.26198624,
+            "varPct": -0.092138316839214
+          }
         }
       }
     },
     {
       "name": "Sales",
-      "sourceTab": "Sales",
+      "sourceTab": "BvA Sales",
       "group": "GTM",
       "type": "Department",
       "budgetLoaded": true,
       "flags": [],
       "metrics": {
-        "headcount": { "actual": 41, "budget": 40, "variance": 1 },
+        "headcount": {
+          "actual": 31,
+          "budget": 33,
+          "variance": -2
+        },
         "cogs": {
-          "mtd": { "actual": 210000, "budget": 200000, "varPct": 0.05 },
-          "qtd": { "actual": 620000, "budget": 600000, "varPct": 0.0333 },
-          "ytd": { "actual": 1240000, "budget": 1200000, "varPct": 0.0333 }
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
         },
         "people": {
-          "mtd": { "actual": 780000, "budget": 750000, "varPct": 0.04 },
-          "qtd": { "actual": 2320000, "budget": 2250000, "varPct": 0.0311 },
-          "ytd": { "actual": 4680000, "budget": 4500000, "varPct": 0.04 }
+          "mtd": {
+            "actual": 904492.98,
+            "budget": 1074401.91606667,
+            "varPct": -0.158142808129657
+          },
+          "qtd": {
+            "actual": 2713742.65,
+            "budget": 3140087.23708889,
+            "varPct": -0.135774758756111
+          },
+          "ytd": {
+            "actual": 5682598.21,
+            "budget": 5890842.58574972,
+            "varPct": -0.0353505246012638
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 140000, "budget": 120000, "varPct": 0.1667 },
-          "qtd": { "actual": 405000, "budget": 360000, "varPct": 0.125 },
-          "ytd": { "actual": 830000, "budget": 720000, "varPct": 0.1528 }
+          "mtd": {
+            "actual": 21522.34,
+            "budget": 37384.7197,
+            "varPct": -0.424301153714415
+          },
+          "qtd": {
+            "actual": 135032.36,
+            "budget": 298287.969266667,
+            "varPct": -0.547308728769807
+          },
+          "ytd": {
+            "actual": 213159.89,
+            "budget": 455970.447666667,
+            "varPct": -0.532513804149367
+          }
         },
         "opex": {
-          "mtd": { "actual": 920000, "budget": 870000, "varPct": 0.0575 },
-          "qtd": { "actual": 2725000, "budget": 2610000, "varPct": 0.0441 },
-          "ytd": { "actual": 5510000, "budget": 5220000, "varPct": 0.0556 }
+          "mtd": {
+            "actual": 926015.32,
+            "budget": 1111786.63576667,
+            "varPct": -0.16709259653815
+          },
+          "qtd": {
+            "actual": 2848775.01,
+            "budget": 3438375.20635555,
+            "varPct": -0.17147639829002
+          },
+          "ytd": {
+            "actual": 5895758.1,
+            "budget": 6346813.03341638,
+            "varPct": -0.0710679408770277
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 1130000, "budget": 1070000, "varPct": 0.0561 },
-          "qtd": { "actual": 3345000, "budget": 3210000, "varPct": 0.0421 },
-          "ytd": { "actual": 6750000, "budget": 6420000, "varPct": 0.0514 }
+          "mtd": {
+            "actual": 926015.32,
+            "budget": 1111786.63576667,
+            "varPct": -0.16709259653815
+          },
+          "qtd": {
+            "actual": 2848775.01,
+            "budget": 3438375.20635555,
+            "varPct": -0.17147639829002
+          },
+          "ytd": {
+            "actual": 5895758.1,
+            "budget": 6346813.03341638,
+            "varPct": -0.0710679408770277
+          }
+        }
+      }
+    },
+    {
+      "name": "BDR",
+      "sourceTab": "BvA BDR",
+      "group": "GTM",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 13,
+          "budget": 13,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 141859.13,
+            "budget": 147298.5313,
+            "varPct": -0.0369277361559137
+          },
+          "qtd": {
+            "actual": 462620.12,
+            "budget": 441895.5939,
+            "varPct": 0.0468991462827071
+          },
+          "ytd": {
+            "actual": 880510.49,
+            "budget": 859171.42475914,
+            "varPct": 0.0248367958080569
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 2912.91,
+            "budget": 8575,
+            "varPct": -0.660302040816326
+          },
+          "qtd": {
+            "actual": 11261.43,
+            "budget": 41725,
+            "varPct": -0.730103535050929
+          },
+          "ytd": {
+            "actual": 24191.51,
+            "budget": 86150,
+            "varPct": -0.719193151479977
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 144772.04,
+            "budget": 155873.5313,
+            "varPct": -0.0712211445228225
+          },
+          "qtd": {
+            "actual": 473881.55,
+            "budget": 483620.5939,
+            "varPct": -0.0201377774702745
+          },
+          "ytd": {
+            "actual": 904702,
+            "budget": 945321.42475914,
+            "varPct": -0.0429689031637989
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 144772.04,
+            "budget": 155873.5313,
+            "varPct": -0.0712211445228225
+          },
+          "qtd": {
+            "actual": 473881.55,
+            "budget": 483620.5939,
+            "varPct": -0.0201377774702745
+          },
+          "ytd": {
+            "actual": 904702,
+            "budget": 945321.42475914,
+            "varPct": -0.0429689031637989
+          }
+        }
+      }
+    },
+    {
+      "name": "Solutions Consultants",
+      "sourceTab": "BvA Solutions",
+      "group": "GTM",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 7,
+          "budget": 8,
+          "variance": -1
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 184263.36,
+            "budget": 188826.422147222,
+            "varPct": -0.0241653794809741
+          },
+          "qtd": {
+            "actual": 446506.7,
+            "budget": 497649.866083244,
+            "varPct": -0.102769375757631
+          },
+          "ytd": {
+            "actual": 774800.58,
+            "budget": 932568.215858244,
+            "varPct": -0.169175437437625
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 7240.24,
+            "budget": 5450,
+            "varPct": 0.328484403669725
+          },
+          "qtd": {
+            "actual": 32429.97,
+            "budget": 26775,
+            "varPct": 0.211203361344538
+          },
+          "ytd": {
+            "actual": 57857.68,
+            "budget": 49725,
+            "varPct": 0.163553142282554
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 191503.6,
+            "budget": 194276.422147222,
+            "varPct": -0.0142725613153458
+          },
+          "qtd": {
+            "actual": 478936.67,
+            "budget": 524424.866083244,
+            "varPct": -0.0867392052230094
+          },
+          "ytd": {
+            "actual": 832658.26,
+            "budget": 982293.215858244,
+            "varPct": -0.152332270489627
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 191503.6,
+            "budget": 194276.422147222,
+            "varPct": -0.0142725613153458
+          },
+          "qtd": {
+            "actual": 478936.67,
+            "budget": 524424.866083244,
+            "varPct": -0.0867392052230094
+          },
+          "ytd": {
+            "actual": 832658.26,
+            "budget": 982293.215858244,
+            "varPct": -0.152332270489627
+          }
+        }
+      }
+    },
+    {
+      "name": "Revenue Operations",
+      "sourceTab": "BvA Rev Ops",
+      "group": "GTM",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 5,
+          "budget": 6,
+          "variance": -1
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 103449.26,
+            "budget": 103428.848,
+            "varPct": 0.000197353063431605
+          },
+          "qtd": {
+            "actual": 260307.41,
+            "budget": 276194.070564516,
+            "varPct": -0.0575199189904592
+          },
+          "ytd": {
+            "actual": 459667.26,
+            "budget": 477433.727251613,
+            "varPct": -0.0372124260133171
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 80232.82,
+            "budget": 89691.8682,
+            "varPct": -0.105461603039728
+          },
+          "qtd": {
+            "actual": 252922.55,
+            "budget": 279718.626666667,
+            "varPct": -0.095796540208954
+          },
+          "ytd": {
+            "actual": 506922.18,
+            "budget": 549843.2974,
+            "varPct": -0.0780606358265303
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 183682.08,
+            "budget": 193120.7162,
+            "varPct": -0.0488742812564198
+          },
+          "qtd": {
+            "actual": 513229.96,
+            "budget": 555912.697231183,
+            "varPct": -0.0767795688851352
+          },
+          "ytd": {
+            "actual": 966589.44,
+            "budget": 1027277.02465161,
+            "varPct": -0.059076162705181
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 183682.08,
+            "budget": 193120.7162,
+            "varPct": -0.0488742812564198
+          },
+          "qtd": {
+            "actual": 513229.96,
+            "budget": 555912.697231183,
+            "varPct": -0.0767795688851352
+          },
+          "ytd": {
+            "actual": 966589.44,
+            "budget": 1027277.02465161,
+            "varPct": -0.059076162705181
+          }
         }
       }
     },
     {
       "name": "Marketing",
-      "sourceTab": "Marketing",
+      "sourceTab": "BvA Marketing",
       "group": "GTM",
       "type": "Department",
       "budgetLoaded": true,
-      "flags": ["REVIEW_LARGE_VARIANCE"],
+      "flags": [],
       "metrics": {
-        "headcount": { "actual": 15, "budget": 18, "variance": -3 },
+        "headcount": {
+          "actual": 9,
+          "budget": 10,
+          "variance": -1
+        },
         "cogs": {
-          "mtd": { "actual": 0, "budget": 0, "varPct": null },
-          "qtd": { "actual": 0, "budget": 0, "varPct": null },
-          "ytd": { "actual": 0, "budget": 0, "varPct": null }
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
         },
         "people": {
-          "mtd": { "actual": 240000, "budget": 300000, "varPct": -0.2 },
-          "qtd": { "actual": 720000, "budget": 900000, "varPct": -0.2 },
-          "ytd": { "actual": 1440000, "budget": 1800000, "varPct": -0.2 }
+          "mtd": {
+            "actual": 148110.64,
+            "budget": 172593.505477778,
+            "varPct": -0.141852762130323
+          },
+          "qtd": {
+            "actual": 401501.96,
+            "budget": 474233.853016667,
+            "varPct": -0.153367146933963
+          },
+          "ytd": {
+            "actual": 831154.76,
+            "budget": 872401.961842473,
+            "varPct": -0.047280042510864
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 480000, "budget": 350000, "varPct": 0.3714 },
-          "qtd": { "actual": 1380000, "budget": 1050000, "varPct": 0.3143 },
-          "ytd": { "actual": 2750000, "budget": 2100000, "varPct": 0.3095 }
+          "mtd": {
+            "actual": 148271.58,
+            "budget": 179331.74,
+            "varPct": -0.173199457050938
+          },
+          "qtd": {
+            "actual": 456098.64,
+            "budget": 661905.72,
+            "varPct": -0.310931109645041
+          },
+          "ytd": {
+            "actual": 989815.77,
+            "budget": 1480416.21,
+            "varPct": -0.33139358829366
+          }
         },
         "opex": {
-          "mtd": { "actual": 720000, "budget": 650000, "varPct": 0.1077 },
-          "qtd": { "actual": 2100000, "budget": 1950000, "varPct": 0.0769 },
-          "ytd": { "actual": 4190000, "budget": 3900000, "varPct": 0.0744 }
+          "mtd": {
+            "actual": 296382.22,
+            "budget": 351925.245477778,
+            "varPct": -0.157826203693833
+          },
+          "qtd": {
+            "actual": 857600.6,
+            "budget": 1136139.57301667,
+            "varPct": -0.245162636380223
+          },
+          "ytd": {
+            "actual": 1820970.53,
+            "budget": 2352818.17184247,
+            "varPct": -0.226047064837989
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 720000, "budget": 650000, "varPct": 0.1077 },
-          "qtd": { "actual": 2100000, "budget": 1950000, "varPct": 0.0769 },
-          "ytd": { "actual": 4190000, "budget": 3900000, "varPct": 0.0744 }
+          "mtd": {
+            "actual": 296382.22,
+            "budget": 351925.245477778,
+            "varPct": -0.157826203693833
+          },
+          "qtd": {
+            "actual": 857600.6,
+            "budget": 1136139.57301667,
+            "varPct": -0.245162636380223
+          },
+          "ytd": {
+            "actual": 1820970.53,
+            "budget": 2352818.17184247,
+            "varPct": -0.226047064837989
+          }
+        }
+      }
+    },
+    {
+      "name": "Product & Design",
+      "sourceTab": "BvA Product & Design",
+      "group": "EPD",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 16,
+          "budget": 16,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 367717.03,
+            "budget": 350829.127383333,
+            "varPct": 0.0481371166146478
+          },
+          "qtd": {
+            "actual": 1012061.36,
+            "budget": 1052487.38215,
+            "varPct": -0.0384099827091691
+          },
+          "ytd": {
+            "actual": 1897653.55,
+            "budget": 2032474.14064409,
+            "varPct": -0.0663332378739941
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 51178.99,
+            "budget": 36583.315495,
+            "varPct": 0.398970796044849
+          },
+          "qtd": {
+            "actual": 104710.01,
+            "budget": 99649.1774403333,
+            "varPct": 0.0507864960821873
+          },
+          "ytd": {
+            "actual": 161664.17,
+            "budget": 196478.933607333,
+            "varPct": -0.177193366067994
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 418896.02,
+            "budget": 387412.442878333,
+            "varPct": 0.0812663033942718
+          },
+          "qtd": {
+            "actual": 1116771.37,
+            "budget": 1152136.55959033,
+            "varPct": -0.0306953106347987
+          },
+          "ytd": {
+            "actual": 2059317.72,
+            "budget": 2228953.07425142,
+            "varPct": -0.0761053950444383
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 418896.02,
+            "budget": 387412.442878333,
+            "varPct": 0.0812663033942718
+          },
+          "qtd": {
+            "actual": 1116771.37,
+            "budget": 1152136.55959033,
+            "varPct": -0.0306953106347987
+          },
+          "ytd": {
+            "actual": 2059317.72,
+            "budget": 2228953.07425142,
+            "varPct": -0.0761053950444383
+          }
+        }
+      }
+    },
+    {
+      "name": "Engineering",
+      "sourceTab": "BvA Eng",
+      "group": "EPD",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 49,
+          "budget": 57,
+          "variance": -8
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 150125.27,
+            "budget": 86409,
+            "varPct": 0.737380018285132
+          },
+          "qtd": {
+            "actual": 425483.35,
+            "budget": 249762,
+            "varPct": 0.703555184535678
+          },
+          "ytd": {
+            "actual": 788384.8,
+            "budget": 482022,
+            "varPct": 0.635578459074482
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 847778.98,
+            "budget": 968905.0490273,
+            "varPct": -0.125013353113291
+          },
+          "qtd": {
+            "actual": 2582810.37,
+            "budget": 2713603.81396246,
+            "varPct": -0.0481991672068989
+          },
+          "ytd": {
+            "actual": 5249412.46,
+            "budget": 5272582.98742702,
+            "varPct": -0.00439453062801876
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 126044.87,
+            "budget": 212124.8121,
+            "varPct": -0.405798554387971
+          },
+          "qtd": {
+            "actual": 570642.89,
+            "budget": 613083.4363,
+            "varPct": -0.0692247478681397
+          },
+          "ytd": {
+            "actual": 991661.53,
+            "budget": 1307753.8726,
+            "varPct": -0.24170629445093
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 973823.85,
+            "budget": 1181029.8611273,
+            "varPct": -0.175445192325214
+          },
+          "qtd": {
+            "actual": 3153453.26,
+            "budget": 3326687.25026246,
+            "varPct": -0.0520740235646702
+          },
+          "ytd": {
+            "actual": 6241073.99,
+            "budget": 6580336.86002702,
+            "varPct": -0.0515570672510564
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 1123949.12,
+            "budget": 1267438.8611273,
+            "varPct": -0.113212357241182
+          },
+          "qtd": {
+            "actual": 3578936.61,
+            "budget": 3576449.25026246,
+            "varPct": 0.000695483023382071
+          },
+          "ytd": {
+            "actual": 7029458.79,
+            "budget": 7062358.86002702,
+            "varPct": -0.00465851009260265
+          }
+        }
+      }
+    },
+    {
+      "name": "Product Operations",
+      "sourceTab": "BvA Product Operations",
+      "group": "EPD",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 9,
+          "budget": 9,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 126397.28,
+            "budget": 112805,
+            "varPct": 0.120493595142059
+          },
+          "qtd": {
+            "actual": 363622.31,
+            "budget": 338415,
+            "varPct": 0.0744863850597639
+          },
+          "ytd": {
+            "actual": 694063.14,
+            "budget": 651993,
+            "varPct": 0.0645254473590977
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 1409.35,
+            "budget": 875,
+            "varPct": 0.610685714285714
+          },
+          "qtd": {
+            "actual": 2482.61,
+            "budget": 2625,
+            "varPct": -0.0542438095238095
+          },
+          "ytd": {
+            "actual": 3565.41,
+            "budget": 21000,
+            "varPct": -0.830218571428571
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 127806.63,
+            "budget": 113680,
+            "varPct": 0.124266625615763
+          },
+          "qtd": {
+            "actual": 366104.92,
+            "budget": 341040,
+            "varPct": 0.0734955430448041
+          },
+          "ytd": {
+            "actual": 697628.55,
+            "budget": 672993,
+            "varPct": 0.036605952810802
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 127806.63,
+            "budget": 113680,
+            "varPct": 0.124266625615763
+          },
+          "qtd": {
+            "actual": 366104.92,
+            "budget": 341040,
+            "varPct": 0.0734955430448041
+          },
+          "ytd": {
+            "actual": 697628.55,
+            "budget": 672993,
+            "varPct": 0.036605952810802
+          }
+        }
+      }
+    },
+    {
+      "name": "IT",
+      "sourceTab": "BvA IT",
+      "group": "EPD",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 2,
+          "budget": 2,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 25660.2,
+            "budget": 26883.3939843333,
+            "varPct": -0.0454999835603409
+          },
+          "qtd": {
+            "actual": 76980.6,
+            "budget": 80650.181953,
+            "varPct": -0.045499983560341
+          },
+          "ytd": {
+            "actual": 152990.02,
+            "budget": 161300.363906,
+            "varPct": -0.0515209247193205
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 114847.16,
+            "budget": 114429.024555588,
+            "varPct": 0.00365410302181313
+          },
+          "qtd": {
+            "actual": 255903.62,
+            "budget": 241076.7416,
+            "varPct": 0.0615027327049293
+          },
+          "ytd": {
+            "actual": 516709.01,
+            "budget": 472726.8467,
+            "varPct": 0.0930392754442226
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 140507.36,
+            "budget": 141312.418539922,
+            "varPct": -0.00569701196992956
+          },
+          "qtd": {
+            "actual": 332884.22,
+            "budget": 321726.923553,
+            "varPct": 0.0346793992985857
+          },
+          "ytd": {
+            "actual": 669699.03,
+            "budget": 634027.210606,
+            "varPct": 0.0562622846421765
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 140507.36,
+            "budget": 141312.418539922,
+            "varPct": -0.00569701196992956
+          },
+          "qtd": {
+            "actual": 332884.22,
+            "budget": 321726.923553,
+            "varPct": 0.0346793992985857
+          },
+          "ytd": {
+            "actual": 669699.03,
+            "budget": 634027.210606,
+            "varPct": 0.0562622846421765
+          }
+        }
+      }
+    },
+    {
+      "name": "Implementation",
+      "sourceTab": "BvA TSM",
+      "group": "EPD",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 18,
+          "budget": 20,
+          "variance": -2
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 6733.99,
+            "budget": 8110,
+            "varPct": -0.169668310727497
+          },
+          "qtd": {
+            "actual": 17365.42,
+            "budget": 23830,
+            "varPct": -0.271279060008393
+          },
+          "ytd": {
+            "actual": 29404.22,
+            "budget": 82734,
+            "varPct": -0.644593274832596
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 253155.82,
+            "budget": 222904.462580367,
+            "varPct": 0.135714453938877
+          },
+          "qtd": {
+            "actual": 668497.75,
+            "budget": 636317.095045656,
+            "varPct": 0.0505732993894112
+          },
+          "ytd": {
+            "actual": 1232480,
+            "budget": 1205248.75907146,
+            "varPct": 0.0225938759310729
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 4983.48,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 253155.82,
+            "budget": 222904.462580367,
+            "varPct": 0.135714453938877
+          },
+          "qtd": {
+            "actual": 668497.75,
+            "budget": 636317.095045656,
+            "varPct": 0.0505732993894112
+          },
+          "ytd": {
+            "actual": 1237463.48,
+            "budget": 1205248.75907146,
+            "varPct": 0.0267286903936403
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 259889.81,
+            "budget": 231014.462580367,
+            "varPct": 0.124993678305262
+          },
+          "qtd": {
+            "actual": 685863.17,
+            "budget": 660147.095045656,
+            "varPct": 0.0389550679649147
+          },
+          "ytd": {
+            "actual": 1266867.7,
+            "budget": 1287982.75907146,
+            "varPct": -0.0163938988489895
+          }
+        }
+      }
+    },
+    {
+      "name": "Accounting & Finance",
+      "sourceTab": "BvA Acct & Finance",
+      "group": "G&A",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 6,
+          "budget": 6,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 116283.71,
+            "budget": 152690.703305,
+            "varPct": -0.23843621462845
+          },
+          "qtd": {
+            "actual": 340434.68,
+            "budget": 458072.109915,
+            "varPct": -0.256809850171469
+          },
+          "ytd": {
+            "actual": 747558.73,
+            "budget": 913939.596174086,
+            "varPct": -0.182047989681797
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 83022.27,
+            "budget": 253876.3207593,
+            "varPct": -0.672981435402503
+          },
+          "qtd": {
+            "actual": 202516.43,
+            "budget": 648873.539857695,
+            "varPct": -0.687895379360955
+          },
+          "ytd": {
+            "actual": 890433.54,
+            "budget": 1177025.7887497,
+            "varPct": -0.243488504235859
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 199305.98,
+            "budget": 406567.0240643,
+            "varPct": -0.509783213582814
+          },
+          "qtd": {
+            "actual": 542951.11,
+            "budget": 1106945.64977269,
+            "varPct": -0.509505177502173
+          },
+          "ytd": {
+            "actual": 1637992.27,
+            "budget": 2090965.38492378,
+            "varPct": -0.216633483361224
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 199305.98,
+            "budget": 406567.0240643,
+            "varPct": -0.509783213582814
+          },
+          "qtd": {
+            "actual": 542951.11,
+            "budget": 1106945.64977269,
+            "varPct": -0.509505177502173
+          },
+          "ytd": {
+            "actual": 1637992.27,
+            "budget": 2090965.38492378,
+            "varPct": -0.216633483361224
+          }
+        }
+      }
+    },
+    {
+      "name": "Analytics",
+      "sourceTab": "BvA Analytics",
+      "group": "G&A",
+      "type": "Department",
+      "budgetLoaded": false,
+      "flags": [
+        "BUDGET_NOT_LOADED"
+      ],
+      "metrics": {
+        "headcount": {
+          "actual": 0,
+          "budget": 0,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 23167.03,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 185277.21,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 123.25,
+            "budget": 2500,
+            "varPct": -0.9507
+          },
+          "ytd": {
+            "actual": 44626.94,
+            "budget": 5000,
+            "varPct": 7.925388
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 23290.28,
+            "budget": 2500,
+            "varPct": 8.316112
+          },
+          "ytd": {
+            "actual": 229904.15,
+            "budget": 5000,
+            "varPct": 44.98083
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 23290.28,
+            "budget": 2500,
+            "varPct": 8.316112
+          },
+          "ytd": {
+            "actual": 229904.15,
+            "budget": 5000,
+            "varPct": 44.98083
+          }
+        }
+      }
+    },
+    {
+      "name": "HR",
+      "sourceTab": "BvA HR",
+      "group": "G&A",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 8,
+          "budget": 8,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 113089.8,
+            "budget": 149719.419044444,
+            "varPct": -0.24465509736964
+          },
+          "qtd": {
+            "actual": 340447.64,
+            "budget": 464358.257133333,
+            "varPct": -0.26684271299122
+          },
+          "ytd": {
+            "actual": 645582.47,
+            "budget": 950551.945142243,
+            "varPct": -0.32083409717983
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 44098.21,
+            "budget": 140341.923398667,
+            "varPct": -0.685780207851854
+          },
+          "qtd": {
+            "actual": 165723.45,
+            "budget": 394797.432016667,
+            "varPct": -0.580231692102283
+          },
+          "ytd": {
+            "actual": 324961.21,
+            "budget": 768376.258848333,
+            "varPct": -0.577080621299958
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 157188.01,
+            "budget": 290061.342443111,
+            "varPct": -0.458087007816876
+          },
+          "qtd": {
+            "actual": 506171.09,
+            "budget": 859155.68915,
+            "varPct": -0.410850563649556
+          },
+          "ytd": {
+            "actual": 970543.68,
+            "budget": 1718928.20399058,
+            "varPct": -0.435378581986824
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 157188.01,
+            "budget": 290061.342443111,
+            "varPct": -0.458087007816876
+          },
+          "qtd": {
+            "actual": 506171.09,
+            "budget": 859155.68915,
+            "varPct": -0.410850563649556
+          },
+          "ytd": {
+            "actual": 970543.68,
+            "budget": 1718928.20399058,
+            "varPct": -0.435378581986824
+          }
+        }
+      }
+    },
+    {
+      "name": "Executive",
+      "sourceTab": "BvA Exec",
+      "group": "G&A",
+      "type": "Department",
+      "budgetLoaded": true,
+      "flags": [
+        "REVIEW_LARGE_VARIANCE"
+      ],
+      "metrics": {
+        "headcount": {
+          "actual": 2,
+          "budget": 2,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 85963.62,
+            "budget": 49549,
+            "varPct": 0.734921390946336
+          },
+          "qtd": {
+            "actual": 228896.36,
+            "budget": 148647,
+            "varPct": 0.53986531850626
+          },
+          "ytd": {
+            "actual": 503672.17,
+            "budget": 297294,
+            "varPct": 0.694188816457782
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 32925.41,
+            "budget": 31049,
+            "varPct": 0.0604338303971141
+          },
+          "qtd": {
+            "actual": 239573.34,
+            "budget": 98190,
+            "varPct": 1.43989550870761
+          },
+          "ytd": {
+            "actual": 672056.51,
+            "budget": 198857,
+            "varPct": 2.37959694654953
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 118889.03,
+            "budget": 80598,
+            "varPct": 0.475086602645227
+          },
+          "qtd": {
+            "actual": 468469.7,
+            "budget": 246837,
+            "varPct": 0.897890915867557
+          },
+          "ytd": {
+            "actual": 1175728.68,
+            "budget": 496151,
+            "varPct": 1.36969930525183
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 118889.03,
+            "budget": 80598,
+            "varPct": 0.475086602645227
+          },
+          "qtd": {
+            "actual": 468469.7,
+            "budget": 246837,
+            "varPct": 0.897890915867557
+          },
+          "ytd": {
+            "actual": 1175728.68,
+            "budget": 496151,
+            "varPct": 1.36969930525183
+          }
         }
       }
     },
     {
       "name": "Legal",
-      "sourceTab": "Legal",
+      "sourceTab": "BvA Legal",
       "group": "G&A",
       "type": "Department",
-      "budgetLoaded": false,
-      "flags": ["BUDGET_NOT_LOADED"],
+      "budgetLoaded": true,
+      "flags": [],
       "metrics": {
-        "headcount": { "actual": 6, "budget": null, "variance": null },
+        "headcount": {
+          "actual": 3,
+          "budget": 3,
+          "variance": 0
+        },
         "cogs": {
-          "mtd": { "actual": 0, "budget": null, "varPct": null },
-          "qtd": { "actual": 0, "budget": null, "varPct": null },
-          "ytd": { "actual": 0, "budget": null, "varPct": null }
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
         },
         "people": {
-          "mtd": { "actual": 128000, "budget": null, "varPct": null },
-          "qtd": { "actual": 380000, "budget": null, "varPct": null },
-          "ytd": { "actual": 760000, "budget": null, "varPct": null }
+          "mtd": {
+            "actual": 75977.2,
+            "budget": 77834,
+            "varPct": -0.0238558984505487
+          },
+          "qtd": {
+            "actual": 227989.44,
+            "budget": 233502,
+            "varPct": -0.0236081917927896
+          },
+          "ytd": {
+            "actual": 394483.92,
+            "budget": 404706,
+            "varPct": -0.0252580391691746
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 42000, "budget": null, "varPct": null },
-          "qtd": { "actual": 124000, "budget": null, "varPct": null },
-          "ytd": { "actual": 250000, "budget": null, "varPct": null }
+          "mtd": {
+            "actual": 50373.75,
+            "budget": 41080,
+            "varPct": 0.226235394352483
+          },
+          "qtd": {
+            "actual": 185556.84,
+            "budget": 128838,
+            "varPct": 0.440233781958739
+          },
+          "ytd": {
+            "actual": 364487.78,
+            "budget": 284146,
+            "varPct": 0.282748235062257
+          }
         },
         "opex": {
-          "mtd": { "actual": 170000, "budget": null, "varPct": null },
-          "qtd": { "actual": 504000, "budget": null, "varPct": null },
-          "ytd": { "actual": 1010000, "budget": null, "varPct": null }
+          "mtd": {
+            "actual": 126350.95,
+            "budget": 118914,
+            "varPct": 0.0625405755419883
+          },
+          "qtd": {
+            "actual": 413546.28,
+            "budget": 362340,
+            "varPct": 0.141321079648949
+          },
+          "ytd": {
+            "actual": 758971.7,
+            "budget": 688852,
+            "varPct": 0.101792112093744
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 170000, "budget": null, "varPct": null },
-          "qtd": { "actual": 504000, "budget": null, "varPct": null },
-          "ytd": { "actual": 1010000, "budget": null, "varPct": null }
+          "mtd": {
+            "actual": 126350.95,
+            "budget": 118914,
+            "varPct": 0.0625405755419883
+          },
+          "qtd": {
+            "actual": 413546.28,
+            "budget": 362340,
+            "varPct": 0.141321079648949
+          },
+          "ytd": {
+            "actual": 758971.7,
+            "budget": 688852,
+            "varPct": 0.101792112093744
+          }
         }
       }
     }
   ],
   "leaders": [
     {
-      "name": "CTO",
-      "sourceTab": "CTO Rollup",
-      "group": "R&D",
+      "name": "Armaan",
+      "sourceTab": "BvA Armaan",
+      "group": "Leadership",
       "type": "Leader",
       "budgetLoaded": true,
       "flags": [],
       "metrics": {
-        "headcount": { "actual": 150, "budget": 156, "variance": -6 },
+        "headcount": {
+          "actual": 78,
+          "budget": 88,
+          "variance": -10
+        },
         "cogs": {
-          "mtd": { "actual": 145000, "budget": 150000, "varPct": -0.0333 },
-          "qtd": { "actual": 430000, "budget": 450000, "varPct": -0.0444 },
-          "ytd": { "actual": 870000, "budget": 900000, "varPct": -0.0333 }
+          "mtd": {
+            "actual": 156859.26,
+            "budget": 94519,
+            "varPct": 0.659552682529439
+          },
+          "qtd": {
+            "actual": 442848.77,
+            "budget": 273592,
+            "varPct": 0.618646634404515
+          },
+          "ytd": {
+            "actual": 817789.02,
+            "budget": 564756,
+            "varPct": 0.448039542740582
+          }
         },
         "people": {
-          "mtd": { "actual": 2550000, "budget": 2640000, "varPct": -0.0341 },
-          "qtd": { "actual": 7540000, "budget": 7920000, "varPct": -0.048 },
-          "ytd": { "actual": 15260000, "budget": 15840000, "varPct": -0.0366 }
+          "mtd": {
+            "actual": 1252992.28,
+            "budget": 1331497.905592,
+            "varPct": -0.0589603823350331
+          },
+          "qtd": {
+            "actual": 3691911.03,
+            "budget": 3768986.09096111,
+            "varPct": -0.020449813053424
+          },
+          "ytd": {
+            "actual": 7328945.62,
+            "budget": 7291125.11040448,
+            "varPct": 0.005187198000697
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 375000, "budget": 350000, "varPct": 0.0714 },
-          "qtd": { "actual": 1100000, "budget": 1050000, "varPct": 0.0476 },
-          "ytd": { "actual": 2200000, "budget": 2100000, "varPct": 0.0476 }
+          "mtd": {
+            "actual": 242301.38,
+            "budget": 327428.836655588,
+            "varPct": -0.259987658769136
+          },
+          "qtd": {
+            "actual": 829029.12,
+            "budget": 856785.1779,
+            "varPct": -0.0323955859834443
+          },
+          "ytd": {
+            "actual": 1516919.43,
+            "budget": 1801480.7193,
+            "varPct": -0.157959664098193
+          }
         },
         "opex": {
-          "mtd": { "actual": 2925000, "budget": 2990000, "varPct": -0.0217 },
-          "qtd": { "actual": 8640000, "budget": 8970000, "varPct": -0.0368 },
-          "ytd": { "actual": 17460000, "budget": 17940000, "varPct": -0.0268 }
+          "mtd": {
+            "actual": 1495293.66,
+            "budget": 1658926.74224759,
+            "varPct": -0.0986379193730345
+          },
+          "qtd": {
+            "actual": 4520940.15,
+            "budget": 4625771.26886111,
+            "varPct": -0.0226624086596744
+          },
+          "ytd": {
+            "actual": 8845865.05,
+            "budget": 9092605.82970448,
+            "varPct": -0.0271364209914837
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 3070000, "budget": 3140000, "varPct": -0.0223 },
-          "qtd": { "actual": 9070000, "budget": 9420000, "varPct": -0.0372 },
-          "ytd": { "actual": 18330000, "budget": 18840000, "varPct": -0.0271 }
+          "mtd": {
+            "actual": 1652152.92,
+            "budget": 1753445.74224759,
+            "varPct": -0.0577678680366521
+          },
+          "qtd": {
+            "actual": 4963788.92,
+            "budget": 4899363.26886111,
+            "varPct": 0.0131498008217432
+          },
+          "ytd": {
+            "actual": 9663654.07,
+            "budget": 9657361.82970448,
+            "varPct": 0.000651548570559601
+          }
         }
       }
     },
     {
-      "name": "CRO",
-      "sourceTab": "CRO Rollup",
-      "group": "GTM",
+      "name": "Kyle",
+      "sourceTab": "BvA Kyle",
+      "group": "Leadership",
       "type": "Leader",
       "budgetLoaded": true,
       "flags": [],
       "metrics": {
-        "headcount": { "actual": 56, "budget": 58, "variance": -2 },
+        "headcount": {
+          "actual": 76,
+          "budget": 82,
+          "variance": -6
+        },
         "cogs": {
-          "mtd": { "actual": 210000, "budget": 200000, "varPct": 0.05 },
-          "qtd": { "actual": 620000, "budget": 600000, "varPct": 0.0333 },
-          "ytd": { "actual": 1240000, "budget": 1200000, "varPct": 0.0333 }
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
         },
         "people": {
-          "mtd": { "actual": 1020000, "budget": 1050000, "varPct": -0.0286 },
-          "qtd": { "actual": 3040000, "budget": 3150000, "varPct": -0.0349 },
-          "ytd": { "actual": 6120000, "budget": 6300000, "varPct": -0.0286 }
+          "mtd": {
+            "actual": 1680759.74,
+            "budget": 1928014.74304833,
+            "varPct": -0.128243315534717
+          },
+          "qtd": {
+            "actual": 4873763.85,
+            "budget": 5554457.18082331,
+            "varPct": -0.122549028404323
+          },
+          "ytd": {
+            "actual": 9893247.97,
+            "budget": 10402802.0207474,
+            "varPct": -0.0489823847201136
+          }
         },
         "nonPeople": {
-          "mtd": { "actual": 620000, "budget": 470000, "varPct": 0.3191 },
-          "qtd": { "actual": 1785000, "budget": 1410000, "varPct": 0.266 },
-          "ytd": { "actual": 3580000, "budget": 2820000, "varPct": 0.2695 }
+          "mtd": {
+            "actual": 264064.66,
+            "budget": 325120.3515,
+            "varPct": -0.187794123678536
+          },
+          "qtd": {
+            "actual": 898085.63,
+            "budget": 1322500.09383333,
+            "varPct": -0.320918286367108
+          },
+          "ytd": {
+            "actual": 1821148.93,
+            "budget": 2676738.11176667,
+            "varPct": -0.319638734176341
+          }
         },
         "opex": {
-          "mtd": { "actual": 1640000, "budget": 1520000, "varPct": 0.0789 },
-          "qtd": { "actual": 4825000, "budget": 4560000, "varPct": 0.0581 },
-          "ytd": { "actual": 9700000, "budget": 9120000, "varPct": 0.0636 }
+          "mtd": {
+            "actual": 1944824.4,
+            "budget": 2253135.09454833,
+            "varPct": -0.136836311011408
+          },
+          "qtd": {
+            "actual": 5771849.48,
+            "budget": 6876957.27465665,
+            "varPct": -0.160697202341107
+          },
+          "ytd": {
+            "actual": 11714396.9,
+            "budget": 13079540.1325141,
+            "varPct": -0.104372418195386
+          }
         },
         "cogsOpex": {
-          "mtd": { "actual": 1850000, "budget": 1720000, "varPct": 0.0756 },
-          "qtd": { "actual": 5445000, "budget": 5160000, "varPct": 0.0552 },
-          "ytd": { "actual": 10940000, "budget": 10320000, "varPct": 0.0601 }
+          "mtd": {
+            "actual": 1944824.4,
+            "budget": 2253135.09454833,
+            "varPct": -0.136836311011408
+          },
+          "qtd": {
+            "actual": 5771849.48,
+            "budget": 6876957.27465665,
+            "varPct": -0.160697202341107
+          },
+          "ytd": {
+            "actual": 11714396.9,
+            "budget": 13079540.1325141,
+            "varPct": -0.104372418195386
+          }
+        }
+      }
+    },
+    {
+      "name": "Keith",
+      "sourceTab": "BvA Keith",
+      "group": "Leadership",
+      "type": "Leader",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 8,
+          "budget": 8,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 202247.33,
+            "budget": 202239.703305,
+            "varPct": 3.77111658858009e-05
+          },
+          "qtd": {
+            "actual": 569331.04,
+            "budget": 606719.109915,
+            "varPct": -0.0616233596470002
+          },
+          "ytd": {
+            "actual": 1251230.9,
+            "budget": 1211233.59617409,
+            "varPct": 0.0330219570793389
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 115947.68,
+            "budget": 284925.3207593,
+            "varPct": -0.593059403456983
+          },
+          "qtd": {
+            "actual": 442089.77,
+            "budget": 747063.539857695,
+            "varPct": -0.408230028085413
+          },
+          "ytd": {
+            "actual": 1562490.05,
+            "budget": 1375882.7887497,
+            "varPct": 0.135627295272645
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 318195.01,
+            "budget": 487165.0240643,
+            "varPct": -0.346843483661089
+          },
+          "qtd": {
+            "actual": 1011420.81,
+            "budget": 1353782.64977269,
+            "varPct": -0.252892766671355
+          },
+          "ytd": {
+            "actual": 2813720.95,
+            "budget": 2587116.38492378,
+            "varPct": 0.0875896292863896
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 318195.01,
+            "budget": 487165.0240643,
+            "varPct": -0.346843483661089
+          },
+          "qtd": {
+            "actual": 1011420.81,
+            "budget": 1353782.64977269,
+            "varPct": -0.252892766671355
+          },
+          "ytd": {
+            "actual": 2813720.95,
+            "budget": 2587116.38492378,
+            "varPct": 0.0875896292863896
+          }
+        }
+      }
+    },
+    {
+      "name": "Nate",
+      "sourceTab": "BvA Nate",
+      "group": "Leadership",
+      "type": "Leader",
+      "budgetLoaded": true,
+      "flags": [
+        "HC_ACTUAL_MISSING"
+      ],
+      "metrics": {
+        "headcount": {
+          "actual": 0,
+          "budget": 561,
+          "variance": -561
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 111036.09,
+            "budget": 75937.3333333333,
+            "varPct": 0.462206863554159
+          },
+          "qtd": {
+            "actual": 280498.25,
+            "budget": 214990.06,
+            "varPct": 0.304703343028975
+          },
+          "ytd": {
+            "actual": 530344.64,
+            "budget": 401445.24,
+            "varPct": 0.321088375590155
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 1568546.63,
+            "budget": 1520188.22381685,
+            "varPct": 0.0318108017319929
+          },
+          "qtd": {
+            "actual": 4645877.54,
+            "budget": 4368270.88421946,
+            "varPct": 0.0635506961766972
+          },
+          "ytd": {
+            "actual": 9138741.26,
+            "budget": 8113369.64438,
+            "varPct": 0.126380488078743
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 224949.49,
+            "budget": 218577.384552,
+            "varPct": 0.0291526292212727
+          },
+          "qtd": {
+            "actual": 625379.58,
+            "budget": 639135.133358333,
+            "varPct": -0.0215221361499168
+          },
+          "ytd": {
+            "actual": 1127922.8,
+            "budget": 1106793.287943,
+            "varPct": 0.0190907482789942
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 1794738.13,
+            "budget": 1729134.4895882,
+            "varPct": 0.0379401607028431
+          },
+          "qtd": {
+            "actual": 4959044.75,
+            "budget": 4707928.66123582,
+            "varPct": 0.0533389749151933
+          },
+          "ytd": {
+            "actual": 10218828.07,
+            "budget": 9175859.21963906,
+            "varPct": 0.113664434620866
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 1905774.22,
+            "budget": 1805071.82292153,
+            "varPct": 0.0557885818169181
+          },
+          "qtd": {
+            "actual": 5239543,
+            "budget": 4922918.72123582,
+            "varPct": 0.0643163734144883
+          },
+          "ytd": {
+            "actual": 10749172.71,
+            "budget": 9577304.45963906,
+            "varPct": 0.12235888034044
+          }
+        }
+      }
+    },
+    {
+      "name": "Amanda",
+      "sourceTab": "BvA Amanda",
+      "group": "Leadership",
+      "type": "Leader",
+      "budgetLoaded": true,
+      "flags": [],
+      "metrics": {
+        "headcount": {
+          "actual": 11,
+          "budget": 11,
+          "variance": 0
+        },
+        "cogs": {
+          "mtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 0,
+            "budget": 0,
+            "varPct": null
+          }
+        },
+        "people": {
+          "mtd": {
+            "actual": 189067,
+            "budget": 227553.419044444,
+            "varPct": -0.169131359159791
+          },
+          "qtd": {
+            "actual": 568437.08,
+            "budget": 697860.257133333,
+            "varPct": -0.185457153936488
+          },
+          "ytd": {
+            "actual": 1040066.39,
+            "budget": 1355257.94514224,
+            "varPct": -0.23256942065679
+          }
+        },
+        "nonPeople": {
+          "mtd": {
+            "actual": 94471.96,
+            "budget": 181421.923398667,
+            "varPct": -0.479269328479105
+          },
+          "qtd": {
+            "actual": 351280.29,
+            "budget": 523635.432016667,
+            "varPct": -0.32915103042756
+          },
+          "ytd": {
+            "actual": 1729515.38,
+            "budget": 2407780.20399058,
+            "varPct": -0.28169715112137
+          }
+        },
+        "opex": {
+          "mtd": {
+            "actual": 283538.96,
+            "budget": 408975.342443111,
+            "varPct": -0.306708912311894
+          },
+          "qtd": {
+            "actual": 919717.37,
+            "budget": 1221495.68915,
+            "varPct": -0.247056393101148
+          },
+          "ytd": {
+            "actual": 2769581.77,
+            "budget": 3763038.14913282,
+            "varPct": -0.264003802183551
+          }
+        },
+        "cogsOpex": {
+          "mtd": {
+            "actual": 283538.96,
+            "budget": 408975.342443111,
+            "varPct": -0.306708912311894
+          },
+          "qtd": {
+            "actual": 919717.37,
+            "budget": 1221495.68915,
+            "varPct": -0.247056393101148
+          },
+          "ytd": {
+            "actual": 2769581.77,
+            "budget": 3763038.14913282,
+            "varPct": -0.264003802183551
+          }
         }
       }
     }
