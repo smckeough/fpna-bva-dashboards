@@ -30,14 +30,20 @@ export type Metrics = {
   [k: string]: HeadcountBlock | MetricBlock | undefined;
 };
 
+export type MonthlyPoint = { month: string; value: number | null };
+
 export type SoftwareVendorRow = {
   name: string;
   department?: string | null;
   isTotal?: boolean;
   isOther?: boolean;
   mtd: MetricWindow;
+  qtd?: MetricWindow | null;
+  ytd?: MetricWindow | null;
   lastMonthActual?: number | null;
   mom?: { delta: number | null; pct: number | null };
+  monthlyActual?: MonthlyPoint[] | null;
+  monthlyBudget?: MonthlyPoint[] | null;
 };
 
 export type SoftwareBlock = {

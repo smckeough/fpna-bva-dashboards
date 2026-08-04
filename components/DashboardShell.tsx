@@ -331,6 +331,8 @@ function SectionView({
           )}
           <SoftwareTable
             record={record}
+            period={period}
+            currentMonthKey={selectedMonth}
             showMoM={section.showMoM ?? true}
             topN={section.topN}
           />
