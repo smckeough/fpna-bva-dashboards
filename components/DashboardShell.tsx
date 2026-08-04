@@ -19,6 +19,7 @@ import VarianceTable from './VarianceTable';
 import BarChart from './BarChart';
 import LineChart from './LineChart';
 import TrendSparkline from './TrendSparkline';
+import HistoryChart from './HistoryChart';
 import Commentary from './Commentary';
 
 type Props = {
@@ -27,6 +28,7 @@ type Props = {
   initialData: DashboardData;
   index: MonthIndex;
   config: DashboardConfig;
+  months: Record<string, DashboardData>;
 };
 
 const DEFAULT_TABLE_PERIODS: PeriodKey[] = ['mtd', 'qtd', 'ytd'];
@@ -37,12 +39,17 @@ export default function DashboardShell({
   initialData,
   index,
   config,
+  months,
 }: Props) {
   const [period, setPeriod] = useState<PeriodKey>(config.defaultPeriod);
   const [monthKey, setMonthKey] = useState<string>(index.default ?? '');
   const [data, setData] = useState<DashboardData>(initialData);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // Merge freshly-fetched months into the initial history map so newly
+  // switched months contribute to the trend line without a full reload.
+  const [historyMonths, setHistoryMonths] =
+    useState<Record<string, DashboardData>>(months);
 
   const periodLabels = Object.fromEntries(
     config.periods.map((p) => [p.key, p.label]),
@@ -60,6 +67,7 @@ export default function DashboardShell({
       const payload: DashboardData = await res.json();
       setData(payload);
       setMonthKey(next);
+      setHistoryMonths((prev) => ({ ...prev, [next]: payload }));
     } catch (err) {
       setError((err as Error).message);
     } finally {
@@ -115,6 +123,11 @@ export default function DashboardShell({
               period={period}
               config={config}
               periodLabels={periodLabels}
+              index={index}
+              months={historyMonths}
+              source={entry.source}
+              dataKey={entry.dataKey}
+              selectedMonth={monthKey}
             />
           ))}
         </div>
@@ -138,12 +151,22 @@ function SectionView({
   period,
   config,
   periodLabels,
+  index,
+  months,
+  source,
+  dataKey,
+  selectedMonth,
 }: {
   section: Section;
   record: DashboardRecord;
   period: PeriodKey;
   config: DashboardConfig;
   periodLabels: Record<PeriodKey, string>;
+  index: MonthIndex;
+  months: Record<string, DashboardData>;
+  source: 'departments' | 'leaders';
+  dataKey: string;
+  selectedMonth: string;
 }) {
   switch (section.type) {
     case 'flagBanner':
@@ -224,6 +247,29 @@ function SectionView({
           metric={section.metric}
           metricLabels={config.metricLabels}
         />
+      );
+    case 'historyChart':
+      return (
+        <div>
+          {section.title && (
+            <h2 className="text-sm font-semibold text-gray-800 mb-3">
+              {section.title}
+            </h2>
+          )}
+          <HistoryChart
+            metric={section.metric}
+            period={section.period ?? period}
+            series={section.series ?? ['actual', 'budget']}
+            monthsBack={section.monthsBack}
+            months={months}
+            index={index}
+            source={source}
+            dataKey={dataKey}
+            selectedMonth={selectedMonth}
+            palette={config.palette}
+            metricLabels={config.metricLabels}
+          />
+        </div>
       );
     case 'commentary':
       return <Commentary body={section.body} />;

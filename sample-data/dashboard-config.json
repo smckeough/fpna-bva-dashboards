@@ -118,6 +118,17 @@
             "actual",
             "budget"
           ]
+        },
+        {
+          "type": "historyChart",
+          "title": "OpEx trend (MTD)",
+          "metric": "opex",
+          "period": "mtd",
+          "series": [
+            "actual",
+            "budget"
+          ],
+          "monthsBack": 12
         }
       ]
     },
@@ -190,6 +201,17 @@
             "actual",
             "budget"
           ]
+        },
+        {
+          "type": "historyChart",
+          "title": "OpEx trend (MTD)",
+          "metric": "opex",
+          "period": "mtd",
+          "series": [
+            "actual",
+            "budget"
+          ],
+          "monthsBack": 12
         }
       ]
     }

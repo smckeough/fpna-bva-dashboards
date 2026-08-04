@@ -85,6 +85,25 @@ export async function loadBootstrap(): Promise<{
   return { config, index, defaultMonth };
 }
 
+// Load every month referenced by the index. Used server-side for pages that
+// render a historyChart section — trend lines need the full series. Files are
+// small (~40KB), and both branches of loadJson disable caching, so this stays
+// fresh on every request.
+export async function loadAllMonths(
+  index: MonthIndex,
+): Promise<Record<string, DashboardData>> {
+  const entries = await Promise.all(
+    index.months.map(async (m) => {
+      try {
+        return [m.key, await loadMonth(m.key)] as const;
+      } catch {
+        return null;
+      }
+    }),
+  );
+  return Object.fromEntries(entries.filter((e) => e !== null));
+}
+
 export function findDashboard(
   config: DashboardConfig,
   route: string,

@@ -96,6 +96,13 @@ export type Section =
       series?: ('actual' | 'budget')[];
     })
   | (SectionCommon & { type: 'trendSparkline'; metric: string })
+  | (SectionCommon & {
+      type: 'historyChart';
+      metric: string;
+      period?: PeriodKey;
+      series?: ('actual' | 'budget')[];
+      monthsBack?: number;
+    })
   | (SectionCommon & { type: 'commentary'; body?: string });
 
 export type Template = {

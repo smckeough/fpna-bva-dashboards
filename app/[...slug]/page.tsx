@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import DashboardShell from '@/components/DashboardShell';
-import { findDashboard, loadBootstrap } from '@/lib/data';
+import { findDashboard, loadAllMonths, loadBootstrap } from '@/lib/data';
 
 export const dynamic = 'force-dynamic';
 
@@ -47,6 +47,13 @@ export default async function CatchAllDashboard({
     );
   }
 
+  // Pre-load every month so historyChart sections have the full trend. Falls
+  // back gracefully if some months fail — the trend line just has holes.
+  const months = await loadAllMonths(index);
+  // Ensure the default month is present even if loadAllMonths couldn't reach
+  // the others (e.g. the Finance server timed out on the rest).
+  months[index.default!] = defaultMonth;
+
   return (
     <DashboardShell
       entry={found.entry}
@@ -54,6 +61,7 @@ export default async function CatchAllDashboard({
       initialData={defaultMonth}
       index={index}
       config={config}
+      months={months}
     />
   );
 }
