@@ -103,6 +103,12 @@ export type Section =
       series?: ('actual' | 'budget')[];
       monthsBack?: number;
     })
+  | (SectionCommon & {
+      type: 'breakdownTable';
+      rows: string[];
+      periods?: PeriodKey[];
+      totalRows?: string[];
+    })
   | (SectionCommon & { type: 'commentary'; body?: string });
 
 export type Template = {
@@ -118,6 +124,10 @@ export type DashboardConfigEntry = {
   source: 'departments' | 'leaders';
   template: string;
   group?: string;
+  // Names of department records that roll up into this record. Used by
+  // breakdownTable sections on leader dashboards to show per-child detail
+  // under each metric row.
+  children?: string[];
 };
 
 export type DashboardConfig = {

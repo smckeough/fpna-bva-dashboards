@@ -169,8 +169,10 @@
           ]
         },
         {
-          "type": "varianceTable",
+          "type": "breakdownTable",
+          "title": "Rollup \u2014 click any row to see department detail",
           "rows": [
+            "headcount",
             "cogs",
             "people",
             "nonPeople",
@@ -431,7 +433,8 @@
       "title": "Armaan \u2014 Portfolio",
       "dataKey": "Armaan",
       "source": "leaders",
-      "template": "leader"
+      "template": "leader",
+      "children": ["Engineering", "Product Operations", "IT", "Implementation", "Analytics"]
     },
     {
       "id": "leader-kyle",
@@ -439,7 +442,8 @@
       "title": "Kyle \u2014 Portfolio",
       "dataKey": "Kyle",
       "source": "leaders",
-      "template": "leader"
+      "template": "leader",
+      "children": ["Sales", "Customer Success", "Solutions Consultants", "BDR", "Revenue Operations", "Marketing"]
     },
     {
       "id": "leader-keith",
@@ -447,7 +451,8 @@
       "title": "Keith \u2014 Portfolio",
       "dataKey": "Keith",
       "source": "leaders",
-      "template": "leader"
+      "template": "leader",
+      "children": ["Analytics", "Accounting & Finance", "Executive"]
     },
     {
       "id": "leader-nate",
@@ -455,7 +460,8 @@
       "title": "Nate \u2014 Portfolio",
       "dataKey": "Nate",
       "source": "leaders",
-      "template": "leader"
+      "template": "leader",
+      "children": ["Licensing", "Payer Enrollment", "Credentialing", "Ongoing Monitoring", "Intake", "Operations Management", "India Operations Mgmt", "Quality Assurance", "Customer Support"]
     },
     {
       "id": "leader-amanda",
@@ -463,7 +469,8 @@
       "title": "Amanda \u2014 Portfolio",
       "dataKey": "Amanda",
       "source": "leaders",
-      "template": "leader"
+      "template": "leader",
+      "children": ["Legal", "HR"]
     }
   ]
 }

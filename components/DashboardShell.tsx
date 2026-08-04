@@ -20,6 +20,7 @@ import BarChart from './BarChart';
 import LineChart from './LineChart';
 import TrendSparkline from './TrendSparkline';
 import HistoryChart from './HistoryChart';
+import BreakdownTable from './BreakdownTable';
 import Commentary from './Commentary';
 
 type Props = {
@@ -56,6 +57,15 @@ export default function DashboardShell({
   ) as Record<PeriodKey, string>;
 
   const record = findRecord(data, entry.source, entry.dataKey);
+
+  // For leader dashboards, resolve entry.children → real department records
+  // from THIS month's data so the breakdown expands with the correct numbers.
+  const childRecords: DashboardRecord[] = (entry.children ?? [])
+    .map((name) => data.departments.find((d) => d.name === name))
+    .filter((d): d is DashboardRecord => d != null);
+  const missingChildren = (entry.children ?? []).filter(
+    (name) => !data.departments.some((d) => d.name === name),
+  );
 
   async function switchMonth(next: string) {
     if (next === monthKey || loading) return;
@@ -115,11 +125,21 @@ export default function DashboardShell({
         </div>
       ) : (
         <div className="space-y-6">
+          {missingChildren.length > 0 && (
+            <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-2 text-xs text-amber-800">
+              Missing child record{missingChildren.length === 1 ? '' : 's'} for{' '}
+              {missingChildren.map((n) => (
+                <span key={n} className="font-mono mr-2">{n}</span>
+              ))}
+              — check the department names in dashboard-config.json.
+            </div>
+          )}
           {template.sections.map((section, i) => (
             <SectionView
               key={`${section.type}-${i}`}
               section={section}
               record={record}
+              childRecords={childRecords}
               period={period}
               config={config}
               periodLabels={periodLabels}
@@ -148,6 +168,7 @@ function findRecord(
 function SectionView({
   section,
   record,
+  childRecords,
   period,
   config,
   periodLabels,
@@ -159,6 +180,7 @@ function SectionView({
 }: {
   section: Section;
   record: DashboardRecord;
+  childRecords: DashboardRecord[];
   period: PeriodKey;
   config: DashboardConfig;
   periodLabels: Record<PeriodKey, string>;
@@ -247,6 +269,33 @@ function SectionView({
           metric={section.metric}
           metricLabels={config.metricLabels}
         />
+      );
+    case 'breakdownTable':
+      return (
+        <div>
+          {section.title && (
+            <h2 className="text-sm font-semibold text-gray-800 mb-3">
+              {section.title}
+            </h2>
+          )}
+          <BreakdownTable
+            record={record}
+            childRecords={childRecords}
+            rows={section.rows}
+            periods={section.periods ?? DEFAULT_TABLE_PERIODS}
+            periodLabels={periodLabels}
+            totalRows={section.totalRows}
+            metricLabels={config.metricLabels}
+          />
+          {childRecords.length === 0 && (
+            <p className="mt-2 text-xs text-gray-500">
+              No <code>children</code> declared for this leader in the config —
+              rows won&apos;t expand. Add a{' '}
+              <code>children: [&quot;Dept Name&quot;, …]</code> array to the
+              dashboard entry.
+            </p>
+          )}
+        </div>
       );
     case 'historyChart':
       return (
