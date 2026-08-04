@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import DashboardShell from '@/components/DashboardShell';
-import { findDashboard, findRecord, loadBoth } from '@/lib/data';
+import { findDashboard, loadBootstrap } from '@/lib/data';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,10 +15,9 @@ export default async function CatchAllDashboard({
   const { slug } = await params;
   const route = '/' + (slug ?? []).join('/');
 
-  let config;
-  let data;
+  let boot;
   try {
-    ({ config, data } = await loadBoth());
+    boot = await loadBootstrap();
   } catch (err: unknown) {
     return (
       <div className="p-10">
@@ -30,20 +29,19 @@ export default async function CatchAllDashboard({
     );
   }
 
+  const { config, index, defaultMonth } = boot;
   const found = findDashboard(config, route);
   if (!found) notFound();
 
-  const record = findRecord(data, found.entry.source, found.entry.dataKey);
-  if (!record) {
+  if (!defaultMonth) {
     return (
       <div className="p-10">
         <h1 className="text-lg font-semibold text-gray-900 mb-2">
           {found.entry.title}
         </h1>
         <p className="text-sm text-amber-700">
-          Configured record <span className="font-mono">{found.entry.dataKey}</span>{' '}
-          not found in <span className="font-mono">data.{found.entry.source}</span>
-          .
+          No months available yet. Run{' '}
+          <code>scripts/export_month.py</code> against a workbook to add one.
         </p>
       </div>
     );
@@ -53,9 +51,9 @@ export default async function CatchAllDashboard({
     <DashboardShell
       entry={found.entry}
       template={found.template}
-      record={record}
+      initialData={defaultMonth}
+      index={index}
       config={config}
-      reportMonth={data.meta.reportMonth}
     />
   );
 }

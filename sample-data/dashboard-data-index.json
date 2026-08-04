@@ -1,0 +1,10 @@
+{
+  "months": [
+    {
+      "key": "2026-06",
+      "label": "June 2026",
+      "source": "Medallion FP&A workbook \u2014 Dashboard Data (BvA tabs)"
+    }
+  ],
+  "default": "2026-06"
+}

@@ -1,4 +1,4 @@
-// Shared types for dashboard-data.json and dashboard-config.json.
+// Shared types for dashboard-data-<YYYY-MM>.json and dashboard-config.json.
 
 export type PeriodKey = 'mtd' | 'qtd' | 'ytd';
 
@@ -53,6 +53,17 @@ export type DashboardData = {
   leaders: DashboardRecord[];
 };
 
+export type MonthIndexEntry = {
+  key: string; // YYYY-MM
+  label: string; // "June 2026"
+  source?: string | null;
+};
+
+export type MonthIndex = {
+  months: MonthIndexEntry[];
+  default: string | null;
+};
+
 export type MetricKind = 'currency' | 'headcount' | 'count' | 'percent' | 'number';
 
 export type SectionKpiCard = {
@@ -103,7 +114,8 @@ export type DashboardConfigEntry = {
 };
 
 export type DashboardConfig = {
-  version?: string;
+  version?: string | number;
+  updated?: string;
   theme?: unknown;
   periods: { key: PeriodKey; label: string }[];
   defaultPeriod: PeriodKey;

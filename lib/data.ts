@@ -4,19 +4,24 @@ import type {
   DashboardConfig,
   DashboardData,
   DashboardRecord,
+  MonthIndex,
 } from './types';
 import { normalizeRoute } from './types';
 
-// Runtime loader for the two JSON blobs. Behavior depends on the base URL:
+// Runtime loader for the three JSON blobs the app depends on:
 //
-//   NEXT_PUBLIC_DATA_BASE_URL set to an absolute http(s) URL
+//   dashboard-config.json                  — layout config (rare changes)
+//   dashboard-data-index.json              — list of months + default
+//   dashboard-data-<YYYY-MM>.json          — one file per closed month
+//
+// Behavior:
+//   NEXT_PUBLIC_DATA_BASE_URL is an absolute http(s) URL
 //     → fetch with cache: 'no-store' every request. Overwriting either file
 //       on the Finance server updates the live app with no redeploy.
 //
 //   NEXT_PUBLIC_DATA_BASE_URL unset (local dev)
-//     → read from public/sample-data/ on disk directly. No port juggling,
-//       no self-fetch. The browser can still hit /sample-data/*.json if it
-//       needs to.
+//     → read from sample-data/ on disk directly. No self-fetch, no port
+//       juggling.
 //
 // Both branches disable caching so overwriting a file always wins.
 
@@ -47,27 +52,37 @@ async function loadJson<T>(fileName: string): Promise<T> {
     return JSON.parse(raw) as T;
   } catch (err) {
     throw new Error(
-      `Could not read ${filePath}. Place ${fileName} in sample-data/ ` +
-        `for local dev, or set NEXT_PUBLIC_DATA_BASE_URL to the Finance-server URL. ` +
+      `Could not read ${filePath}. Place ${fileName} in sample-data/ for local ` +
+        `dev, or set NEXT_PUBLIC_DATA_BASE_URL to the Finance-server URL. ` +
         `Underlying error: ${(err as Error).message}`,
     );
   }
-}
-
-export async function loadData(): Promise<DashboardData> {
-  return loadJson<DashboardData>('dashboard-data.json');
 }
 
 export async function loadConfig(): Promise<DashboardConfig> {
   return loadJson<DashboardConfig>('dashboard-config.json');
 }
 
-export async function loadBoth(): Promise<{
-  data: DashboardData;
+export async function loadIndex(): Promise<MonthIndex> {
+  return loadJson<MonthIndex>('dashboard-data-index.json');
+}
+
+export async function loadMonth(monthKey: string): Promise<DashboardData> {
+  if (!/^\d{4}-\d{2}$/.test(monthKey)) {
+    throw new Error(`Invalid month key: ${JSON.stringify(monthKey)} (expected YYYY-MM)`);
+  }
+  return loadJson<DashboardData>(`dashboard-data-${monthKey}.json`);
+}
+
+export async function loadBootstrap(): Promise<{
   config: DashboardConfig;
+  index: MonthIndex;
+  defaultMonth: DashboardData | null;
 }> {
-  const [data, config] = await Promise.all([loadData(), loadConfig()]);
-  return { data, config };
+  const [config, index] = await Promise.all([loadConfig(), loadIndex()]);
+  const defaultKey = index.default;
+  const defaultMonth = defaultKey ? await loadMonth(defaultKey) : null;
+  return { config, index, defaultMonth };
 }
 
 export function findDashboard(

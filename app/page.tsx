@@ -1,14 +1,13 @@
 import Link from 'next/link';
-import { loadBoth } from '@/lib/data';
+import { loadBootstrap } from '@/lib/data';
 import type { DashboardConfigEntry } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
-  let config;
-  let data;
+  let boot;
   try {
-    ({ config, data } = await loadBoth());
+    boot = await loadBootstrap();
   } catch (err) {
     return (
       <div className="p-10">
@@ -16,18 +15,17 @@ export default async function HomePage() {
           FP&amp;A · Budget vs Actual
         </h1>
         <p className="text-sm text-red-600 mt-4">
-          Could not load dashboard-config.json / dashboard-data.json:{' '}
-          {(err as Error).message}
+          Could not load dashboard files: {(err as Error).message}
         </p>
         <p className="text-xs text-gray-500 mt-2">
-          Set <code>NEXT_PUBLIC_DATA_BASE_URL</code> to the Finance-server URL
-          hosting these files, or place them in <code>public/sample-data/</code>{' '}
-          for local dev.
+          Set <code>NEXT_PUBLIC_DATA_BASE_URL</code> to the Finance-server URL,
+          or place the JSON files in <code>sample-data/</code>.
         </p>
       </div>
     );
   }
 
+  const { config, index, defaultMonth } = boot;
   const grouped: Record<string, DashboardConfigEntry[]> = {};
   for (const d of config.dashboards) {
     const bucket = d.source === 'leaders' ? 'Leaders' : 'Departments';
@@ -37,14 +35,20 @@ export default async function HomePage() {
   return (
     <div className="p-10">
       <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">
-        {data.meta.reportMonth}
+        {defaultMonth?.meta.reportMonth ?? 'no months loaded'}
       </p>
       <h1 className="text-2xl font-semibold text-gray-900 mb-1">
         FP&amp;A · Budget vs Actual
       </h1>
       <p className="text-sm text-gray-500 mb-8">
-        {config.dashboards.length} dashboards · source{' '}
-        <span className="font-mono">{data.meta.source ?? 'n/a'}</span>
+        {config.dashboards.length} dashboards ·{' '}
+        {index.months.length} month{index.months.length === 1 ? '' : 's'} loaded
+        {defaultMonth?.meta.source ? (
+          <>
+            {' · source '}
+            <span className="font-mono">{defaultMonth.meta.source}</span>
+          </>
+        ) : null}
       </p>
       {Object.entries(grouped).map(([bucket, items]) => (
         <section key={bucket} className="mb-8">

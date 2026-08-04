@@ -4,12 +4,15 @@ import { useState } from 'react';
 import type {
   DashboardConfig,
   DashboardConfigEntry,
+  DashboardData,
   DashboardRecord,
+  MonthIndex,
   PeriodKey,
   Section,
   Template,
 } from '@/lib/types';
 import PeriodToggle from './PeriodToggle';
+import MonthPicker from './MonthPicker';
 import FlagBanner from './FlagBanner';
 import KpiCards from './KpiCards';
 import VarianceTable from './VarianceTable';
@@ -21,9 +24,9 @@ import Commentary from './Commentary';
 type Props = {
   entry: DashboardConfigEntry;
   template: Template;
-  record: DashboardRecord;
+  initialData: DashboardData;
+  index: MonthIndex;
   config: DashboardConfig;
-  reportMonth: string;
 };
 
 const DEFAULT_TABLE_PERIODS: PeriodKey[] = ['mtd', 'qtd', 'ytd'];
@@ -31,48 +34,102 @@ const DEFAULT_TABLE_PERIODS: PeriodKey[] = ['mtd', 'qtd', 'ytd'];
 export default function DashboardShell({
   entry,
   template,
-  record,
+  initialData,
+  index,
   config,
-  reportMonth,
 }: Props) {
   const [period, setPeriod] = useState<PeriodKey>(config.defaultPeriod);
+  const [monthKey, setMonthKey] = useState<string>(index.default ?? '');
+  const [data, setData] = useState<DashboardData>(initialData);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const periodLabels = Object.fromEntries(
     config.periods.map((p) => [p.key, p.label]),
   ) as Record<PeriodKey, string>;
+
+  const record = findRecord(data, entry.source, entry.dataKey);
+
+  async function switchMonth(next: string) {
+    if (next === monthKey || loading) return;
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`/api/month/${next}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const payload: DashboardData = await res.json();
+      setData(payload);
+      setMonthKey(next);
+    } catch (err) {
+      setError((err as Error).message);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <div className="p-8 max-w-7xl">
       <header className="mb-6 flex items-start justify-between gap-4 flex-wrap">
         <div>
           <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">
-            {entry.source === 'leaders' ? 'Leader' : 'Department'} · {reportMonth}
+            {entry.source === 'leaders' ? 'Leader' : 'Department'} · {data.meta.reportMonth}
           </p>
           <h1 className="text-2xl font-semibold text-gray-900">{entry.title}</h1>
           {template.subtitle && (
             <p className="text-sm text-gray-500 mt-1">{template.subtitle}</p>
           )}
         </div>
-        <PeriodToggle
-          periods={config.periods}
-          value={period}
-          onChange={setPeriod}
-        />
+        <div className="flex items-center gap-3 flex-wrap">
+          <MonthPicker
+            months={index.months}
+            value={monthKey}
+            onChange={switchMonth}
+            loading={loading}
+          />
+          <PeriodToggle
+            periods={config.periods}
+            value={period}
+            onChange={setPeriod}
+          />
+        </div>
       </header>
 
-      <div className="space-y-6">
-        {template.sections.map((section, i) => (
-          <SectionView
-            key={`${section.type}-${i}`}
-            section={section}
-            record={record}
-            period={period}
-            config={config}
-            periodLabels={periodLabels}
-          />
-        ))}
-      </div>
+      {error && (
+        <div className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-2 text-sm text-red-800">
+          Could not load month: {error}
+        </div>
+      )}
+
+      {!record ? (
+        <div className="rounded-lg border border-dashed border-gray-300 p-4 text-sm text-gray-600">
+          No record for <span className="font-mono">{entry.dataKey}</span> in{' '}
+          <span className="font-mono">{data.meta.reportMonth}</span>.
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {template.sections.map((section, i) => (
+            <SectionView
+              key={`${section.type}-${i}`}
+              section={section}
+              record={record}
+              period={period}
+              config={config}
+              periodLabels={periodLabels}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
+}
+
+function findRecord(
+  data: DashboardData,
+  source: 'departments' | 'leaders',
+  dataKey: string,
+): DashboardRecord | null {
+  const bucket = data[source] ?? [];
+  return bucket.find((r) => r.name === dataKey) ?? null;
 }
 
 function SectionView({
