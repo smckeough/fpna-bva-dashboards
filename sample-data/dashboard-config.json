@@ -452,7 +452,7 @@
       "dataKey": "Keith",
       "source": "leaders",
       "template": "leader",
-      "children": ["Analytics", "Accounting & Finance", "Executive"]
+      "children": ["Accounting & Finance", "Executive"]
     },
     {
       "id": "leader-nate",
