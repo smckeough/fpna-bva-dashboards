@@ -21,6 +21,7 @@ import LineChart from './LineChart';
 import TrendSparkline from './TrendSparkline';
 import HistoryChart from './HistoryChart';
 import BreakdownTable from './BreakdownTable';
+import SoftwareTable from './SoftwareTable';
 import Commentary from './Commentary';
 
 type Props = {
@@ -317,6 +318,21 @@ function SectionView({
             selectedMonth={selectedMonth}
             palette={config.palette}
             metricLabels={config.metricLabels}
+          />
+        </div>
+      );
+    case 'softwareTable':
+      return (
+        <div>
+          {section.title && (
+            <h2 className="text-sm font-semibold text-gray-800 mb-3">
+              {section.title}
+            </h2>
+          )}
+          <SoftwareTable
+            record={record}
+            showMoM={section.showMoM ?? true}
+            topN={section.topN}
           />
         </div>
       );

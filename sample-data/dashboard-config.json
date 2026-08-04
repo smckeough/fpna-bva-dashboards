@@ -214,6 +214,11 @@
             "budget"
           ],
           "monthsBack": 12
+        },
+        {
+          "type": "softwareTable",
+          "title": "Software spend — current month",
+          "showMoM": true
         }
       ]
     }

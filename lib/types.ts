@@ -30,6 +30,20 @@ export type Metrics = {
   [k: string]: HeadcountBlock | MetricBlock | undefined;
 };
 
+export type SoftwareVendorRow = {
+  name: string;
+  department?: string | null;
+  isTotal?: boolean;
+  isOther?: boolean;
+  mtd: MetricWindow;
+  lastMonthActual?: number | null;
+  mom?: { delta: number | null; pct: number | null };
+};
+
+export type SoftwareBlock = {
+  vendors: SoftwareVendorRow[];
+};
+
 export type DashboardRecord = {
   name: string;
   sourceTab?: string;
@@ -38,6 +52,7 @@ export type DashboardRecord = {
   budgetLoaded: boolean;
   flags: string[];
   metrics: Metrics;
+  software?: SoftwareBlock;
 };
 
 export type DashboardData = {
@@ -109,7 +124,14 @@ export type Section =
       periods?: PeriodKey[];
       totalRows?: string[];
     })
-  | (SectionCommon & { type: 'commentary'; body?: string });
+  | (SectionCommon & { type: 'commentary'; body?: string })
+  | (SectionCommon & {
+      type: 'softwareTable';
+      // How many vendor rows to show before folding the rest into 'All Other'.
+      // Absent = show every row the source has (usually top 15 + All Other + Total).
+      topN?: number;
+      showMoM?: boolean;
+    });
 
 export type Template = {
   subtitle?: string;
