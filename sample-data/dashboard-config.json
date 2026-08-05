@@ -216,6 +216,9 @@
           "monthsBack": 12
         },
         {
+          "type": "commentary"
+        },
+        {
           "type": "softwareTable",
           "title": "Software spend — current month",
           "showMoM": true

@@ -339,7 +339,7 @@ function SectionView({
         </div>
       );
     case 'commentary':
-      return <Commentary body={section.body} />;
+      return <Commentary record={record} body={section.body} />;
     default:
       return (
         <div className="rounded-lg border border-dashed border-gray-300 p-4 text-xs text-gray-500">

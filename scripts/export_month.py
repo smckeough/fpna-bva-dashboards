@@ -1,21 +1,32 @@
 """Export one month's dashboard-data JSON from an FP&A workbook.
 
 Usage:
-    python scripts/export_month.py "path/to/(NEW) June 2026 Department HC & Opex Template.xlsx"
-    python scripts/export_month.py "path/to/workbook.xlsx" --refresh-config
+    python scripts/export_month.py "workbook.xlsx"
+    python scripts/export_month.py "workbook.xlsx" --monthly-detail "monthly_opex.xlsx"
+    python scripts/export_month.py "workbook.xlsx" --refresh-config
 
-Reads the workbook's `Dashboard JSON` sheet — cells A2 (+A3 if present) contain the
-already-assembled dashboard-data.json (Excel splits it across cells because of the
-32k-char cell limit).
+Primary source:
+  Workbook's `Dashboard JSON` sheet — cells A2 (+A3 if present) hold the already-
+  assembled dashboard-data.json (Excel splits it across cells because of the
+  32k-char cell limit).
 
-With --refresh-config, ALSO overwrites sample-data/dashboard-config.json from the
-workbook's `Dashboard Config` sheet. Off by default so hand edits to the layout
-(section types, children maps, dashboards list) survive re-running the export.
+Layout config (--refresh-config only):
+  Workbook's `Dashboard Config` A2. Off by default so hand edits to the layout
+  survive re-running the export.
 
-Also scans each `BvA <Leader>` tab for the 'Software BvA Summary' section and
-attaches that vendor list to the corresponding leader record as `software.vendors`.
-This isn't in the workbook's Dashboard JSON output — the leader tabs are the only
-source of the current-month vendor detail.
+Software vendor detail:
+  Scans each `BvA <Leader>` tab for the 'Software BvA Summary' section and
+  attaches its vendors + monthly detail to the corresponding leader record.
+
+Finance commentary (--monthly-detail only):
+  Reads the separate 'Opex Monthly Summary' workbook (a QBO-derived pivot).
+  Pulls the human-written 'Accounting Notes' per Class (=department), maps
+  Class codes via scripts/class-to-department.json, and computes top MoM
+  drivers per department. Attaches:
+      commentary.raw     — list of finance-authored notes with amounts
+      commentary.movers  — top MoM $ deltas per department
+      commentary.summary — empty; filled in by editorial pass
+  Also aggregates children's notes up onto each leader.
 
 Writes:
     sample-data/dashboard-data-<YYYY-MM>.json          — that month's numbers
@@ -273,6 +284,276 @@ def extract_software_vendors(ws) -> list[dict] | None:
     return vendors or None
 
 
+# =====================================================================
+# Commentary extraction from the monthly Opex file (QBO pivot)
+# =====================================================================
+
+
+def _load_class_to_dept(path: Path) -> dict[str, str]:
+    """Class label (as written in the QBO file) → department dataKey."""
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    return {k: v for k, v in raw.items() if not k.startswith("_")}
+
+
+def _find_header_row(snap: list[list], must_have: list[str]) -> int | None:
+    """First 1-based row where every string in `must_have` appears as a cell."""
+    needed = set(must_have)
+    for r_idx, row in enumerate(snap, start=1):
+        seen = {str(v).strip() for v in row if isinstance(v, str)}
+        if needed.issubset(seen):
+            return r_idx
+    return None
+
+
+def _snapshot_full_sheet(ws, max_rows: int = 400) -> list[list]:
+    rows: list[list] = []
+    for row in ws.iter_rows(min_row=1, max_row=min(ws.max_row, max_rows), values_only=True):
+        rows.append(list(row))
+    return rows
+
+
+def _extract_notes_from_pivot(
+    ws,
+    class_map: dict[str, str],
+    max_rows: int = 400,
+) -> tuple[dict[str, list[dict]], list[str]]:
+    """Return {department: [{class, account, mtdActual, variance, note}]} and
+    a list of Class labels seen but not mapped. Reads a pivot with headers
+    Class + Account + monthly date columns + Variance + a notes column."""
+    snap = _snapshot_full_sheet(ws, max_rows)
+
+    hdr_row = _find_header_row(snap, ["Class", "Account"])
+    if hdr_row is None:
+        return {}, []
+
+    hdr = snap[hdr_row - 1]
+    col_idx = {v.strip(): i + 1 for i, v in enumerate(hdr) if isinstance(v, str)}
+    class_col = col_idx.get("Class")
+    account_col = col_idx.get("Account")
+    if not (class_col and account_col):
+        return {}, []
+
+    # Notes columns: look for "Accounting Notes" / "Notes" / any col with
+    # "note" in its header. Skip "Y/N" flag columns.
+    notes_col = None
+    variance_col = None
+    for label, ci in col_idx.items():
+        lo = label.lower()
+        if notes_col is None and ("note" in lo or "commentary" in lo) and "y/n" not in lo:
+            notes_col = ci
+        if variance_col is None and "variance" in lo and "accounting variance" not in lo:
+            variance_col = ci
+    # Fallback: 'Accounting Variance' is the notes column in EXPENSES BY MONTH SUMMARY
+    if notes_col is None:
+        for label, ci in col_idx.items():
+            if label.strip().lower() == "accounting variance":
+                notes_col = ci
+                break
+
+    # Month columns are datetimes in the header row; the LAST one is the
+    # current reporting month, second-to-last is prior. Use them to compute
+    # MoM $ delta for each row.
+    month_cols: list[tuple[int, str]] = []
+    for i, v in enumerate(hdr, start=1):
+        if hasattr(v, "year"):
+            month_cols.append((i, f"{v.year:04d}-{v.month:02d}"))
+    curr_col = month_cols[-1][0] if month_cols else None
+    prev_col = month_cols[-2][0] if len(month_cols) >= 2 else None
+
+    by_dept: dict[str, list[dict]] = {}
+    unmapped: set[str] = set()
+
+    for r in range(hdr_row + 1, len(snap) + 1):
+        class_val = snap[r - 1][class_col - 1] if class_col - 1 < len(snap[r - 1]) else None
+        if not isinstance(class_val, str) or not class_val.strip():
+            continue
+        cls = class_val.strip()
+        if cls in {"Grand Total"} or cls.endswith(" Total"):
+            continue
+
+        dept = class_map.get(cls)
+        note = snap[r - 1][notes_col - 1] if (notes_col and notes_col - 1 < len(snap[r - 1])) else None
+        if not (isinstance(note, str) and note.strip()):
+            # Skip rows that don't carry finance commentary; the raw amounts
+            # are already captured elsewhere in the JSON.
+            continue
+
+        if dept is None:
+            unmapped.add(cls)
+            continue
+
+        account = snap[r - 1][account_col - 1] if account_col - 1 < len(snap[r - 1]) else None
+        mtd_actual = None
+        prior_actual = None
+        if curr_col and curr_col - 1 < len(snap[r - 1]):
+            v = snap[r - 1][curr_col - 1]
+            mtd_actual = float(v) if isinstance(v, (int, float)) else None
+        if prev_col and prev_col - 1 < len(snap[r - 1]):
+            v = snap[r - 1][prev_col - 1]
+            prior_actual = float(v) if isinstance(v, (int, float)) else None
+        mom_delta = (
+            mtd_actual - prior_actual
+            if (mtd_actual is not None and prior_actual is not None)
+            else None
+        )
+
+        by_dept.setdefault(dept, []).append({
+            "class": cls,
+            "account": str(account).strip() if isinstance(account, str) else None,
+            "mtdActual": mtd_actual,
+            "priorActual": prior_actual,
+            "momDelta": mom_delta,
+            "note": note.strip(),
+        })
+
+    return by_dept, sorted(unmapped)
+
+
+def _compute_movers_by_dept(
+    ws, class_map: dict[str, str], top_n: int = 5, max_rows: int = 400,
+) -> dict[str, list[dict]]:
+    """Regardless of notes, pull the top ±MoM movers by $ per department.
+    Uses the same Class + Account + monthly-date pivot layout."""
+    snap = _snapshot_full_sheet(ws, max_rows)
+    hdr_row = _find_header_row(snap, ["Class", "Account"])
+    if hdr_row is None:
+        return {}
+    hdr = snap[hdr_row - 1]
+    col_idx = {v.strip(): i + 1 for i, v in enumerate(hdr) if isinstance(v, str)}
+    class_col = col_idx.get("Class")
+    account_col = col_idx.get("Account")
+    month_cols = [(i, f"{v.year:04d}-{v.month:02d}") for i, v in enumerate(hdr, start=1) if hasattr(v, "year")]
+    if not (class_col and account_col and len(month_cols) >= 2):
+        return {}
+    curr_col = month_cols[-1][0]
+    prev_col = month_cols[-2][0]
+
+    by_dept: dict[str, list[dict]] = {}
+    for r in range(hdr_row + 1, len(snap) + 1):
+        class_val = snap[r - 1][class_col - 1] if class_col - 1 < len(snap[r - 1]) else None
+        if not isinstance(class_val, str):
+            continue
+        cls = class_val.strip()
+        if cls.endswith(" Total") or cls in {"Grand Total"}:
+            continue
+        dept = class_map.get(cls)
+        if dept is None:
+            continue
+        curr = snap[r - 1][curr_col - 1] if curr_col - 1 < len(snap[r - 1]) else None
+        prev = snap[r - 1][prev_col - 1] if prev_col - 1 < len(snap[r - 1]) else None
+        curr_f = float(curr) if isinstance(curr, (int, float)) else None
+        prev_f = float(prev) if isinstance(prev, (int, float)) else None
+        if curr_f is None or prev_f is None:
+            continue
+        delta = curr_f - prev_f
+        if abs(delta) < 500:  # noise floor
+            continue
+        account = snap[r - 1][account_col - 1] if account_col - 1 < len(snap[r - 1]) else None
+        by_dept.setdefault(dept, []).append({
+            "account": str(account).strip() if isinstance(account, str) else None,
+            "mtdActual": curr_f,
+            "priorActual": prev_f,
+            "momDelta": delta,
+            "momPct": (delta / prev_f) if prev_f else None,
+        })
+    # Keep only the top |delta| N per department.
+    for dept, rows in by_dept.items():
+        rows.sort(key=lambda x: abs(x["momDelta"] or 0), reverse=True)
+        by_dept[dept] = rows[:top_n]
+    return by_dept
+
+
+def attach_commentary(data: dict, monthly_path: Path, class_map_path: Path) -> None:
+    """Merge finance notes + top movers from the monthly file into each
+    department/leader record in `data` (in place)."""
+    class_map = _load_class_to_dept(class_map_path)
+    wb = load_workbook_unlocked(monthly_path)
+
+    # Notes: pull from the two "*Expenses by Account" pivots and the roll-up
+    # sheet. Merge across sheets; dedupe by (class, account, note).
+    seen: set[tuple] = set()
+    combined_notes: dict[str, list[dict]] = {}
+    all_unmapped: set[str] = set()
+    for sheet_name in [
+        "Opex Expenses by Account ",
+        "COGS Expenses by Account",
+        "EXPENSES BY MONTH SUMMARY",
+    ]:
+        if sheet_name not in wb.sheetnames:
+            continue
+        notes, unmapped = _extract_notes_from_pivot(wb[sheet_name], class_map)
+        for dept, rows in notes.items():
+            for row in rows:
+                key = (dept, row.get("class"), row.get("account"), row.get("note"))
+                if key in seen:
+                    continue
+                seen.add(key)
+                combined_notes.setdefault(dept, []).append(row)
+        all_unmapped.update(unmapped)
+
+    if all_unmapped:
+        print(
+            "  commentary: unmapped Class labels "
+            "(add to scripts/class-to-department.json): "
+            + ", ".join(sorted(all_unmapped))
+        )
+
+    # Movers: pull from the Opex + COGS pivots. Merge, then trim to top-5.
+    all_movers: dict[str, list[dict]] = {}
+    for sheet_name in ["Opex Expenses by Account ", "COGS Expenses by Account"]:
+        if sheet_name not in wb.sheetnames:
+            continue
+        mv = _compute_movers_by_dept(wb[sheet_name], class_map)
+        for dept, rows in mv.items():
+            all_movers.setdefault(dept, []).extend(rows)
+    for dept in list(all_movers.keys()):
+        all_movers[dept].sort(key=lambda x: abs(x["momDelta"] or 0), reverse=True)
+        all_movers[dept] = all_movers[dept][:5]
+
+    # Attach to each department record. Missing = empty block so the frontend
+    # can still render the section without checking for presence.
+    for dept in data.get("departments", []):
+        name = dept["name"]
+        dept["commentary"] = {
+            "raw": combined_notes.get(name, []),
+            "movers": all_movers.get(name, []),
+            "summary": [],
+        }
+
+    # For leaders, roll up their children's commentary (from dashboard-config
+    # `children` — same source truth used by breakdownTable). Load the config
+    # once; if it's not present (or a leader lacks a `children` array), skip.
+    cfg_path = SAMPLE_DIR / "dashboard-config.json"
+    child_by_leader: dict[str, list[str]] = {}
+    if cfg_path.exists():
+        cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+        for entry in cfg.get("dashboards", []):
+            if entry.get("source") == "leaders" and entry.get("children"):
+                child_by_leader[entry["dataKey"]] = list(entry["children"])
+
+    for leader in data.get("leaders", []):
+        children = child_by_leader.get(leader["name"], [])
+        combined_raw: list[dict] = []
+        combined_mov: list[dict] = []
+        for child in children:
+            for row in combined_notes.get(child, []):
+                combined_raw.append({**row, "department": child})
+            for row in all_movers.get(child, []):
+                combined_mov.append({**row, "department": child})
+        # Order movers by absolute MoM $ delta.
+        combined_mov.sort(key=lambda x: abs(x.get("momDelta") or 0), reverse=True)
+        leader["commentary"] = {
+            "raw": combined_raw,
+            "movers": combined_mov[:8],  # a leader's rollup can afford a few more
+            "summary": [],
+            "children": children,
+        }
+
+    total_notes = sum(len(v) for v in combined_notes.values())
+    print(f"  commentary: {total_notes} finance notes across {len(combined_notes)} depts; "
+          f"{sum(len(v) for v in all_movers.values())} movers")
+
+
 def load_workbook_unlocked(xlsx_path: Path):
     """openpyxl can't open files locked by Excel (e.g., open in OneDrive). If the
     direct open fails with PermissionError, copy to a temp file and retry."""
@@ -285,12 +566,30 @@ def load_workbook_unlocked(xlsx_path: Path):
 
 
 def main() -> int:
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    flags = {a for a in sys.argv[1:] if a.startswith("--")}
+    argv = sys.argv[1:]
+    args: list[str] = []
+    monthly_detail: str | None = None
+    flags: set[str] = set()
+    i = 0
+    while i < len(argv):
+        a = argv[i]
+        if a == "--monthly-detail":
+            if i + 1 >= len(argv):
+                sys.exit("--monthly-detail requires a path argument")
+            monthly_detail = argv[i + 1]
+            i += 2
+            continue
+        if a.startswith("--"):
+            flags.add(a)
+            i += 1
+            continue
+        args.append(a)
+        i += 1
+
     if len(args) != 1:
         sys.exit(
-            "Usage: python scripts/export_month.py <path-to-workbook.xlsx> "
-            "[--refresh-config]"
+            "Usage: python scripts/export_month.py <workbook.xlsx> "
+            "[--monthly-detail <opex_monthly.xlsx>] [--refresh-config]"
         )
     refresh_config = "--refresh-config" in flags
     src = Path(args[0]).expanduser().resolve()
@@ -326,6 +625,18 @@ def main() -> int:
         # Count excludes the Total row for the log line
         real_vendors = [v for v in vendors if not v.get("isTotal")]
         print(f"  software: {name} — {len(real_vendors)} vendors + total")
+
+    # Optional: pull finance-authored notes + top MoM movers from the separate
+    # monthly detail file (QBO-derived pivot). Only runs when --monthly-detail
+    # is passed; departments and leaders still export cleanly without it.
+    if monthly_detail:
+        detail_path = Path(monthly_detail).expanduser().resolve()
+        if not detail_path.exists():
+            sys.exit(f"--monthly-detail file not found: {detail_path}")
+        class_map_path = Path(__file__).resolve().parent / "class-to-department.json"
+        if not class_map_path.exists():
+            sys.exit(f"Missing class map: {class_map_path}")
+        attach_commentary(data, detail_path, class_map_path)
 
     SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
     data_path = SAMPLE_DIR / f"dashboard-data-{month_key}.json"

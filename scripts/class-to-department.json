@@ -1,0 +1,43 @@
+{
+  "_comment": "Maps QBO Class codes (from the monthly Opex file) to the department dataKey used in dashboard-config.json. Left side is the exact Class label the finance file uses; right side must exactly match a department 'dataKey' from dashboard-config.json. Anything not mapped here is logged as 'unmapped' when export runs.",
+
+  "5000 Ops - Licensing - COGS": "Licensing",
+  "5001 Ops - Licensing - Offshore": "Licensing",
+  "5100 Ops - Payor Enrollments - COGS": "Payer Enrollment",
+  "5101 Ops - Payer Enrollment - Offshore": "Payer Enrollment",
+  "5200 Ops - Credentialing - COGS": "Credentialing",
+  "5201 Ops - Credentialing - Offshore": "Credentialing",
+  "5202 Ops - Privileging": "Credentialing",
+  "5250 Ops - Ongoing Monitoring - COGS": "Ongoing Monitoring",
+  "5300 Ops - Intake - COGS": "Intake",
+  "5500 Ops - Customer Support - COGS": "Customer Support",
+  "5600 Ops - Implementation - COGS": "Implementation",
+  "5700 Ops - Quality Assurance - COGS": "Quality Assurance",
+
+  "5800 Product Technology - COGS": "Engineering",
+  "5900 Engineering - COGS": "Engineering",
+  "7000 Engineering": "Engineering",
+  "7100 Product & Design": "Product & Design",
+  "7200 Product Operations": "Product Operations",
+
+  "6500 Solutions Consulting": "Solutions Consultants",
+  "6600 Customer Success": "Customer Success",
+  "6700 Sales": "Sales",
+  "6705 Sales - BDR": "BDR",
+  "6800 Revenue Operations": "Revenue Operations",
+  "6900 Marketing": "Marketing",
+
+  "7300 Ops - Licensing - Mgmt": "Operations Management",
+  "7400 Ops - Credentialing - Mgmt": "Operations Management",
+  "7500 Ops - Payer Enrollment - Mgmt": "Operations Management",
+  "7800 Ops Management": "Operations Management",
+  "7850 Ops Management - Offshore": "India Operations Mgmt",
+
+  "8000 Accounting & Finance": "Accounting & Finance",
+  "8100 Talent Mgmt, HR": "HR",
+  "8200 Legal": "Legal",
+  "8300 Info Tech": "IT",
+  "8400 Exec Mgmt": "Executive",
+  "8500 Analytics": "Analytics",
+  "8600 Business Operations": "Business Operations"
+}

@@ -50,6 +50,37 @@ export type SoftwareBlock = {
   vendors: SoftwareVendorRow[];
 };
 
+export type CommentaryRawNote = {
+  class?: string;
+  account?: string | null;
+  department?: string; // present on leader-level rollups
+  mtdActual?: number | null;
+  priorActual?: number | null;
+  momDelta?: number | null;
+  note: string;
+};
+
+export type CommentaryMover = {
+  account?: string | null;
+  department?: string;
+  mtdActual?: number | null;
+  priorActual?: number | null;
+  momDelta?: number | null;
+  momPct?: number | null;
+};
+
+export type CommentaryBlock = {
+  // Editorial summary written for department heads — 2-3 short bullets.
+  // Empty until the per-close editorial pass fills it in.
+  summary: string[];
+  // Verbatim finance notes (with dollar context) that back the summary.
+  raw: CommentaryRawNote[];
+  // Top MoM $ movers computed automatically from the pivot.
+  movers: CommentaryMover[];
+  // Leader records carry the department list they roll up.
+  children?: string[];
+};
+
 export type DashboardRecord = {
   name: string;
   sourceTab?: string;
@@ -59,6 +90,7 @@ export type DashboardRecord = {
   flags: string[];
   metrics: Metrics;
   software?: SoftwareBlock;
+  commentary?: CommentaryBlock;
 };
 
 export type DashboardData = {

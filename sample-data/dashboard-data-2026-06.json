@@ -139,6 +139,88 @@
             "varPct": 0.12913660697742
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 73487.7,
+            "priorActual": 65426.92999999999,
+            "momDelta": 8060.770000000004,
+            "note": "Drivers: Hours worked variance MoM (additional working days)"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 11440.610000000004,
+            "priorActual": 5757.579999999999,
+            "momDelta": 5683.030000000005,
+            "note": "Drivers: Hours worked variance MoM (additional working days)"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 17487.58,
+            "priorActual": 9997.42,
+            "momDelta": 7490.160000000002,
+            "note": "Drivers: First Advantage $7,490 - Background screening / fingerprinting \u2013 monthly. Ramp shows the most recent invoice 6500222606 $14,745 (\"Fingerprint services for May 2026,\" booked June) vs the prior $12,945 (inv 6500222605). Higher screening volume drove the increase"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": 60306.880000000005,
+            "priorActual": 69924.87,
+            "momDelta": -9617.98999999999,
+            "note": "Drivers: Bold Business, LLC (-$9,618) - MoM change reflects week-ending timing and one fewer/lower weekly accrual booked in June vs May."
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 80153.37,
+            "priorActual": 5261.77,
+            "momDelta": 74891.59999999999,
+            "note": "Drivers: Primarily journal-entry activity (e.g., \u201cJun'26 Passthrough Fee Invoice Exclusions - Credit Memos\u201d)."
+          }
+        ],
+        "movers": [
+          {
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 80153.37,
+            "priorActual": 5261.77,
+            "momDelta": 74891.59999999999,
+            "momPct": 14.233157283575675
+          },
+          {
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": 60306.880000000005,
+            "priorActual": 69924.87,
+            "momDelta": -9617.98999999999,
+            "momPct": -0.13754748489342908
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 73487.7,
+            "priorActual": 65426.92999999999,
+            "momDelta": 8060.770000000004,
+            "momPct": 0.12320263231057922
+          },
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 17487.58,
+            "priorActual": 9997.42,
+            "momDelta": 7490.160000000002,
+            "momPct": 0.7492092959983677
+          },
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 11440.610000000004,
+            "priorActual": 5757.579999999999,
+            "momDelta": 5683.030000000005,
+            "momPct": 0.9870518516460052
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -239,6 +321,80 @@
             "varPct": 0.410642078485858
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5100 Ops - Payor Enrollments - COGS",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 193949.37,
+            "priorActual": 183533.51999999993,
+            "momDelta": 10415.850000000064,
+            "note": "Drivers: 1 June new hire, offset by 1 June termination; variance driven by number of working days"
+          },
+          {
+            "class": "5100 Ops - Payor Enrollments - COGS",
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 24898.23,
+            "priorActual": 13081.859999999995,
+            "momDelta": 11816.370000000004,
+            "note": "Drivers: 1 June new hire, offset by 1 June termination; variance driven by number of working days"
+          },
+          {
+            "class": "5100 Ops - Payor Enrollments - COGS",
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": 174322.0,
+            "priorActual": 166502.38,
+            "momDelta": 7819.619999999995,
+            "note": "Drivers: Altermed RCM LLC $7,820 -MoM is leveling between the monthly accrual estimate and actual invoiced timesheet volume - Increased June accrual for Payor Enrollments BPO services"
+          },
+          {
+            "class": "5101 Ops - Payer Enrollment - Offshore",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 136710.2,
+            "priorActual": 131285.66,
+            "momDelta": 5424.540000000008,
+            "note": "Drivers: 6 June new hires, offset by 17 June terminations (Mostly on India Team so small impact), offset by full impact of May new hires"
+          }
+        ],
+        "movers": [
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 24898.23,
+            "priorActual": 13081.859999999995,
+            "momDelta": 11816.370000000004,
+            "momPct": 0.903263756071385
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 193949.37,
+            "priorActual": 183533.51999999993,
+            "momDelta": 10415.850000000064,
+            "momPct": 0.05675175847986824
+          },
+          {
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": 174322.0,
+            "priorActual": 166502.38,
+            "momDelta": 7819.619999999995,
+            "momPct": 0.04696401336725634
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 136710.2,
+            "priorActual": 131285.66,
+            "momDelta": 5424.540000000008,
+            "momPct": 0.04131860250388358
+          },
+          {
+            "account": "51430 Cost of Goods Sold:COGS - Contractors",
+            "mtdActual": 30491.1,
+            "priorActual": 32355.379999999997,
+            "momDelta": -1864.2799999999988,
+            "momPct": -0.05761885658582897
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -339,6 +495,72 @@
             "varPct": 0.0935351636507573
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5200 Ops - Credentialing - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 16078.850000000002,
+            "priorActual": 24897.73,
+            "momDelta": -8818.879999999997,
+            "note": "Drivers: Streamline Verify LLC monthly amortization now being booked to Ongoing Monitoring instead of Cred"
+          },
+          {
+            "class": "5200 Ops - Credentialing - COGS",
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 11349.96,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: NCQA  - Expanded NCQA support scope in June drove the increase"
+          },
+          {
+            "class": "5201 Ops - Credentialing - Offshore",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 42850.700000000004,
+            "priorActual": 50549.06,
+            "momDelta": -7698.359999999993,
+            "note": "Drivers: 1 June termination plus 10 employees transferred to Licensing Offshore dept"
+          }
+        ],
+        "movers": [
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 16078.850000000002,
+            "priorActual": 24897.73,
+            "momDelta": -8818.879999999997,
+            "momPct": -0.35420417845321633
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 42850.700000000004,
+            "priorActual": 50549.06,
+            "momDelta": -7698.359999999993,
+            "momPct": -0.15229482012128404
+          },
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 10095.09,
+            "priorActual": 6830.2699999999995,
+            "momDelta": 3264.8200000000006,
+            "momPct": 0.4779928172678387
+          },
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 5888.42,
+            "priorActual": 3929.71,
+            "momDelta": 1958.71,
+            "momPct": 0.49843627137880403
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 48410.41999999999,
+            "priorActual": 46922.99000000001,
+            "momDelta": 1487.4299999999785,
+            "momPct": 0.0316993865906665
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -439,6 +661,26 @@
             "varPct": 0.0230155991735577
           }
         }
+      },
+      "commentary": {
+        "raw": [],
+        "movers": [
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 5617.449999999999,
+            "priorActual": 3715.9700000000003,
+            "momDelta": 1901.4799999999987,
+            "momPct": 0.511704884592717
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 33919.93,
+            "priorActual": 33232.46000000001,
+            "momDelta": 687.4699999999939,
+            "momPct": 0.02068670209788844
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -541,6 +783,11 @@
             "varPct": -0.959790077967699
           }
         }
+      },
+      "commentary": {
+        "raw": [],
+        "movers": [],
+        "summary": []
       }
     },
     {
@@ -643,6 +890,43 @@
             "varPct": 11.2758772684555
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5250 Ops - Ongoing Monitoring - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 59828.02000000001,
+            "priorActual": 39197.55000000001,
+            "momDelta": 20630.47,
+            "note": "Drivers: Streamline Verify LLC - monthly amortization increased $10,937 MoM; \nCAQH Solutions - catch-up amortization for the pre-June period 3/1/26\u20135/31/26 (added 5/5/26, after the amortization start)."
+          },
+          {
+            "class": "5250 Ops - Ongoing Monitoring - COGS",
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": -2717.0,
+            "priorActual": 8451.0,
+            "momDelta": -11168.0,
+            "note": "Drivers: Bold Business, LLC (-$11,168) - MoM change reflects week-ending timing and one fewer/lower weekly accrual booked in June vs May."
+          }
+        ],
+        "movers": [
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 59828.02000000001,
+            "priorActual": 39197.55000000001,
+            "momDelta": 20630.47,
+            "momPct": 0.526320395024689
+          },
+          {
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": -2717.0,
+            "priorActual": 8451.0,
+            "momDelta": -11168.0,
+            "momPct": -1.3215004141521713
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -743,6 +1027,80 @@
             "varPct": -0.194612018440673
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "7500 Ops - Payer Enrollment - Mgmt",
+            "account": "61100 Salaries",
+            "mtdActual": 8393.34,
+            "priorActual": 20953.38,
+            "momDelta": -12560.04,
+            "note": "Drivers: Full impact of late May termination"
+          },
+          {
+            "class": "7500 Ops - Payer Enrollment - Mgmt",
+            "account": "68500 Contractors",
+            "mtdActual": 6897.44,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: Primarily journal-entry activity (e.g., \u201c1099 Hourly Payment for dept: Payer Enrollment Management\u201d)."
+          },
+          {
+            "class": "7800 Ops Management",
+            "account": "61100 Salaries",
+            "mtdActual": 9656.25,
+            "priorActual": 19372.5,
+            "momDelta": -9716.25,
+            "note": "Drivers: Kate Sanders transferred mid-month to Business Operations"
+          },
+          {
+            "class": "7800 Ops Management",
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 19770.0,
+            "priorActual": 8538.75,
+            "momDelta": 11231.25,
+            "note": "Drivers: DAVIS HEALTHCARE CONSULTING $11,231 - Expanded NCQA support scope in June, increased June accrual based on invoice received in early July"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 8393.34,
+            "priorActual": 20953.38,
+            "momDelta": -12560.04,
+            "momPct": -0.5994278727346137
+          },
+          {
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 19770.0,
+            "priorActual": 8538.75,
+            "momDelta": 11231.25,
+            "momPct": 1.3153271848924022
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 9656.25,
+            "priorActual": 19372.5,
+            "momDelta": -9716.25,
+            "momPct": -0.5015485869144406
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 11376.29,
+            "priorActual": 16226.280000000002,
+            "momDelta": -4849.990000000002,
+            "momPct": -0.2988972210512823
+          },
+          {
+            "account": "62400 Internal Events",
+            "mtdActual": 3319.58,
+            "priorActual": 426.8,
+            "momDelta": 2892.7799999999997,
+            "momPct": 6.777835051546391
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -843,6 +1201,72 @@
             "varPct": 0.0466135545749666
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "7850 Ops Management - Offshore",
+            "account": "67300 Equipment < $1,000",
+            "mtdActual": 25063.989999999998,
+            "priorActual": 24260.5,
+            "momDelta": 803.489999999998,
+            "note": "Increased $11,671 MoM ($24,260 \u2192 $35,931). Drivers: RUDHRA IT SERVICES $10,870 (RUDHRA IT SERVICES Accrual_6.30.26 - June bill received in July)."
+          },
+          {
+            "class": "7850 Ops Management - Offshore",
+            "account": "68200 Recruiting Fees",
+            "mtdActual": 2961.220000000001,
+            "priorActual": 10660.81,
+            "momDelta": -7699.589999999998,
+            "note": "Drivers: ISTAR BUISNESS SOLUTIONS (-$7,700) - Recruiting Fees for India Team - Booked smaller accrual for June services based on invoice received for that period in early July"
+          },
+          {
+            "class": "7850 Ops Management - Offshore",
+            "account": "69100 Rent & Lease",
+            "mtdActual": 79060.82,
+            "priorActual": 69984.95,
+            "momDelta": 9075.87000000001,
+            "note": "Drivers: Awfis Space Solutions Limited $9,076 - June 2026: Fixed Desk increased by 18 Seats"
+          }
+        ],
+        "movers": [
+          {
+            "account": "69100 Rent & Lease",
+            "mtdActual": 79060.82,
+            "priorActual": 69984.95,
+            "momDelta": 9075.87000000001,
+            "momPct": 0.12968316759531887
+          },
+          {
+            "account": "68200 Recruiting Fees",
+            "mtdActual": 2961.220000000001,
+            "priorActual": 10660.81,
+            "momDelta": -7699.589999999998,
+            "momPct": -0.7222331136189463
+          },
+          {
+            "account": "64300 Payroll & Benefit Admin",
+            "mtdActual": 102202.09,
+            "priorActual": 97202.97,
+            "momDelta": 4999.119999999995,
+            "momPct": 0.05142970425697893
+          },
+          {
+            "account": "62200 Travel Transportation",
+            "mtdActual": 54703.780000000006,
+            "priorActual": 56338.409999999996,
+            "momDelta": -1634.62999999999,
+            "momPct": -0.02901448585432195
+          },
+          {
+            "account": "67300 Equipment < $1,000",
+            "mtdActual": 25063.989999999998,
+            "priorActual": 24260.5,
+            "momDelta": 803.489999999998,
+            "momPct": 0.0331192679458378
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -943,6 +1367,72 @@
             "varPct": -0.196667587920448
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8600 Business Operations",
+            "account": "61100 Salaries",
+            "mtdActual": 115401.97,
+            "priorActual": 72680.0,
+            "momDelta": 42721.97,
+            "note": "Drivers: 3 new hires in June, plus 1 transfer from Ops Mgmt to department"
+          },
+          {
+            "class": "8600 Business Operations",
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 46151.96,
+            "priorActual": 40100.38,
+            "momDelta": 6051.580000000002,
+            "note": "Increased $6,052 MoM ($40,100 \u2192 $46,152). Drivers: Primarily payroll/journal-entry activity (e.g., \u201cJune 2026 Stock Comp\u201d)."
+          },
+          {
+            "class": "8600 Business Operations",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": null,
+            "priorActual": 6000.0,
+            "momDelta": null,
+            "note": "Drivers: 8flow Inc. (-$6,000) - 8Flow Pilot Fee for service period 5/13/2026 - 6/13/2026 fully expensed in May 2026"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 115401.97,
+            "priorActual": 72680.0,
+            "momDelta": 42721.97,
+            "momPct": 0.5878091634562466
+          },
+          {
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 46151.96,
+            "priorActual": 40100.38,
+            "momDelta": 6051.580000000002,
+            "momPct": 0.15091078937406582
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 10311.240000000002,
+            "priorActual": 5460.409999999999,
+            "momDelta": 4850.830000000003,
+            "momPct": 0.8883636943013443
+          },
+          {
+            "account": "62200 Travel Transportation",
+            "mtdActual": 4255.46,
+            "priorActual": 81.86,
+            "momDelta": 4173.6,
+            "momPct": 50.98460786709016
+          },
+          {
+            "account": "62400 Internal Events",
+            "mtdActual": 3922.4900000000002,
+            "priorActual": 83.84,
+            "momDelta": 3838.65,
+            "momPct": 45.78542461832061
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1043,6 +1533,72 @@
             "varPct": 0.0720090990588902
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5500 Ops - Customer Support - COGS",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 150419.17,
+            "priorActual": 159996.02000000002,
+            "momDelta": -9576.850000000006,
+            "note": "Drivers: 1 June termination, offset by impact of late May new hire"
+          },
+          {
+            "class": "5500 Ops - Customer Support - COGS",
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 9906.45,
+            "priorActual": 1698.58,
+            "momDelta": 8207.87,
+            "note": "Drivers: Final Commission pay out for terminated Engagement Manager"
+          },
+          {
+            "class": "5500 Ops - Customer Support - COGS",
+            "account": "51250 Cost of Goods Sold:COGS - Stock Based Comp",
+            "mtdActual": -8239.7,
+            "priorActual": 3662.08,
+            "momDelta": -11901.78,
+            "note": "Decreased ($11,902) MoM ($3,662 \u2192 ($8,240)). Drivers: Primarily payroll/journal-entry activity (e.g., \u201cJune 2026 Stock Comp (Engagement Management)\u201d)."
+          }
+        ],
+        "movers": [
+          {
+            "account": "51250 Cost of Goods Sold:COGS - Stock Based Comp",
+            "mtdActual": -8239.7,
+            "priorActual": 3662.08,
+            "momDelta": -11901.78,
+            "momPct": -3.250005461377141
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 150419.17,
+            "priorActual": 159996.02000000002,
+            "momDelta": -9576.850000000006,
+            "momPct": -0.0598568014379358
+          },
+          {
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 9906.45,
+            "priorActual": 1698.58,
+            "momDelta": 8207.87,
+            "momPct": 4.832195127694899
+          },
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 9632.54,
+            "priorActual": 7398.76,
+            "momDelta": 2233.7800000000007,
+            "momPct": 0.30191275294779135
+          },
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 15713.230000000003,
+            "priorActual": 14678.119999999999,
+            "momDelta": 1035.1100000000042,
+            "momPct": 0.07052061163146263
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1143,6 +1699,57 @@
             "varPct": -0.092138316839214
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6600 Customer Success",
+            "account": "61100 Salaries",
+            "mtdActual": 148952.08000000002,
+            "priorActual": 155362.62,
+            "momDelta": -6410.539999999979,
+            "note": "Drivers: 1 June termination"
+          },
+          {
+            "class": "6600 Customer Success",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 25476.34,
+            "priorActual": 51146.55,
+            "momDelta": -25670.210000000003,
+            "note": "Drivers: Increase in Bonus Accrual_Jun 26 based on AM Activity in June;\nFinal commission paid out for terminated employee"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 25476.34,
+            "priorActual": 51146.55,
+            "momDelta": -25670.210000000003,
+            "momPct": -0.5018952402459208
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 148952.08000000002,
+            "priorActual": 155362.62,
+            "momDelta": -6410.539999999979,
+            "momPct": -0.04126179128544549
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 13306.669999999998,
+            "priorActual": 12020.34,
+            "momDelta": 1286.329999999998,
+            "momPct": 0.10701278000455879
+          },
+          {
+            "account": "62400 Internal Events",
+            "mtdActual": 3884.7700000000004,
+            "priorActual": 3340.32,
+            "momDelta": 544.4500000000003,
+            "momPct": 0.16299336590506305
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1243,6 +1850,56 @@
             "varPct": -0.0710679408770277
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6700 Sales",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 405746.55999999976,
+            "priorActual": 373369.47,
+            "momDelta": 32377.089999999793,
+            "note": "Drivers: Increase in Bonus Accrual_Jun 26 based on AE Activity in June;"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 405746.55999999976,
+            "priorActual": 373369.47,
+            "momDelta": 32377.089999999793,
+            "momPct": 0.08671595457443211
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 433526.68000000005,
+            "priorActual": 437292.28,
+            "momDelta": -3765.5999999999767,
+            "momPct": -0.008611174201383057
+          },
+          {
+            "account": "68550 Meals & Entertainment",
+            "mtdActual": 1595.8199999999997,
+            "priorActual": 4184.159999999999,
+            "momDelta": -2588.3399999999992,
+            "momPct": -0.6186044510726167
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 36851.06999999999,
+            "priorActual": 39423.200000000004,
+            "momDelta": -2572.130000000012,
+            "momPct": -0.06524406948192972
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 3825.4399999999996,
+            "priorActual": 1554.7600000000002,
+            "momDelta": 2270.6799999999994,
+            "momPct": 1.460469783117651
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1343,6 +2000,49 @@
             "varPct": -0.0429689031637989
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6705 Sales - BDR",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 40761.03999999999,
+            "priorActual": 50694.79,
+            "momDelta": -9933.750000000007,
+            "note": "Drivers: Over accrued for May commissions paid out in June; \nAdjusted Bonus Accrual_Jun 26 based on BDR Activity in June;"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 40761.03999999999,
+            "priorActual": 50694.79,
+            "momDelta": -9933.750000000007,
+            "momPct": -0.1959520889621992
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 81203.77,
+            "priorActual": 78944.08000000002,
+            "momDelta": 2259.689999999988,
+            "momPct": 0.0286239322821925
+          },
+          {
+            "account": "62400 Internal Events",
+            "mtdActual": 2769.2599999999998,
+            "priorActual": 1546.6599999999999,
+            "momDelta": 1222.6,
+            "momPct": 0.7904775451618327
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 9221.039999999999,
+            "priorActual": 10047.580000000002,
+            "momDelta": -826.5400000000027,
+            "momPct": -0.08226259457501235
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1443,6 +2143,56 @@
             "varPct": -0.152332270489627
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6500 Solutions Consulting",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 65973.13,
+            "priorActual": 4996.300000000001,
+            "momDelta": 60976.83,
+            "note": "Drivers: Increase in Bonus Accrual_Jun 26 based on SC Activity in June"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 65973.13,
+            "priorActual": 4996.300000000001,
+            "momDelta": 60976.83,
+            "momPct": 12.204397253967935
+          },
+          {
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 3893.73,
+            "priorActual": 5423.71,
+            "momDelta": -1529.98,
+            "momPct": -0.28209104100329846
+          },
+          {
+            "account": "62200 Travel Transportation",
+            "mtdActual": 108.32,
+            "priorActual": 1475.7600000000002,
+            "momDelta": -1367.4400000000003,
+            "momPct": -0.9266005312516941
+          },
+          {
+            "account": "61400 Employee Benefits - Medical",
+            "mtdActual": 7418.960000000001,
+            "priorActual": 6626.110000000001,
+            "momDelta": 792.8500000000004,
+            "momPct": 0.11965542377050793
+          },
+          {
+            "account": "62400 Internal Events",
+            "mtdActual": 1713.11,
+            "priorActual": 2462.3199999999997,
+            "momDelta": -749.2099999999998,
+            "momPct": -0.30426995678871954
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1543,6 +2293,64 @@
             "varPct": -0.059076162705181
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6800 Revenue Operations",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 18768.42,
+            "priorActual": -11826.25,
+            "momDelta": 30594.67,
+            "note": "Drivers: Adjusted Bonus Accrual_Jun 26 based on BDR Activity in June;\nPaid out final commissions for terminated employee;\nReferral bonus paid out for employee in June"
+          },
+          {
+            "class": "6800 Revenue Operations",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 79821.02,
+            "priorActual": 85204.13,
+            "momDelta": -5383.110000000001,
+            "note": "Drivers: DocuSign Inc. being booked under 6700 Sales instead of Rev Ops"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 18768.42,
+            "priorActual": -11826.25,
+            "momDelta": 30594.67,
+            "momPct": -2.5870136349223123
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 79821.02,
+            "priorActual": 85204.13,
+            "momDelta": -5383.110000000001,
+            "momPct": -0.06317897970438757
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 74004.99,
+            "priorActual": 78203.0,
+            "momDelta": -4198.009999999995,
+            "momPct": -0.05368093295653613
+          },
+          {
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 2426.41,
+            "priorActual": 3341.4,
+            "momDelta": -914.9900000000002,
+            "momPct": -0.2738343209433172
+          },
+          {
+            "account": "61400 Employee Benefits - Medical",
+            "mtdActual": 4382.39,
+            "priorActual": 3808.9300000000007,
+            "momDelta": 573.4599999999996,
+            "momPct": 0.15055671802842255
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1643,6 +2451,80 @@
             "varPct": -0.226047064837989
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6900 Marketing",
+            "account": "61100 Salaries",
+            "mtdActual": 122268.76,
+            "priorActual": 111662.73,
+            "momDelta": 10606.029999999999,
+            "note": "Drivers: Full impact of Lauren's return from parental leave"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "65100 Advertising & Marketing",
+            "mtdActual": 74624.7,
+            "priorActual": 93899.14,
+            "momDelta": -19274.440000000002,
+            "note": "Drivers: Everest Global, Inc. (-$48,600) - One-time engagement for Whitepaper for Payer Industry Report,\" project 3/5\u20134/30/26; \nWorkweek (-$12,925) - Two sponorships in May with no June sponisher - the decrease is related to non-reccurrence of May placements"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "65200 Marketing Events",
+            "mtdActual": 31288.989999999998,
+            "priorActual": 83255.72,
+            "momDelta": -51966.73,
+            "note": "Drivers: Bridgemark Media Group LLC (-$25,000) - relates to Spring Revenue Cycle Management Congress Spring RCM 26 (May 2026); \nMcDermott Will & Emery LLP (-$25,000) - May spend relates to McDermott Health Ex 2026 Patron Sponsor event sponsorship 5/20/2026 - 5/21/2026; \nIllinois Health and Hospital Association $7,750 - Sponsorship Fee (event date 6/18/2026)"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 35036.72,
+            "priorActual": 23618.790000000005,
+            "momDelta": 11417.929999999997,
+            "note": "Drivers: Sendoso $12,700 - true-up/adjustment was booked in June even though the amortization window closed 1/31/25 (catch-up of a remaining balance from prepaid clean up exercise in June)."
+          }
+        ],
+        "movers": [
+          {
+            "account": "65200 Marketing Events",
+            "mtdActual": 31288.989999999998,
+            "priorActual": 83255.72,
+            "momDelta": -51966.73,
+            "momPct": -0.6241820982390159
+          },
+          {
+            "account": "65100 Advertising & Marketing",
+            "mtdActual": 74624.7,
+            "priorActual": 93899.14,
+            "momDelta": -19274.440000000002,
+            "momPct": -0.20526748168300585
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 35036.72,
+            "priorActual": 23618.790000000005,
+            "momDelta": 11417.929999999997,
+            "momPct": 0.4834256962359204
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 122268.76,
+            "priorActual": 111662.73,
+            "momDelta": 10606.029999999999,
+            "momPct": 0.09498272162967894
+          },
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 9333.220000000001,
+            "priorActual": 6349.3,
+            "momDelta": 2983.920000000001,
+            "momPct": 0.46996046808309594
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1743,6 +2625,72 @@
             "varPct": -0.0761053950444383
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "7100 Product & Design",
+            "account": "61100 Salaries",
+            "mtdActual": 275101.19,
+            "priorActual": 263083.39,
+            "momDelta": 12017.799999999988,
+            "note": "Drivers: 2 June terminations, offset by increased comp payouts from parental leave adjustments"
+          },
+          {
+            "class": "7100 Product & Design",
+            "account": "61300 Severance",
+            "mtdActual": 37212.0,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: Primarily payroll/journal-entry activity (e.g., \u201cSeverance for dept: Product & Design\u201d)."
+          },
+          {
+            "class": "7100 Product & Design",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 46615.37000000001,
+            "priorActual": 25229.700000000004,
+            "momDelta": 21385.670000000006,
+            "note": "Drivers: CE Broker Inc. $22,891 - additional amortization relates to added licenses and certification verifications"
+          }
+        ],
+        "movers": [
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 46615.37000000001,
+            "priorActual": 25229.700000000004,
+            "momDelta": 21385.670000000006,
+            "momPct": 0.8476386956642371
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 275101.19,
+            "priorActual": 263083.39,
+            "momDelta": 12017.799999999988,
+            "momPct": 0.04568057299246443
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 24127.839999999997,
+            "priorActual": 20247.750000000004,
+            "momDelta": 3880.089999999993,
+            "momPct": 0.1916306750132727
+          },
+          {
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 39532.9,
+            "priorActual": 40540.34,
+            "momDelta": -1007.439999999995,
+            "momPct": -0.024850309592864665
+          },
+          {
+            "account": "61400 Employee Benefits - Medical",
+            "mtdActual": 11351.129999999997,
+            "priorActual": 10733.539999999995,
+            "momDelta": 617.590000000002,
+            "momPct": 0.05753833311284089
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1843,6 +2791,112 @@
             "varPct": -0.00465851009260265
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "7000 Engineering",
+            "account": "61100 Salaries",
+            "mtdActual": 725528.79,
+            "priorActual": 737470.26,
+            "momDelta": -11941.469999999972,
+            "note": "Drivers: 1 June new hire, offset by 2 June terminations and full impact of May termination"
+          },
+          {
+            "class": "7000 Engineering",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 13837.779999999999,
+            "priorActual": 20582.919999999995,
+            "momDelta": -6745.139999999996,
+            "note": "Drivers: Rippling (-$1,745) Less PrepaidCompensation amortization in June for Signing Bonuses;\nAdjusted monthly retention bonus accrual"
+          },
+          {
+            "class": "7000 Engineering",
+            "account": "62400 Internal Events",
+            "mtdActual": 9782.380000000005,
+            "priorActual": 266.4,
+            "momDelta": 9515.980000000005,
+            "note": "Drivers: Flights for Q3 2026 company offsite."
+          },
+          {
+            "class": "7000 Engineering",
+            "account": "68500 Contractors",
+            "mtdActual": -14563.309999999998,
+            "priorActual": 101076.69,
+            "momDelta": -115640.0,
+            "note": "Drivers: Genzeon - Over accrued for May's services since vendor never provided an estimate."
+          },
+          {
+            "class": "5800 Product Technology - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 74206.84999999999,
+            "priorActual": 49636.84999999999,
+            "momDelta": 24570.0,
+            "note": "Drivers: CAQH Solutions - ~$4,031 of catch-up amortization for the pre-June period 3/1/26\u20135/31/26 (added 5/5/26, after the amortization start);\nCloudAvail Technology Consulting spend was moved to 51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services in June"
+          },
+          {
+            "class": "5800 Product Technology - COGS",
+            "account": "51410 Cost of Goods Sold:COGS - Hosting Services",
+            "mtdActual": 73774.07,
+            "priorActual": 66874.53,
+            "momDelta": 6899.540000000008,
+            "note": "Drivers: Amazon Web Services - The ~$6.9K increase reflects higher June cloud consumption, not a rate change."
+          },
+          {
+            "class": "5800 Product Technology - COGS",
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 2144.3499999999985,
+            "priorActual": 13455.650000000001,
+            "momDelta": -11311.300000000003,
+            "note": "Drivers: CloudAvail Technology Consulting - MoM decrease reflects lower June consulting volume; May included higher/additional DevOps work that did not repeat."
+          },
+          {
+            "class": "5900 Engineering - COGS",
+            "account": "51440 Cost of Goods Sold:COGS - Cap Software Amort",
+            "mtdActual": 147413.4,
+            "priorActual": 89928.52,
+            "momDelta": 57484.87999999999,
+            "note": "Drivers: Caught up amortization for project releases that went live in Q1'26 & Q2'26"
+          }
+        ],
+        "movers": [
+          {
+            "account": "68500 Contractors",
+            "mtdActual": -14563.309999999998,
+            "priorActual": 101076.69,
+            "momDelta": -115640.0,
+            "momPct": -1.1440817858202519
+          },
+          {
+            "account": "51440 Cost of Goods Sold:COGS - Cap Software Amort",
+            "mtdActual": 147413.4,
+            "priorActual": 89928.52,
+            "momDelta": 57484.87999999999,
+            "momPct": 0.6392285784309581
+          },
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 74206.84999999999,
+            "priorActual": 49636.84999999999,
+            "momDelta": 24570.0,
+            "momPct": 0.49499514977279996
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 725528.79,
+            "priorActual": 737470.26,
+            "momDelta": -11941.469999999972,
+            "momPct": -0.016192476697297557
+          },
+          {
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 2144.3499999999985,
+            "priorActual": 13455.650000000001,
+            "momDelta": -11311.300000000003,
+            "momPct": -0.8406357180812523
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -1943,6 +2997,35 @@
             "varPct": 0.036605952810802
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "7200 Product Operations",
+            "account": "61100 Salaries",
+            "mtdActual": 110337.41999999998,
+            "priorActual": 104003.87,
+            "momDelta": 6333.549999999988,
+            "note": "Drivers: Full impact of 1 mid-April transfer from Payer Enrollment"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 110337.41999999998,
+            "priorActual": 104003.87,
+            "momDelta": 6333.549999999988,
+            "momPct": 0.06089725315029132
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 8459.509999999998,
+            "priorActual": 7943.599999999999,
+            "momDelta": 515.909999999999,
+            "momPct": 0.06494662369706418
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -2043,6 +3126,35 @@
             "varPct": 0.0562622846421765
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8300 Info Tech",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 92952.71999999999,
+            "priorActual": 82587.41999999998,
+            "momDelta": 10365.300000000003,
+            "note": "Drivers: Atlassian $2,877 - amortization for multiple subscription invoices ; \nSlab $2,766 - Relates to increase users ; \nMicrosoft $2,574 - Relates to increase licenses"
+          }
+        ],
+        "movers": [
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 92952.71999999999,
+            "priorActual": 82587.41999999998,
+            "momDelta": 10365.300000000003,
+            "momPct": 0.12550700821020933
+          },
+          {
+            "account": "69900 Depreciation",
+            "mtdActual": 21641.55999999996,
+            "priorActual": 20420.27,
+            "momDelta": 1221.2899999999609,
+            "momPct": 0.059807730260175836
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -2143,6 +3255,42 @@
             "varPct": -0.0163938988489895
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5600 Ops - Implementation - COGS",
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 42784.78,
+            "priorActual": 2383.52,
+            "momDelta": 40401.26,
+            "note": "Drivers: Primarily payroll/journal-entry activity (e.g., \u201cAdditional Pay - Amount for dept: Technical Solutions\u201d) for India Ops Employees"
+          }
+        ],
+        "movers": [
+          {
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 42784.78,
+            "priorActual": 2383.52,
+            "momDelta": 40401.26,
+            "momPct": 16.95025005034571
+          },
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 19327.809999999998,
+            "priorActual": 14540.639999999998,
+            "momDelta": 4787.17,
+            "momPct": 0.3292269116077422
+          },
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 6540.9,
+            "priorActual": 3646.3300000000013,
+            "momDelta": 2894.5699999999983,
+            "momPct": 0.7938310575290765
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -2243,6 +3391,80 @@
             "varPct": -0.216633483361224
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "61410 Employee Benefits - Worker's Compensation",
+            "mtdActual": 11861.9,
+            "priorActual": 1977.5000000000002,
+            "momDelta": 9884.4,
+            "note": "Drivers: THE HARTFORD $9,884 - true-up/adjustment was booked in June even though the amortization window closed 4/30/26 (catch-up of a remaining balance as part of prepaids clean up )"
+          },
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 38314.6,
+            "priorActual": 25000.0,
+            "momDelta": 13314.599999999999,
+            "note": "Drivers: PricewaterhouseCoopers LLP (-$25,000) - no audit milestone was billed in June; \nVector Advisory Services LLC $20,400 - New consulting engagement\nWithum Advisory Tax Audit $16,317 - Tax preparation milestone and data security technology fees for 2025 tax returns & provisions"
+          },
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "68500 Contractors",
+            "mtdActual": 5040.0,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: Robert Half $5,040 - Labor services provided by Susanna Weinholt for June 2026"
+          },
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "81100 Taxes & Licenses",
+            "mtdActual": 8381.84,
+            "priorActual": 18128.219999999998,
+            "momDelta": -9746.379999999997,
+            "note": "Drivers: eCorp Tax (-$19,595); \nOR EMPL DEPT $4,392"
+          }
+        ],
+        "movers": [
+          {
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 38314.6,
+            "priorActual": 25000.0,
+            "momDelta": 13314.599999999999,
+            "momPct": 0.532584
+          },
+          {
+            "account": "61410 Employee Benefits - Worker's Compensation",
+            "mtdActual": 11861.9,
+            "priorActual": 1977.5000000000002,
+            "momDelta": 9884.4,
+            "momPct": 4.99843236409608
+          },
+          {
+            "account": "81100 Taxes & Licenses",
+            "mtdActual": 8381.84,
+            "priorActual": 18128.219999999998,
+            "momDelta": -9746.379999999997,
+            "momPct": -0.537635796564693
+          },
+          {
+            "account": "69200 Insurance",
+            "mtdActual": 10793.81,
+            "priorActual": 6811.170000000001,
+            "momDelta": 3982.6399999999985,
+            "momPct": 0.5847218612954893
+          },
+          {
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 16012.64,
+            "priorActual": 19517.52,
+            "momDelta": -3504.880000000001,
+            "momPct": -0.17957609368403368
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -2345,6 +3567,11 @@
             "varPct": 44.98083
           }
         }
+      },
+      "commentary": {
+        "raw": [],
+        "movers": [],
+        "summary": []
       }
     },
     {
@@ -2445,6 +3672,49 @@
             "varPct": -0.435378581986824
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8100 Talent Mgmt, HR",
+            "account": "64300 Payroll & Benefit Admin",
+            "mtdActual": 19723.499999999996,
+            "priorActual": 29425.779999999995,
+            "momDelta": -9702.279999999999,
+            "note": "Drivers: Rippling (-$5,738) - Lower HR - Subscription charges for Jun 2026\nWorld Investment Advisors, LLC (-$3,965) - Reversed portion of expense due to prepaid clean up exercise in June 2026"
+          }
+        ],
+        "movers": [
+          {
+            "account": "64300 Payroll & Benefit Admin",
+            "mtdActual": 19723.499999999996,
+            "priorActual": 29425.779999999995,
+            "momDelta": -9702.279999999999,
+            "momPct": -0.3297204016342133
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 25463.989999999998,
+            "priorActual": 17451.659999999996,
+            "momDelta": 8012.330000000002,
+            "momPct": 0.45911563713709774
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 98357.09000000001,
+            "priorActual": 96067.31,
+            "momDelta": 2289.7800000000134,
+            "momPct": 0.023835163074723477
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 8265.84,
+            "priorActual": 7256.1,
+            "momDelta": 1009.7399999999998,
+            "momPct": 0.13915739860255505
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -2547,6 +3817,56 @@
             "varPct": 1.36969930525183
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8400 Exec Mgmt",
+            "account": "61100 Salaries",
+            "mtdActual": 45438.15,
+            "priorActual": 29755.72,
+            "momDelta": 15682.43,
+            "note": "Drivers: Impact of Emily M returning from parental leave"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 45438.15,
+            "priorActual": 29755.72,
+            "momDelta": 15682.43,
+            "momPct": 0.527039170956038
+          },
+          {
+            "account": "64100 Office Supplies",
+            "mtdActual": 9512.829999999998,
+            "priorActual": 13331.51,
+            "momDelta": -3818.680000000002,
+            "momPct": -0.2864401706933425
+          },
+          {
+            "account": "62200 Travel Transportation",
+            "mtdActual": 3290.7400000000002,
+            "priorActual": 10.97,
+            "momDelta": 3279.7700000000004,
+            "momPct": 298.9762989972653
+          },
+          {
+            "account": "68550 Meals & Entertainment",
+            "mtdActual": 1433.1,
+            "priorActual": 136.64,
+            "momDelta": 1296.46,
+            "momPct": 9.488144028103045
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 3440.59,
+            "priorActual": 2259.2000000000003,
+            "momDelta": 1181.3899999999999,
+            "momPct": 0.5229240439093483
+          }
+        ],
+        "summary": []
       }
     },
     {
@@ -2647,6 +3967,35 @@
             "varPct": 0.101792112093744
           }
         }
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8200 Legal",
+            "account": "68300 Legal Corporate",
+            "mtdActual": 44610.95,
+            "priorActual": 31349.340000000004,
+            "momDelta": 13261.609999999993,
+            "note": "Drivers: Latham & Watkins LLP $7,376 - Under accrual for May services based on estimate provided by legal vendor for May ;\nJ. SAGAR ASSOCIATES $6,287 - Increased India-entry advice plus equity-share valuation work:\nJones & Associates $5,225 -Time keeper fees - May 2026 - Missed accrual in May for legal services through this vendor"
+          }
+        ],
+        "movers": [
+          {
+            "account": "68300 Legal Corporate",
+            "mtdActual": 44610.95,
+            "priorActual": 31349.340000000004,
+            "momDelta": 13261.609999999993,
+            "momPct": 0.42302676866562394
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 4059.4300000000003,
+            "priorActual": 7276.819999999999,
+            "momDelta": -3217.3899999999985,
+            "momPct": -0.44214230941537636
+          }
+        ],
+        "summary": []
       }
     }
   ],
@@ -4895,6 +6244,188 @@
             ]
           }
         ]
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "7000 Engineering",
+            "account": "61100 Salaries",
+            "mtdActual": 725528.79,
+            "priorActual": 737470.26,
+            "momDelta": -11941.469999999972,
+            "note": "Drivers: 1 June new hire, offset by 2 June terminations and full impact of May termination",
+            "department": "Engineering"
+          },
+          {
+            "class": "7000 Engineering",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 13837.779999999999,
+            "priorActual": 20582.919999999995,
+            "momDelta": -6745.139999999996,
+            "note": "Drivers: Rippling (-$1,745) Less PrepaidCompensation amortization in June for Signing Bonuses;\nAdjusted monthly retention bonus accrual",
+            "department": "Engineering"
+          },
+          {
+            "class": "7000 Engineering",
+            "account": "62400 Internal Events",
+            "mtdActual": 9782.380000000005,
+            "priorActual": 266.4,
+            "momDelta": 9515.980000000005,
+            "note": "Drivers: Flights for Q3 2026 company offsite.",
+            "department": "Engineering"
+          },
+          {
+            "class": "7000 Engineering",
+            "account": "68500 Contractors",
+            "mtdActual": -14563.309999999998,
+            "priorActual": 101076.69,
+            "momDelta": -115640.0,
+            "note": "Drivers: Genzeon - Over accrued for May's services since vendor never provided an estimate.",
+            "department": "Engineering"
+          },
+          {
+            "class": "5800 Product Technology - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 74206.84999999999,
+            "priorActual": 49636.84999999999,
+            "momDelta": 24570.0,
+            "note": "Drivers: CAQH Solutions - ~$4,031 of catch-up amortization for the pre-June period 3/1/26\u20135/31/26 (added 5/5/26, after the amortization start);\nCloudAvail Technology Consulting spend was moved to 51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services in June",
+            "department": "Engineering"
+          },
+          {
+            "class": "5800 Product Technology - COGS",
+            "account": "51410 Cost of Goods Sold:COGS - Hosting Services",
+            "mtdActual": 73774.07,
+            "priorActual": 66874.53,
+            "momDelta": 6899.540000000008,
+            "note": "Drivers: Amazon Web Services - The ~$6.9K increase reflects higher June cloud consumption, not a rate change.",
+            "department": "Engineering"
+          },
+          {
+            "class": "5800 Product Technology - COGS",
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 2144.3499999999985,
+            "priorActual": 13455.650000000001,
+            "momDelta": -11311.300000000003,
+            "note": "Drivers: CloudAvail Technology Consulting - MoM decrease reflects lower June consulting volume; May included higher/additional DevOps work that did not repeat.",
+            "department": "Engineering"
+          },
+          {
+            "class": "5900 Engineering - COGS",
+            "account": "51440 Cost of Goods Sold:COGS - Cap Software Amort",
+            "mtdActual": 147413.4,
+            "priorActual": 89928.52,
+            "momDelta": 57484.87999999999,
+            "note": "Drivers: Caught up amortization for project releases that went live in Q1'26 & Q2'26",
+            "department": "Engineering"
+          },
+          {
+            "class": "7200 Product Operations",
+            "account": "61100 Salaries",
+            "mtdActual": 110337.41999999998,
+            "priorActual": 104003.87,
+            "momDelta": 6333.549999999988,
+            "note": "Drivers: Full impact of 1 mid-April transfer from Payer Enrollment",
+            "department": "Product Operations"
+          },
+          {
+            "class": "8300 Info Tech",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 92952.71999999999,
+            "priorActual": 82587.41999999998,
+            "momDelta": 10365.300000000003,
+            "note": "Drivers: Atlassian $2,877 - amortization for multiple subscription invoices ; \nSlab $2,766 - Relates to increase users ; \nMicrosoft $2,574 - Relates to increase licenses",
+            "department": "IT"
+          },
+          {
+            "class": "5600 Ops - Implementation - COGS",
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 42784.78,
+            "priorActual": 2383.52,
+            "momDelta": 40401.26,
+            "note": "Drivers: Primarily payroll/journal-entry activity (e.g., \u201cAdditional Pay - Amount for dept: Technical Solutions\u201d) for India Ops Employees",
+            "department": "Implementation"
+          }
+        ],
+        "movers": [
+          {
+            "account": "68500 Contractors",
+            "mtdActual": -14563.309999999998,
+            "priorActual": 101076.69,
+            "momDelta": -115640.0,
+            "momPct": -1.1440817858202519,
+            "department": "Engineering"
+          },
+          {
+            "account": "51440 Cost of Goods Sold:COGS - Cap Software Amort",
+            "mtdActual": 147413.4,
+            "priorActual": 89928.52,
+            "momDelta": 57484.87999999999,
+            "momPct": 0.6392285784309581,
+            "department": "Engineering"
+          },
+          {
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 42784.78,
+            "priorActual": 2383.52,
+            "momDelta": 40401.26,
+            "momPct": 16.95025005034571,
+            "department": "Implementation"
+          },
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 74206.84999999999,
+            "priorActual": 49636.84999999999,
+            "momDelta": 24570.0,
+            "momPct": 0.49499514977279996,
+            "department": "Engineering"
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 725528.79,
+            "priorActual": 737470.26,
+            "momDelta": -11941.469999999972,
+            "momPct": -0.016192476697297557,
+            "department": "Engineering"
+          },
+          {
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 2144.3499999999985,
+            "priorActual": 13455.650000000001,
+            "momDelta": -11311.300000000003,
+            "momPct": -0.8406357180812523,
+            "department": "Engineering"
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 92952.71999999999,
+            "priorActual": 82587.41999999998,
+            "momDelta": 10365.300000000003,
+            "momPct": 0.12550700821020933,
+            "department": "IT"
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 110337.41999999998,
+            "priorActual": 104003.87,
+            "momDelta": 6333.549999999988,
+            "momPct": 0.06089725315029132,
+            "department": "Product Operations"
+          }
+        ],
+        "summary": [
+          "Engineering contractor spend swung -$116K MoM as May's Genzeon estimate was reversed and re-booked at actual (Genzeon didn't provide a May estimate). Underlying activity is unchanged.",
+          "AWS cloud +$7K MoM from higher June consumption, not a rate change. Capitalized software amortization jumped +$57K as Q1/Q2 project releases caught up their amortization schedules.",
+          "IT software subscriptions +$10K on Atlassian, Slab, and Microsoft seat expansions.",
+          "Engineering salaries roughly flat (1 hire, 2 terms). Q3 offsite flights ($9.8K) hit June travel."
+        ],
+        "children": [
+          "Engineering",
+          "Product Operations",
+          "IT",
+          "Implementation",
+          "Analytics"
+        ]
       }
     },
     {
@@ -6511,6 +8042,189 @@
             ]
           }
         ]
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "6700 Sales",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 405746.55999999976,
+            "priorActual": 373369.47,
+            "momDelta": 32377.089999999793,
+            "note": "Drivers: Increase in Bonus Accrual_Jun 26 based on AE Activity in June;",
+            "department": "Sales"
+          },
+          {
+            "class": "6600 Customer Success",
+            "account": "61100 Salaries",
+            "mtdActual": 148952.08000000002,
+            "priorActual": 155362.62,
+            "momDelta": -6410.539999999979,
+            "note": "Drivers: 1 June termination",
+            "department": "Customer Success"
+          },
+          {
+            "class": "6600 Customer Success",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 25476.34,
+            "priorActual": 51146.55,
+            "momDelta": -25670.210000000003,
+            "note": "Drivers: Increase in Bonus Accrual_Jun 26 based on AM Activity in June;\nFinal commission paid out for terminated employee",
+            "department": "Customer Success"
+          },
+          {
+            "class": "6500 Solutions Consulting",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 65973.13,
+            "priorActual": 4996.300000000001,
+            "momDelta": 60976.83,
+            "note": "Drivers: Increase in Bonus Accrual_Jun 26 based on SC Activity in June",
+            "department": "Solutions Consultants"
+          },
+          {
+            "class": "6705 Sales - BDR",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 40761.03999999999,
+            "priorActual": 50694.79,
+            "momDelta": -9933.750000000007,
+            "note": "Drivers: Over accrued for May commissions paid out in June; \nAdjusted Bonus Accrual_Jun 26 based on BDR Activity in June;",
+            "department": "BDR"
+          },
+          {
+            "class": "6800 Revenue Operations",
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 18768.42,
+            "priorActual": -11826.25,
+            "momDelta": 30594.67,
+            "note": "Drivers: Adjusted Bonus Accrual_Jun 26 based on BDR Activity in June;\nPaid out final commissions for terminated employee;\nReferral bonus paid out for employee in June",
+            "department": "Revenue Operations"
+          },
+          {
+            "class": "6800 Revenue Operations",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 79821.02,
+            "priorActual": 85204.13,
+            "momDelta": -5383.110000000001,
+            "note": "Drivers: DocuSign Inc. being booked under 6700 Sales instead of Rev Ops",
+            "department": "Revenue Operations"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "61100 Salaries",
+            "mtdActual": 122268.76,
+            "priorActual": 111662.73,
+            "momDelta": 10606.029999999999,
+            "note": "Drivers: Full impact of Lauren's return from parental leave",
+            "department": "Marketing"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "65100 Advertising & Marketing",
+            "mtdActual": 74624.7,
+            "priorActual": 93899.14,
+            "momDelta": -19274.440000000002,
+            "note": "Drivers: Everest Global, Inc. (-$48,600) - One-time engagement for Whitepaper for Payer Industry Report,\" project 3/5\u20134/30/26; \nWorkweek (-$12,925) - Two sponorships in May with no June sponisher - the decrease is related to non-reccurrence of May placements",
+            "department": "Marketing"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "65200 Marketing Events",
+            "mtdActual": 31288.989999999998,
+            "priorActual": 83255.72,
+            "momDelta": -51966.73,
+            "note": "Drivers: Bridgemark Media Group LLC (-$25,000) - relates to Spring Revenue Cycle Management Congress Spring RCM 26 (May 2026); \nMcDermott Will & Emery LLP (-$25,000) - May spend relates to McDermott Health Ex 2026 Patron Sponsor event sponsorship 5/20/2026 - 5/21/2026; \nIllinois Health and Hospital Association $7,750 - Sponsorship Fee (event date 6/18/2026)",
+            "department": "Marketing"
+          },
+          {
+            "class": "6900 Marketing",
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 35036.72,
+            "priorActual": 23618.790000000005,
+            "momDelta": 11417.929999999997,
+            "note": "Drivers: Sendoso $12,700 - true-up/adjustment was booked in June even though the amortization window closed 1/31/25 (catch-up of a remaining balance from prepaid clean up exercise in June).",
+            "department": "Marketing"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 65973.13,
+            "priorActual": 4996.300000000001,
+            "momDelta": 60976.83,
+            "momPct": 12.204397253967935,
+            "department": "Solutions Consultants"
+          },
+          {
+            "account": "65200 Marketing Events",
+            "mtdActual": 31288.989999999998,
+            "priorActual": 83255.72,
+            "momDelta": -51966.73,
+            "momPct": -0.6241820982390159,
+            "department": "Marketing"
+          },
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 405746.55999999976,
+            "priorActual": 373369.47,
+            "momDelta": 32377.089999999793,
+            "momPct": 0.08671595457443211,
+            "department": "Sales"
+          },
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 18768.42,
+            "priorActual": -11826.25,
+            "momDelta": 30594.67,
+            "momPct": -2.5870136349223123,
+            "department": "Revenue Operations"
+          },
+          {
+            "account": "61240 Commission/Bonus",
+            "mtdActual": 25476.34,
+            "priorActual": 51146.55,
+            "momDelta": -25670.210000000003,
+            "momPct": -0.5018952402459208,
+            "department": "Customer Success"
+          },
+          {
+            "account": "65100 Advertising & Marketing",
+            "mtdActual": 74624.7,
+            "priorActual": 93899.14,
+            "momDelta": -19274.440000000002,
+            "momPct": -0.20526748168300585,
+            "department": "Marketing"
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 35036.72,
+            "priorActual": 23618.790000000005,
+            "momDelta": 11417.929999999997,
+            "momPct": 0.4834256962359204,
+            "department": "Marketing"
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 122268.76,
+            "priorActual": 111662.73,
+            "momDelta": 10606.029999999999,
+            "momPct": 0.09498272162967894,
+            "department": "Marketing"
+          }
+        ],
+        "summary": [
+          "Commissions moved sharply across GTM on June activity: Solutions Consultants +$61K, Sales +$32K, Customer Success -$26K (final commission paid for a departure), BDR -$41K (May over-accrual settled in June).",
+          "Marketing events -$52K MoM \u2014 May carried one-time sponsorships (Bridgemark $25K, McDermott $25K) that didn't repeat. Ad spend -$19K as the Everest Global whitepaper project wrapped.",
+          "Marketing software +$11K on a Sendoso true-up (prior-period amortization catch-up as part of prepaid clean-up).",
+          "Heads-up: DocuSign is being booked to Sales instead of Rev Ops going forward \u2014 Rev Ops software will look lower and Sales software higher on that reclassification."
+        ],
+        "children": [
+          "Sales",
+          "Customer Success",
+          "Solutions Consultants",
+          "BDR",
+          "Revenue Operations",
+          "Marketing"
+        ]
       }
     },
     {
@@ -8126,6 +9840,130 @@
               }
             ]
           }
+        ]
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "61410 Employee Benefits - Worker's Compensation",
+            "mtdActual": 11861.9,
+            "priorActual": 1977.5000000000002,
+            "momDelta": 9884.4,
+            "note": "Drivers: THE HARTFORD $9,884 - true-up/adjustment was booked in June even though the amortization window closed 4/30/26 (catch-up of a remaining balance as part of prepaids clean up )",
+            "department": "Accounting & Finance"
+          },
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 38314.6,
+            "priorActual": 25000.0,
+            "momDelta": 13314.599999999999,
+            "note": "Drivers: PricewaterhouseCoopers LLP (-$25,000) - no audit milestone was billed in June; \nVector Advisory Services LLC $20,400 - New consulting engagement\nWithum Advisory Tax Audit $16,317 - Tax preparation milestone and data security technology fees for 2025 tax returns & provisions",
+            "department": "Accounting & Finance"
+          },
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "68500 Contractors",
+            "mtdActual": 5040.0,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: Robert Half $5,040 - Labor services provided by Susanna Weinholt for June 2026",
+            "department": "Accounting & Finance"
+          },
+          {
+            "class": "8000 Accounting & Finance",
+            "account": "81100 Taxes & Licenses",
+            "mtdActual": 8381.84,
+            "priorActual": 18128.219999999998,
+            "momDelta": -9746.379999999997,
+            "note": "Drivers: eCorp Tax (-$19,595); \nOR EMPL DEPT $4,392",
+            "department": "Accounting & Finance"
+          },
+          {
+            "class": "8400 Exec Mgmt",
+            "account": "61100 Salaries",
+            "mtdActual": 45438.15,
+            "priorActual": 29755.72,
+            "momDelta": 15682.43,
+            "note": "Drivers: Impact of Emily M returning from parental leave",
+            "department": "Executive"
+          }
+        ],
+        "movers": [
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 45438.15,
+            "priorActual": 29755.72,
+            "momDelta": 15682.43,
+            "momPct": 0.527039170956038,
+            "department": "Executive"
+          },
+          {
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 38314.6,
+            "priorActual": 25000.0,
+            "momDelta": 13314.599999999999,
+            "momPct": 0.532584,
+            "department": "Accounting & Finance"
+          },
+          {
+            "account": "61410 Employee Benefits - Worker's Compensation",
+            "mtdActual": 11861.9,
+            "priorActual": 1977.5000000000002,
+            "momDelta": 9884.4,
+            "momPct": 4.99843236409608,
+            "department": "Accounting & Finance"
+          },
+          {
+            "account": "81100 Taxes & Licenses",
+            "mtdActual": 8381.84,
+            "priorActual": 18128.219999999998,
+            "momDelta": -9746.379999999997,
+            "momPct": -0.537635796564693,
+            "department": "Accounting & Finance"
+          },
+          {
+            "account": "69200 Insurance",
+            "mtdActual": 10793.81,
+            "priorActual": 6811.170000000001,
+            "momDelta": 3982.6399999999985,
+            "momPct": 0.5847218612954893,
+            "department": "Accounting & Finance"
+          },
+          {
+            "account": "64100 Office Supplies",
+            "mtdActual": 9512.829999999998,
+            "priorActual": 13331.51,
+            "momDelta": -3818.680000000002,
+            "momPct": -0.2864401706933425,
+            "department": "Executive"
+          },
+          {
+            "account": "61460 Stock Based Comp",
+            "mtdActual": 16012.64,
+            "priorActual": 19517.52,
+            "momDelta": -3504.880000000001,
+            "momPct": -0.17957609368403368,
+            "department": "Accounting & Finance"
+          },
+          {
+            "account": "62200 Travel Transportation",
+            "mtdActual": 3290.7400000000002,
+            "priorActual": 10.97,
+            "momDelta": 3279.7700000000004,
+            "momPct": 298.9762989972653,
+            "department": "Executive"
+          }
+        ],
+        "summary": [
+          "Professional & consulting +$13K MoM: PwC didn't bill an audit milestone in June (-$25K), offset by two new engagements \u2014 Vector Advisory ($20K) and Withum tax prep ($16K).",
+          "Executive payroll +$15K as Emily M returned from parental leave.",
+          "Two one-time items to note: Hartford workers' comp true-up ($9.9K catch-up as a prepaid window closed in April) and Robert Half labor services ($5K for June)."
+        ],
+        "children": [
+          "Accounting & Finance",
+          "Executive"
         ]
       }
     },
@@ -9745,6 +11583,309 @@
             ]
           }
         ]
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 73487.7,
+            "priorActual": 65426.92999999999,
+            "momDelta": 8060.770000000004,
+            "note": "Drivers: Hours worked variance MoM (additional working days)",
+            "department": "Licensing"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 11440.610000000004,
+            "priorActual": 5757.579999999999,
+            "momDelta": 5683.030000000005,
+            "note": "Drivers: Hours worked variance MoM (additional working days)",
+            "department": "Licensing"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 17487.58,
+            "priorActual": 9997.42,
+            "momDelta": 7490.160000000002,
+            "note": "Drivers: First Advantage $7,490 - Background screening / fingerprinting \u2013 monthly. Ramp shows the most recent invoice 6500222606 $14,745 (\"Fingerprint services for May 2026,\" booked June) vs the prior $12,945 (inv 6500222605). Higher screening volume drove the increase",
+            "department": "Licensing"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": 60306.880000000005,
+            "priorActual": 69924.87,
+            "momDelta": -9617.98999999999,
+            "note": "Drivers: Bold Business, LLC (-$9,618) - MoM change reflects week-ending timing and one fewer/lower weekly accrual booked in June vs May.",
+            "department": "Licensing"
+          },
+          {
+            "class": "5000 Ops - Licensing - COGS",
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 80153.37,
+            "priorActual": 5261.77,
+            "momDelta": 74891.59999999999,
+            "note": "Drivers: Primarily journal-entry activity (e.g., \u201cJun'26 Passthrough Fee Invoice Exclusions - Credit Memos\u201d).",
+            "department": "Licensing"
+          },
+          {
+            "class": "5100 Ops - Payor Enrollments - COGS",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 193949.37,
+            "priorActual": 183533.51999999993,
+            "momDelta": 10415.850000000064,
+            "note": "Drivers: 1 June new hire, offset by 1 June termination; variance driven by number of working days",
+            "department": "Payer Enrollment"
+          },
+          {
+            "class": "5100 Ops - Payor Enrollments - COGS",
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 24898.23,
+            "priorActual": 13081.859999999995,
+            "momDelta": 11816.370000000004,
+            "note": "Drivers: 1 June new hire, offset by 1 June termination; variance driven by number of working days",
+            "department": "Payer Enrollment"
+          },
+          {
+            "class": "5100 Ops - Payor Enrollments - COGS",
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": 174322.0,
+            "priorActual": 166502.38,
+            "momDelta": 7819.619999999995,
+            "note": "Drivers: Altermed RCM LLC $7,820 -MoM is leveling between the monthly accrual estimate and actual invoiced timesheet volume - Increased June accrual for Payor Enrollments BPO services",
+            "department": "Payer Enrollment"
+          },
+          {
+            "class": "5101 Ops - Payer Enrollment - Offshore",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 136710.2,
+            "priorActual": 131285.66,
+            "momDelta": 5424.540000000008,
+            "note": "Drivers: 6 June new hires, offset by 17 June terminations (Mostly on India Team so small impact), offset by full impact of May new hires",
+            "department": "Payer Enrollment"
+          },
+          {
+            "class": "5200 Ops - Credentialing - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 16078.850000000002,
+            "priorActual": 24897.73,
+            "momDelta": -8818.879999999997,
+            "note": "Drivers: Streamline Verify LLC monthly amortization now being booked to Ongoing Monitoring instead of Cred",
+            "department": "Credentialing"
+          },
+          {
+            "class": "5200 Ops - Credentialing - COGS",
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 11349.96,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: NCQA  - Expanded NCQA support scope in June drove the increase",
+            "department": "Credentialing"
+          },
+          {
+            "class": "5201 Ops - Credentialing - Offshore",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 42850.700000000004,
+            "priorActual": 50549.06,
+            "momDelta": -7698.359999999993,
+            "note": "Drivers: 1 June termination plus 10 employees transferred to Licensing Offshore dept",
+            "department": "Credentialing"
+          },
+          {
+            "class": "5250 Ops - Ongoing Monitoring - COGS",
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 59828.02000000001,
+            "priorActual": 39197.55000000001,
+            "momDelta": 20630.47,
+            "note": "Drivers: Streamline Verify LLC - monthly amortization increased $10,937 MoM; \nCAQH Solutions - catch-up amortization for the pre-June period 3/1/26\u20135/31/26 (added 5/5/26, after the amortization start).",
+            "department": "Ongoing Monitoring"
+          },
+          {
+            "class": "5250 Ops - Ongoing Monitoring - COGS",
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": -2717.0,
+            "priorActual": 8451.0,
+            "momDelta": -11168.0,
+            "note": "Drivers: Bold Business, LLC (-$11,168) - MoM change reflects week-ending timing and one fewer/lower weekly accrual booked in June vs May.",
+            "department": "Ongoing Monitoring"
+          },
+          {
+            "class": "7500 Ops - Payer Enrollment - Mgmt",
+            "account": "61100 Salaries",
+            "mtdActual": 8393.34,
+            "priorActual": 20953.38,
+            "momDelta": -12560.04,
+            "note": "Drivers: Full impact of late May termination",
+            "department": "Operations Management"
+          },
+          {
+            "class": "7500 Ops - Payer Enrollment - Mgmt",
+            "account": "68500 Contractors",
+            "mtdActual": 6897.44,
+            "priorActual": null,
+            "momDelta": null,
+            "note": "Drivers: Primarily journal-entry activity (e.g., \u201c1099 Hourly Payment for dept: Payer Enrollment Management\u201d).",
+            "department": "Operations Management"
+          },
+          {
+            "class": "7800 Ops Management",
+            "account": "61100 Salaries",
+            "mtdActual": 9656.25,
+            "priorActual": 19372.5,
+            "momDelta": -9716.25,
+            "note": "Drivers: Kate Sanders transferred mid-month to Business Operations",
+            "department": "Operations Management"
+          },
+          {
+            "class": "7800 Ops Management",
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 19770.0,
+            "priorActual": 8538.75,
+            "momDelta": 11231.25,
+            "note": "Drivers: DAVIS HEALTHCARE CONSULTING $11,231 - Expanded NCQA support scope in June, increased June accrual based on invoice received in early July",
+            "department": "Operations Management"
+          },
+          {
+            "class": "7850 Ops Management - Offshore",
+            "account": "67300 Equipment < $1,000",
+            "mtdActual": 25063.989999999998,
+            "priorActual": 24260.5,
+            "momDelta": 803.489999999998,
+            "note": "Increased $11,671 MoM ($24,260 \u2192 $35,931). Drivers: RUDHRA IT SERVICES $10,870 (RUDHRA IT SERVICES Accrual_6.30.26 - June bill received in July).",
+            "department": "India Operations Mgmt"
+          },
+          {
+            "class": "7850 Ops Management - Offshore",
+            "account": "68200 Recruiting Fees",
+            "mtdActual": 2961.220000000001,
+            "priorActual": 10660.81,
+            "momDelta": -7699.589999999998,
+            "note": "Drivers: ISTAR BUISNESS SOLUTIONS (-$7,700) - Recruiting Fees for India Team - Booked smaller accrual for June services based on invoice received for that period in early July",
+            "department": "India Operations Mgmt"
+          },
+          {
+            "class": "7850 Ops Management - Offshore",
+            "account": "69100 Rent & Lease",
+            "mtdActual": 79060.82,
+            "priorActual": 69984.95,
+            "momDelta": 9075.87000000001,
+            "note": "Drivers: Awfis Space Solutions Limited $9,076 - June 2026: Fixed Desk increased by 18 Seats",
+            "department": "India Operations Mgmt"
+          },
+          {
+            "class": "5500 Ops - Customer Support - COGS",
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 150419.17,
+            "priorActual": 159996.02000000002,
+            "momDelta": -9576.850000000006,
+            "note": "Drivers: 1 June termination, offset by impact of late May new hire",
+            "department": "Customer Support"
+          },
+          {
+            "class": "5500 Ops - Customer Support - COGS",
+            "account": "51220 Cost of Goods Sold:COGS - Bonuses",
+            "mtdActual": 9906.45,
+            "priorActual": 1698.58,
+            "momDelta": 8207.87,
+            "note": "Drivers: Final Commission pay out for terminated Engagement Manager",
+            "department": "Customer Support"
+          },
+          {
+            "class": "5500 Ops - Customer Support - COGS",
+            "account": "51250 Cost of Goods Sold:COGS - Stock Based Comp",
+            "mtdActual": -8239.7,
+            "priorActual": 3662.08,
+            "momDelta": -11901.78,
+            "note": "Decreased ($11,902) MoM ($3,662 \u2192 ($8,240)). Drivers: Primarily payroll/journal-entry activity (e.g., \u201cJune 2026 Stock Comp (Engagement Management)\u201d).",
+            "department": "Customer Support"
+          }
+        ],
+        "movers": [
+          {
+            "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+            "mtdActual": 80153.37,
+            "priorActual": 5261.77,
+            "momDelta": 74891.59999999999,
+            "momPct": 14.233157283575675,
+            "department": "Licensing"
+          },
+          {
+            "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+            "mtdActual": 59828.02000000001,
+            "priorActual": 39197.55000000001,
+            "momDelta": 20630.47,
+            "momPct": 0.526320395024689,
+            "department": "Ongoing Monitoring"
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 8393.34,
+            "priorActual": 20953.38,
+            "momDelta": -12560.04,
+            "momPct": -0.5994278727346137,
+            "department": "Operations Management"
+          },
+          {
+            "account": "51250 Cost of Goods Sold:COGS - Stock Based Comp",
+            "mtdActual": -8239.7,
+            "priorActual": 3662.08,
+            "momDelta": -11901.78,
+            "momPct": -3.250005461377141,
+            "department": "Customer Support"
+          },
+          {
+            "account": "51240 Cost of Goods Sold:COGS - Employee Benefits",
+            "mtdActual": 24898.23,
+            "priorActual": 13081.859999999995,
+            "momDelta": 11816.370000000004,
+            "momPct": 0.903263756071385,
+            "department": "Payer Enrollment"
+          },
+          {
+            "account": "68100 Professional & Consulting Fees",
+            "mtdActual": 19770.0,
+            "priorActual": 8538.75,
+            "momDelta": 11231.25,
+            "momPct": 1.3153271848924022,
+            "department": "Operations Management"
+          },
+          {
+            "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+            "mtdActual": -2717.0,
+            "priorActual": 8451.0,
+            "momDelta": -11168.0,
+            "momPct": -1.3215004141521713,
+            "department": "Ongoing Monitoring"
+          },
+          {
+            "account": "51200 Cost of Goods Sold:COGS - Salaries",
+            "mtdActual": 193949.37,
+            "priorActual": 183533.51999999993,
+            "momDelta": 10415.850000000064,
+            "momPct": 0.05675175847986824,
+            "department": "Payer Enrollment"
+          }
+        ],
+        "summary": [
+          "Streamline Verify LLC amortization ($11K/mo) reclassified from Credentialing to Ongoing Monitoring \u2014 Ongoing Monitoring software +$21K, Credentialing software -$16K, net-zero across Ops.",
+          "Licensing onshore COGS +$75K MoM on journal-entry activity (Passthrough Fee credit memos) \u2014 Q1 catch-up, not run-rate.",
+          "India Ops footprint growing: Awfis rent +$9K (+18 fixed-desk seats), new RUDHRA IT accrual +$11K.",
+          "Multiple headcount moves: 6 new hires in Payer Enrollment offset by 17 terms (mostly India team); Kate Sanders transferred from Ops Mgmt to Business Ops mid-month."
+        ],
+        "children": [
+          "Licensing",
+          "Payer Enrollment",
+          "Credentialing",
+          "Ongoing Monitoring",
+          "Intake",
+          "Operations Management",
+          "India Operations Mgmt",
+          "Quality Assurance",
+          "Customer Support"
+        ]
       }
     },
     {
@@ -10856,6 +12997,86 @@
               }
             ]
           }
+        ]
+      },
+      "commentary": {
+        "raw": [
+          {
+            "class": "8200 Legal",
+            "account": "68300 Legal Corporate",
+            "mtdActual": 44610.95,
+            "priorActual": 31349.340000000004,
+            "momDelta": 13261.609999999993,
+            "note": "Drivers: Latham & Watkins LLP $7,376 - Under accrual for May services based on estimate provided by legal vendor for May ;\nJ. SAGAR ASSOCIATES $6,287 - Increased India-entry advice plus equity-share valuation work:\nJones & Associates $5,225 -Time keeper fees - May 2026 - Missed accrual in May for legal services through this vendor",
+            "department": "Legal"
+          },
+          {
+            "class": "8100 Talent Mgmt, HR",
+            "account": "64300 Payroll & Benefit Admin",
+            "mtdActual": 19723.499999999996,
+            "priorActual": 29425.779999999995,
+            "momDelta": -9702.279999999999,
+            "note": "Drivers: Rippling (-$5,738) - Lower HR - Subscription charges for Jun 2026\nWorld Investment Advisors, LLC (-$3,965) - Reversed portion of expense due to prepaid clean up exercise in June 2026",
+            "department": "HR"
+          }
+        ],
+        "movers": [
+          {
+            "account": "68300 Legal Corporate",
+            "mtdActual": 44610.95,
+            "priorActual": 31349.340000000004,
+            "momDelta": 13261.609999999993,
+            "momPct": 0.42302676866562394,
+            "department": "Legal"
+          },
+          {
+            "account": "64300 Payroll & Benefit Admin",
+            "mtdActual": 19723.499999999996,
+            "priorActual": 29425.779999999995,
+            "momDelta": -9702.279999999999,
+            "momPct": -0.3297204016342133,
+            "department": "HR"
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 25463.989999999998,
+            "priorActual": 17451.659999999996,
+            "momDelta": 8012.330000000002,
+            "momPct": 0.45911563713709774,
+            "department": "HR"
+          },
+          {
+            "account": "67400 Software Subscriptions",
+            "mtdActual": 4059.4300000000003,
+            "priorActual": 7276.819999999999,
+            "momDelta": -3217.3899999999985,
+            "momPct": -0.44214230941537636,
+            "department": "Legal"
+          },
+          {
+            "account": "61100 Salaries",
+            "mtdActual": 98357.09000000001,
+            "priorActual": 96067.31,
+            "momDelta": 2289.7800000000134,
+            "momPct": 0.023835163074723477,
+            "department": "HR"
+          },
+          {
+            "account": "61200 Employer Payroll Tax Expense",
+            "mtdActual": 8265.84,
+            "priorActual": 7256.1,
+            "momDelta": 1009.7399999999998,
+            "momPct": 0.13915739860255505,
+            "department": "HR"
+          }
+        ],
+        "summary": [
+          "Legal fees +$13K MoM: Latham & Watkins under-accrued May services ($7K catch-up in June); J. Sagar Associates +$6K on expanded India entity setup and equity-share advice.",
+          "HR benefit admin -$10K as June Rippling charges came in lower and a prior-period World Investment Advisors accrual was reversed as part of the prepaids clean-up."
+        ],
+        "children": [
+          "Legal",
+          "HR"
         ]
       }
     }
