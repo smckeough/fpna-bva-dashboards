@@ -1,23 +1,44 @@
 'use client';
 
 import { Fragment, useState } from 'react';
-import type { DashboardRecord, PeriodKey } from '@/lib/types';
+import type {
+  DashboardRecord,
+  PeriodKey,
+  SubCategory,
+  SubCategoryBucket,
+} from '@/lib/types';
 import { getWindow } from '@/lib/metrics';
 import { fmtValue, fmtVarPct, readableMetricName, varClass } from '@/lib/format';
 
-// Variance table with expandable metric rows. On the leader dashboards each
-// row's numbers are the rollup; expanding the row lists one line per child
-// department that contributes to that metric. Nothing else about the layout
-// (columns, periods, totals) differs from VarianceTable.
+// Nested variance table. Three expand levels:
+//   1. Metric row       — leader rollup for COGS / People / Non-People / OpEx
+//   2. Department row   — one contributing child dept per metric row
+//   3. Sub-category row — Software / Contractors / Consulting / Legal / etc.
+//                         (only present on Non-People, COGS, OpEx, COGS+Opex —
+//                         People and Headcount have no sub-categories.)
+//
+// Sub-categories carry actuals only (source doesn't include per-category budgets),
+// so their Budget and Var% columns render as em-dash.
 
 type Props = {
   record: DashboardRecord;
-  childRecords: DashboardRecord[]; // resolved child department records
+  childRecords: DashboardRecord[];
   rows: string[];
   periods: PeriodKey[];
   periodLabels: Record<PeriodKey, string>;
   totalRows?: string[];
   metricLabels?: Record<string, string>;
+};
+
+// Metric → which sub-category buckets to show under a drilled-in child dept.
+// Empty array = no sub-category detail on that row.
+const METRIC_TO_SUBCAT_BUCKETS: Record<string, SubCategoryBucket[]> = {
+  cogs: ['cogs'],
+  nonPeople: ['nonPeople'],
+  opex: ['nonPeople'], // People has no sub-cat detail; only Non-People shows
+  cogsOpex: ['cogs', 'nonPeople'],
+  headcount: [],
+  people: [],
 };
 
 export default function BreakdownTable({
@@ -31,14 +52,25 @@ export default function BreakdownTable({
 }: Props) {
   const budgetLoaded = record.budgetLoaded !== false;
   const totals = new Set(totalRows ?? []);
-  const [openRows, setOpenRows] = useState<Set<string>>(new Set());
+  const [openMetrics, setOpenMetrics] = useState<Set<string>>(new Set());
+  // Key: `${metric}::${deptName}` — tracks which dept rows are further expanded.
+  const [openDeptRows, setOpenDeptRows] = useState<Set<string>>(new Set());
   const colSpanTotal = 1 + periods.length * 3;
 
-  function toggle(row: string) {
-    setOpenRows((prev) => {
+  function toggleMetric(row: string) {
+    setOpenMetrics((prev) => {
       const next = new Set(prev);
       if (next.has(row)) next.delete(row);
       else next.add(row);
+      return next;
+    });
+  }
+  function toggleDept(row: string, dept: string) {
+    setOpenDeptRows((prev) => {
+      const key = `${row}::${dept}`;
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
       return next;
     });
   }
@@ -76,21 +108,16 @@ export default function BreakdownTable({
           {rows.map((row) => {
             const isTotal = totals.has(row);
             const kind = row === 'headcount' ? 'headcount' : 'currency';
-            const isOpen = openRows.has(row);
+            const isOpen = openMetrics.has(row);
 
-            // A child contributes to this metric if it has a non-null actual in
-            // any of the requested periods. Filter dead rows so a leader's
-            // detail view isn't polluted with 0/0/— lines from unrelated teams.
             const contributingChildren = childRecords.filter((child) =>
               periods.some((p) => {
                 const w = getWindow(child, row, p);
-                return (
-                  w != null &&
-                  (w.actual != null || w.budget != null)
-                );
+                return w != null && (w.actual != null || w.budget != null);
               }),
             );
             const canExpand = contributingChildren.length > 0;
+            const applicableBuckets = METRIC_TO_SUBCAT_BUCKETS[row] ?? [];
 
             return (
               <Fragment key={row}>
@@ -98,7 +125,7 @@ export default function BreakdownTable({
                   className={`${isTotal ? 'bg-gray-50 font-semibold' : ''} ${
                     canExpand ? 'cursor-pointer hover:bg-blue-50/40' : ''
                   }`}
-                  onClick={canExpand ? () => toggle(row) : undefined}
+                  onClick={canExpand ? () => toggleMetric(row) : undefined}
                 >
                   <td className="px-4 py-2 text-gray-800">
                     <span className="inline-flex items-center gap-2">
@@ -137,33 +164,104 @@ export default function BreakdownTable({
                   })}
                 </tr>
                 {isOpen &&
-                  contributingChildren.map((child) => (
-                    <tr key={`${row}-${child.name}`} className="bg-blue-50/20">
-                      <td className="px-4 py-1.5 pl-10 text-xs text-gray-700">
-                        {child.name}
-                      </td>
-                      {periods.map((p) => {
-                        const cw = getWindow(child, row, p);
-                        return (
-                          <Fragment key={`${row}-${child.name}-${p}`}>
-                            <td className="px-4 py-1.5 text-right tabular-nums text-xs border-l border-gray-100">
-                              {fmtValue(cw?.actual ?? null, kind)}
-                            </td>
-                            <td className="px-4 py-1.5 text-right tabular-nums text-xs text-gray-500">
-                              {budgetLoaded ? fmtValue(cw?.budget ?? null, kind) : '—'}
-                            </td>
-                            <td
-                              className={`px-4 py-1.5 text-right tabular-nums text-xs font-medium ${
-                                budgetLoaded ? varClass(cw?.varPct ?? null) : 'text-gray-400'
-                              }`}
+                  contributingChildren.map((child) => {
+                    const deptOpen = openDeptRows.has(`${row}::${child.name}`);
+                    const applicableSubs =
+                      applicableBuckets.length > 0
+                        ? Object.entries(child.subCategories ?? {})
+                            .filter(([, sc]) => applicableBuckets.includes(sc.metricBucket))
+                            .filter(([, sc]) => sc.mtd !== 0 || sc.qtd !== 0 || sc.ytd !== 0)
+                        : [];
+                    const canDeptExpand = applicableSubs.length > 0;
+
+                    return (
+                      <Fragment key={`${row}-${child.name}`}>
+                        <tr
+                          className={`bg-blue-50/20 ${
+                            canDeptExpand ? 'cursor-pointer hover:bg-blue-100/40' : ''
+                          }`}
+                          onClick={
+                            canDeptExpand ? () => toggleDept(row, child.name) : undefined
+                          }
+                        >
+                          <td className="px-4 py-1.5 pl-10 text-xs text-gray-700">
+                            <span className="inline-flex items-center gap-2">
+                              {canDeptExpand && (
+                                <span
+                                  className={`inline-block text-gray-400 transition-transform ${
+                                    deptOpen ? 'rotate-90' : ''
+                                  }`}
+                                  aria-hidden
+                                >
+                                  ▶
+                                </span>
+                              )}
+                              {child.name}
+                            </span>
+                          </td>
+                          {periods.map((p) => {
+                            const cw = getWindow(child, row, p);
+                            return (
+                              <Fragment key={`${row}-${child.name}-${p}`}>
+                                <td className="px-4 py-1.5 text-right tabular-nums text-xs border-l border-gray-100">
+                                  {fmtValue(cw?.actual ?? null, kind)}
+                                </td>
+                                <td className="px-4 py-1.5 text-right tabular-nums text-xs text-gray-500">
+                                  {budgetLoaded ? fmtValue(cw?.budget ?? null, kind) : '—'}
+                                </td>
+                                <td
+                                  className={`px-4 py-1.5 text-right tabular-nums text-xs font-medium ${
+                                    budgetLoaded ? varClass(cw?.varPct ?? null) : 'text-gray-400'
+                                  }`}
+                                >
+                                  {budgetLoaded ? fmtVarPct(cw?.varPct ?? null) : '—'}
+                                </td>
+                              </Fragment>
+                            );
+                          })}
+                        </tr>
+                        {deptOpen &&
+                          applicableSubs.map(([subId, sc]) => (
+                            <tr
+                              key={`${row}-${child.name}-${subId}`}
+                              className="bg-blue-50/40"
                             >
-                              {budgetLoaded ? fmtVarPct(cw?.varPct ?? null) : '—'}
+                              <td className="px-4 py-1 pl-16 text-[11px] text-gray-600">
+                                {sc.label}
+                                {sc.vendors.length > 0 && (
+                                  <span className="ml-1.5 text-gray-400">
+                                    ({sc.vendors.length} vendor{sc.vendors.length === 1 ? '' : 's'})
+                                  </span>
+                                )}
+                              </td>
+                              {periods.map((p) => (
+                                <Fragment key={`${row}-${child.name}-${subId}-${p}`}>
+                                  <td className="px-4 py-1 text-right tabular-nums text-[11px] border-l border-gray-100">
+                                    {fmtValue(subActualForPeriod(sc, p), 'currency')}
+                                  </td>
+                                  <td className="px-4 py-1 text-right tabular-nums text-[11px] text-gray-400">
+                                    —
+                                  </td>
+                                  <td className="px-4 py-1 text-right tabular-nums text-[11px] text-gray-400">
+                                    —
+                                  </td>
+                                </Fragment>
+                              ))}
+                            </tr>
+                          ))}
+                        {deptOpen && !canDeptExpand && (
+                          <tr className="bg-blue-50/40">
+                            <td
+                              colSpan={colSpanTotal}
+                              className="px-4 py-1 pl-16 text-[11px] italic text-gray-500"
+                            >
+                              No sub-category detail for {child.name} in this bucket.
                             </td>
-                          </Fragment>
-                        );
-                      })}
-                    </tr>
-                  ))}
+                          </tr>
+                        )}
+                      </Fragment>
+                    );
+                  })}
                 {isOpen && !canExpand && (
                   <tr className="bg-blue-50/20">
                     <td
@@ -181,4 +279,11 @@ export default function BreakdownTable({
       </table>
     </div>
   );
+}
+
+function subActualForPeriod(sc: SubCategory, p: PeriodKey): number | null {
+  if (p === 'mtd') return sc.mtd;
+  if (p === 'qtd') return sc.qtd;
+  if (p === 'ytd') return sc.ytd;
+  return null;
 }

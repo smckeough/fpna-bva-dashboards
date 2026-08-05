@@ -221,6 +221,75 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 17487.58,
+          "qtd": 47630.0,
+          "ytd": 97303.92,
+          "vendors": [
+            {
+              "name": "First Advantage",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 16962.58,
+              "qtd": 46055.0,
+              "ytd": 93210.0
+            },
+            {
+              "name": "FAXPLUS",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 699.98
+            },
+            {
+              "name": "Lob.com",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 525.0,
+              "qtd": 1575.0,
+              "ytd": 3150.0
+            },
+            {
+              "name": "Lucid Software Inc",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 193.94
+            },
+            {
+              "name": "Kristy Castelli (kristine@medallion.co)",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Frontapp, Inc",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": -5.684341886080802e-14
+            }
+          ]
+        },
+        "bpo_services": {
+          "label": "BPO Services",
+          "metricBucket": "cogs",
+          "mtd": 140460.25,
+          "qtd": 301204.92,
+          "ytd": 597949.0700000001,
+          "vendors": [
+            {
+              "name": "Bold Business, LLC",
+              "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+              "mtd": 60306.880000000005,
+              "qtd": 208983.85,
+              "ytd": 450507.53
+            }
+          ]
+        }
       }
     },
     {
@@ -395,6 +464,56 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 7542.42,
+          "qtd": 22644.47,
+          "ytd": 43760.38,
+          "vendors": [
+            {
+              "name": "UiPath Inc.",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 7542.42,
+              "qtd": 22644.47,
+              "ytd": 43760.38
+            }
+          ]
+        },
+        "contractors_cogs": {
+          "label": "Contractors (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 30491.1,
+          "qtd": 124928.31,
+          "ytd": 187694.01,
+          "vendors": [
+            {
+              "name": "Insight Global, LLC",
+              "account": "51430 Cost of Goods Sold:COGS - Contractors",
+              "mtd": 15780.0,
+              "qtd": 65114.0,
+              "ytd": 95314.5
+            }
+          ]
+        },
+        "bpo_services": {
+          "label": "BPO Services",
+          "metricBucket": "cogs",
+          "mtd": 174322.0,
+          "qtd": 562067.56,
+          "ytd": 1242615.65,
+          "vendors": [
+            {
+              "name": "Altermed RCM LLC",
+              "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+              "mtd": 174322.0,
+              "qtd": 562067.56,
+              "ytd": 1242615.65
+            }
+          ]
+        }
       }
     },
     {
@@ -561,6 +680,82 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 16103.85,
+          "qtd": 60628.119999999995,
+          "ytd": 154079.14,
+          "vendors": [
+            {
+              "name": "CE Broker Inc.",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 12078.670000000006
+            },
+            {
+              "name": "CAQH Solutions",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 9330.849999999999,
+              "qtd": 28303.57,
+              "ytd": 56296.13
+            },
+            {
+              "name": "ABMS Solutions LLC",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 3726.51,
+              "qtd": 11595.42,
+              "ytd": 24025.059999999998
+            },
+            {
+              "name": "Streamline Verify LLC",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 3021.4900000000016,
+              "qtd": 20651.63,
+              "ytd": 60665.78
+            },
+            {
+              "name": "Federation of State Medical Boards",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 936.0
+            },
+            {
+              "name": "Kristy Castelli (kristine@medallion.co)",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 25.0,
+              "qtd": 77.5,
+              "ytd": 77.5
+            }
+          ]
+        },
+        "bpo_services": {
+          "label": "BPO Services",
+          "metricBucket": "cogs",
+          "mtd": 12449.96,
+          "qtd": 36504.399999999994,
+          "ytd": 102047.48999999999,
+          "vendors": [
+            {
+              "name": "NCQA",
+              "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+              "mtd": 11349.96,
+              "qtd": 11349.96,
+              "ytd": 11349.96
+            },
+            {
+              "name": "Altermed RCM LLC",
+              "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+              "mtd": 1100.0,
+              "qtd": 25154.44,
+              "ytd": 90697.53
+            }
+          ]
+        }
       }
     },
     {
@@ -681,7 +876,8 @@
           }
         ],
         "summary": []
-      }
+      },
+      "subCategories": {}
     },
     {
       "name": "Quality Assurance",
@@ -788,7 +984,8 @@
         "raw": [],
         "movers": [],
         "summary": []
-      }
+      },
+      "subCategories": {}
     },
     {
       "name": "Ongoing Monitoring",
@@ -927,6 +1124,61 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 59828.02,
+          "qtd": 116316.92,
+          "ytd": 169861.82,
+          "vendors": [
+            {
+              "name": "Streamline Verify LLC",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 42613.67,
+              "qtd": 78744.25,
+              "ytd": 132289.15
+            },
+            {
+              "name": "CAQH Solutions",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 16523.59,
+              "qtd": 35885.2,
+              "ytd": 35885.2
+            },
+            {
+              "name": "ABMS Solutions LLC",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 438.76,
+              "qtd": 775.47,
+              "ytd": 775.47
+            },
+            {
+              "name": "Federation of State Medical Boards",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 252.0,
+              "qtd": 912.0,
+              "ytd": 912.0
+            }
+          ]
+        },
+        "bpo_services": {
+          "label": "BPO Services",
+          "metricBucket": "cogs",
+          "mtd": -2717.0,
+          "qtd": 24165.82,
+          "ytd": 81193.16,
+          "vendors": [
+            {
+              "name": "Bold Business, LLC",
+              "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+              "mtd": -2717.0,
+              "qtd": 24165.82,
+              "ytd": 81193.16
+            }
+          ]
+        }
       }
     },
     {
@@ -1101,6 +1353,76 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 28031.450000000004,
+          "qtd": 89321.3,
+          "ytd": 161151.31000000003,
+          "vendors": [
+            {
+              "name": "Formagrid Inc dba Airtable",
+              "account": "67400 Software Subscriptions",
+              "mtd": 11376.29,
+              "qtd": 38871.28,
+              "ytd": 62820.280000000006
+            },
+            {
+              "name": "Teramind",
+              "account": "67400 Software Subscriptions",
+              "mtd": 10677.300000000001,
+              "qtd": 32915.520000000004,
+              "ytd": 65532.71000000001
+            },
+            {
+              "name": "DocHub LLC",
+              "account": "67400 Software Subscriptions",
+              "mtd": 5346.660000000001,
+              "qtd": 16251.060000000001,
+              "ytd": 30839.88
+            },
+            {
+              "name": "National Committee For Qu",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 675.0
+            },
+            {
+              "name": "CURSOR AI POWERED IDE",
+              "account": "67400 Software Subscriptions",
+              "mtd": 631.2,
+              "qtd": 1283.44,
+              "ytd": 1283.44
+            }
+          ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 6897.44,
+          "qtd": 6897.44,
+          "ytd": 6897.44,
+          "vendors": []
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 19770.0,
+          "qtd": 37833.75,
+          "ytd": 50880.0,
+          "vendors": [
+            {
+              "name": "DAVIS HEALTHCARE CONSULTING",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 19770.0,
+              "qtd": 37833.75,
+              "ytd": 50880.0
+            }
+          ]
+        }
       }
     },
     {
@@ -1267,6 +1589,31 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 48.3,
+          "qtd": 2485.95,
+          "ytd": 5084.919999999999,
+          "vendors": [
+            {
+              "name": "Nord Security",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 2417.49,
+              "ytd": 4915.5599999999995
+            },
+            {
+              "name": "SLT.NORD TEAMS",
+              "account": "67400 Software Subscriptions",
+              "mtd": 48.3,
+              "qtd": 68.46,
+              "ytd": 169.35999999999999
+            }
+          ]
+        }
       }
     },
     {
@@ -1433,6 +1780,24 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 6000.0,
+          "ytd": 6000.0,
+          "vendors": [
+            {
+              "name": "8flow Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 6000.0,
+              "ytd": 6000.0
+            }
+          ]
+        }
       }
     },
     {
@@ -1599,6 +1964,47 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 9632.54,
+          "qtd": 28940.31,
+          "ytd": 55641.31,
+          "vendors": [
+            {
+              "name": "Intercom",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 8696.54,
+              "qtd": 26169.11,
+              "ytd": 51950.909999999996
+            },
+            {
+              "name": "Tresorit",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 936.0,
+              "qtd": 2771.2,
+              "ytd": 3690.4
+            }
+          ]
+        },
+        "bpo_services": {
+          "label": "BPO Services",
+          "metricBucket": "cogs",
+          "mtd": 2050.0,
+          "qtd": 6052.0,
+          "ytd": 11826.82,
+          "vendors": [
+            {
+              "name": "Altermed RCM LLC",
+              "account": "51420 Cost of Goods Sold:COGS - Offshore BPO Services",
+              "mtd": 2050.0,
+              "qtd": 6052.0,
+              "ytd": 11826.82
+            }
+          ]
+        }
       }
     },
     {
@@ -1750,6 +2156,40 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 788.53,
+          "ytd": 2519.4700000000003,
+          "vendors": [
+            {
+              "name": "Scratchpad, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 788.53,
+              "ytd": 2519.4700000000003
+            }
+          ]
+        },
+        "marketing": {
+          "label": "Marketing",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 0.0,
+          "ytd": 85.0,
+          "vendors": [
+            {
+              "name": "Nic Schisler (nic.schisler@medallion.co)",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 85.0
+            }
+          ]
+        }
       }
     },
     {
@@ -1900,6 +2340,1314 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 3825.44,
+          "qtd": 5587.570000000001,
+          "ytd": 6807.110000000001,
+          "vendors": [
+            {
+              "name": "DocuSign Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3533.86,
+              "qtd": 4830.01,
+              "ytd": 4830.01
+            },
+            {
+              "name": "IN COLORADO ASSOCIATION",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 499.93999999999994
+            },
+            {
+              "name": "FRONT STARTER",
+              "account": "67400 Software Subscriptions",
+              "mtd": 187.35999999999999,
+              "qtd": 568.34,
+              "ytd": 1030.8799999999999
+            },
+            {
+              "name": "LinkedIn Corporation",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 157.06
+            },
+            {
+              "name": "Anthropic",
+              "account": "67400 Software Subscriptions",
+              "mtd": 104.22,
+              "qtd": 189.22,
+              "ytd": 209.22
+            },
+            {
+              "name": "Kyle Carbine (kyle.carbine@medallion.co)",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 80.0
+            }
+          ]
+        },
+        "marketing": {
+          "label": "Marketing",
+          "metricBucket": "nonPeople",
+          "mtd": 6482.870000000001,
+          "qtd": 19330.869999999995,
+          "ytd": 36477.17999999999,
+          "vendors": [
+            {
+              "name": "VIVE",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 2545.0
+            },
+            {
+              "name": "Crumbl Cookies",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 2134.8599999999997,
+              "qtd": 5003.54,
+              "ytd": 6669.76
+            },
+            {
+              "name": "Doordash",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 1570.3099999999997,
+              "qtd": 6919.09,
+              "ytd": 12874.109999999999
+            },
+            {
+              "name": "Southwest Airlines",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 1000.0,
+              "qtd": 1000.0,
+              "ytd": 1000.0
+            },
+            {
+              "name": "Cameo",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 467.5
+            },
+            {
+              "name": "Jeremy Walker (jeremy.walker@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 450.0,
+              "qtd": 584.01,
+              "ytd": 584.01
+            },
+            {
+              "name": "Bijon Brydson (bijon@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 272.96,
+              "qtd": 477.2,
+              "ytd": 557.13
+            },
+            {
+              "name": "Paypal Giving Fund",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 100.0,
+              "ytd": 251.52
+            },
+            {
+              "name": "Grubhub",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 216.4,
+              "ytd": 244.55
+            },
+            {
+              "name": "Dripify",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 158.0,
+              "ytd": 237.0
+            },
+            {
+              "name": "Fatima Nunes (fatima@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 214.17999999999998,
+              "ytd": 214.17999999999998
+            },
+            {
+              "name": "Uber Eats",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 203.72,
+              "qtd": 418.95,
+              "ytd": 555.36
+            },
+            {
+              "name": "NY Bakery & Desserts",
+              "account": "65100 Advertising & Marketing",
+              "mtd": -197.48,
+              "qtd": 0.0,
+              "ytd": 0.0
+            },
+            {
+              "name": "QGIV - Food Bank of Northern Nevada",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 121.75,
+              "ytd": 196.75
+            },
+            {
+              "name": "Zo Hooda (zo@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 131.42000000000002,
+              "ytd": 181.42000000000002
+            },
+            {
+              "name": "Leukemia & Lymphoma Society",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 75.0,
+              "ytd": 180.0
+            },
+            {
+              "name": "Fanatics",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 176.49,
+              "qtd": 176.49,
+              "ytd": 176.49
+            },
+            {
+              "name": "Philip Stefani (philip@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 150.0,
+              "ytd": 150.0
+            },
+            {
+              "name": "Publix",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 142.93,
+              "qtd": 142.93,
+              "ytd": 142.93
+            },
+            {
+              "name": "Amazon",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 142.82,
+              "qtd": 460.55999999999995,
+              "ytd": 806.03
+            },
+            {
+              "name": "Clipstic",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 136.6
+            },
+            {
+              "name": "Nothing Bundt Cakes",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 131.45999999999998,
+              "qtd": 212.48999999999998,
+              "ytd": 589.1599999999999
+            },
+            {
+              "name": "Autism Society Of Texas",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 111.4
+            },
+            {
+              "name": "Etsy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 107.86,
+              "ytd": 107.86
+            },
+            {
+              "name": "Make-A-Wish America",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 107.0
+            },
+            {
+              "name": "National Kidney Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 104.45
+            },
+            {
+              "name": "Regional Food Bank of Oklahoma",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 103.94
+            },
+            {
+              "name": "Unity Health Care",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 103.94
+            },
+            {
+              "name": "Valleywise Health Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 103.94,
+              "ytd": 103.94
+            },
+            {
+              "name": "Idaho Youth Ranch",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 103.2
+            },
+            {
+              "name": "American Cancer Social Events",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 100.0,
+              "qtd": 100.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "Richardson, TX",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "Sankofa Vision",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "SOS Children's Villages",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 100.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "YMCA",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "Veteran Cancer Network",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 88.8
+            },
+            {
+              "name": "Levain Bakery",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 88.2
+            },
+            {
+              "name": "Downtown Baltimore Child Care",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 82.62,
+              "ytd": 82.62
+            },
+            {
+              "name": "Jigger Shop",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 82.48
+            },
+            {
+              "name": "New York Blood Center",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 79.27
+            },
+            {
+              "name": "Wt Wines",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 78.79
+            },
+            {
+              "name": "The Ohio State University",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 76.5,
+              "ytd": 76.5
+            },
+            {
+              "name": "ATI Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 75.0
+            },
+            {
+              "name": "Children's Museum of Denver",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 75.0
+            },
+            {
+              "name": "Paypal",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.0,
+              "ytd": 75.0
+            },
+            {
+              "name": "Three Rangers Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 75.0
+            },
+            {
+              "name": "Lifeline Connections",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 65.0
+            },
+            {
+              "name": "Bloomerang",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 62.29,
+              "ytd": 62.29
+            },
+            {
+              "name": "Cigars",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 62.11,
+              "ytd": 62.11
+            },
+            {
+              "name": "Jacob Andreasson (jacob.andreasson@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 61.81
+            },
+            {
+              "name": "JRB Media",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 60.0
+            },
+            {
+              "name": "Givebutter",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 59.3
+            },
+            {
+              "name": "Autism Society",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 59.23
+            },
+            {
+              "name": "International Child Advancement",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 58.5
+            },
+            {
+              "name": "Pak Mail",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 58.25,
+              "qtd": 58.25,
+              "ytd": 58.25
+            },
+            {
+              "name": "City Dogs & City Kitties Rescue",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 56.54
+            },
+            {
+              "name": "Brendan Cherry (brendan.cherry@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 55.58,
+              "ytd": 55.58
+            },
+            {
+              "name": "Horizon Health",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 54.5,
+              "ytd": 54.5
+            },
+            {
+              "name": "Judi's House",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 53.7
+            },
+            {
+              "name": "MassChallenge",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 53.18
+            },
+            {
+              "name": "GiGi's Playhouse",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.92
+            },
+            {
+              "name": "Cherry Republic",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.8
+            },
+            {
+              "name": "American Cancer Society",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.75
+            },
+            {
+              "name": "Second Harvest Community Food Bank",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.75
+            },
+            {
+              "name": "Parent Project Muscular Dystrophy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 52.71,
+              "ytd": 52.71
+            },
+            {
+              "name": "iMentor",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 52.66,
+              "ytd": 52.66
+            },
+            {
+              "name": "Autism Speaks",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 52.6,
+              "ytd": 52.6
+            },
+            {
+              "name": "Save a Child's Heart",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.6
+            },
+            {
+              "name": "JDRF",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.5
+            },
+            {
+              "name": "Meals on Wheels",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.32
+            },
+            {
+              "name": "Calvary Baptist Church",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 52.12,
+              "qtd": 52.12,
+              "ytd": 52.12
+            },
+            {
+              "name": "Chicanos Por La Causa",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.12
+            },
+            {
+              "name": "Habitat for Humanity",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.12
+            },
+            {
+              "name": "The Leapfrog Group",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.01
+            },
+            {
+              "name": "Shriners Hospitals for Children",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.0
+            },
+            {
+              "name": "The Valerie Fund",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 52.0
+            },
+            {
+              "name": "Christ Clinic",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 51.99
+            },
+            {
+              "name": "Children's Law Center",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 51.5,
+              "ytd": 51.5
+            },
+            {
+              "name": "March for Babies",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 51.5
+            },
+            {
+              "name": "SSP",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 51.5
+            },
+            {
+              "name": "Ssp Vision House",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 51.5
+            },
+            {
+              "name": "Three Roots International",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 51.5
+            },
+            {
+              "name": "Young & Healthy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 51.5,
+              "ytd": 51.5
+            },
+            {
+              "name": "St. Baldrick's Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 51.25,
+              "ytd": 51.25
+            },
+            {
+              "name": "NAMI",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 51.0
+            },
+            {
+              "name": "American Association For",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "American Diabetes Assoc",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "American Music Therapy Association",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Best Buddies",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Bethlehem Haven",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Big Brothers Big Sisters of America",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Braid Mission",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Cahaba Medical Care",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Clark University",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Conexus Recruiting",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Cornerstone Women's Resource Center",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Dreams On Horseback",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Dress for Success",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Driftwood",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Dutchess Land Conservancy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Family Legacy Missions International",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Giv Peninsular Florida",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Heritage Health",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "HERO Campaign",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Home of the Innocents",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Hospital for Special Surgery",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Leadership Florida",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Mental Health America of Indiana",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Montage Health Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "National Associaton Of Co",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "National Ovarian Cancer Coalition",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Newark Campus Development Fund",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "North Texas Ingred",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Northeastern Vermont Regional Hospital",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Northwestern University Dance Marathon",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Outward Bound",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Parkinson's Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Pu Ag Education Web",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Ridgeview Clinics",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Ronald McDonald House",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Ronald McDonald House Charities",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Scripps Health",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Second Harvest Food Bank of the Lehigh Valley",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "The Cooper Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Trillium Botanicals",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Watertown Urban Mission",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Wounded Warrior Project",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 50.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Yale University",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 50.0,
+              "qtd": 50.0,
+              "ytd": 50.0
+            },
+            {
+              "name": "Tiff'S Treats",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 47.0,
+              "ytd": 47.0
+            },
+            {
+              "name": "Nave Brar (nave.brar@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": -45.93,
+              "ytd": -45.93
+            },
+            {
+              "name": "The Mary Ryan Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 45.0,
+              "ytd": 45.0
+            },
+            {
+              "name": "Josh Brunell (josh.brunell@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": -44.19,
+              "qtd": -81.47,
+              "ytd": -81.47
+            },
+            {
+              "name": "National Kidney Donation Organization",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 41.8,
+              "qtd": 41.8,
+              "ytd": 41.8
+            },
+            {
+              "name": "BHcare",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 41.5,
+              "qtd": 41.5,
+              "ytd": 41.5
+            },
+            {
+              "name": "Catholic Charities",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 40.0,
+              "ytd": 40.0
+            },
+            {
+              "name": "CollegeSpring",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 40.0,
+              "ytd": 40.0
+            },
+            {
+              "name": "Marshall County Community Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 40.0,
+              "ytd": 40.0
+            },
+            {
+              "name": "National Multiple Scleros",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 40.0,
+              "ytd": 40.0
+            },
+            {
+              "name": "Uber",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 36.66,
+              "qtd": 36.66,
+              "ytd": 36.66
+            },
+            {
+              "name": "Insomnia Cookies",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 36.59,
+              "ytd": 36.59
+            },
+            {
+              "name": "First Tee",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 35.0
+            },
+            {
+              "name": "Stationers",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 31.14,
+              "qtd": 31.14,
+              "ytd": 31.14
+            },
+            {
+              "name": "Autob 1A Clase Cib 1",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 27.25,
+              "ytd": 27.25
+            },
+            {
+              "name": "Girls on the Run",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 27.15,
+              "ytd": 27.15
+            },
+            {
+              "name": "Joybound People & Pets",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 27.1,
+              "ytd": 27.1
+            },
+            {
+              "name": "Creative Girls Rock",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 26.81
+            },
+            {
+              "name": "Casey's",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.56,
+              "ytd": 26.56
+            },
+            {
+              "name": "American Heart Association",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.5,
+              "ytd": 26.5
+            },
+            {
+              "name": "Rebuilding Together",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.5,
+              "ytd": 26.5
+            },
+            {
+              "name": "Girls Who Code",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.38,
+              "ytd": 26.38
+            },
+            {
+              "name": "Care Net Pregnancy Center",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.13,
+              "ytd": 26.13
+            },
+            {
+              "name": "Trulight Ministries",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 26.08
+            },
+            {
+              "name": "Senior Community Services",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.06,
+              "ytd": 26.06
+            },
+            {
+              "name": "Donate Strivev5Kstrivev5",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 26.0,
+              "ytd": 26.0
+            },
+            {
+              "name": "Family Ties of Westchester",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 26.0
+            },
+            {
+              "name": "Network For Good",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.75,
+              "ytd": 25.75
+            },
+            {
+              "name": "United Way of Greater Houston",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.64,
+              "ytd": 25.64
+            },
+            {
+              "name": "Food Pantry Network of Licking County",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.5,
+              "ytd": 25.5
+            },
+            {
+              "name": "American Cancer Society Center",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Georgia State University Foundation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Junior Achievement",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Lake Minnetonka Klondike Dog Derby",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "LifeBridge Health",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Loyola Academy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Midwest Academy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Notarize",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Sadler's Ordinary",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Special Olympics Minnesota",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Texas Physical Therapy Association",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "VISN 2",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 25.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "YMCA of Douglas County",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Target",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 23.91
+            },
+            {
+              "name": "USPS",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 22.95
+            },
+            {
+              "name": "Anthropic",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 21.32
+            },
+            {
+              "name": "Office Depot",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 17.98,
+              "qtd": 17.98,
+              "ytd": 17.98
+            },
+            {
+              "name": "Amazon Prime",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 16.28,
+              "qtd": 32.56,
+              "ytd": 32.56
+            },
+            {
+              "name": "Jordan Tantleff (jordan.tantleff@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": -42.74,
+              "ytd": 7.399999999999999
+            },
+            {
+              "name": "Walgreens",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 3.26,
+              "qtd": 3.26,
+              "ytd": 3.26
+            }
+          ]
+        }
       }
     },
     {
@@ -2043,6 +3791,24 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "marketing": {
+          "label": "Marketing",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 93.53,
+          "ytd": 93.53,
+          "vendors": [
+            {
+              "name": "Nneka-Shay Grant (nneka@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 93.53,
+              "ytd": 93.53
+            }
+          ]
+        }
       }
     },
     {
@@ -2193,6 +3959,47 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 4931.94,
+          "qtd": 22891.440000000002,
+          "ytd": 30400.87,
+          "vendors": [
+            {
+              "name": "Demostack, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4833.33,
+              "qtd": 22592.33,
+              "ytd": 29999.86
+            },
+            {
+              "name": "Lucid Software Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 98.61000000000001,
+              "qtd": 299.11,
+              "ytd": 401.0100000000001
+            }
+          ]
+        },
+        "marketing": {
+          "label": "Marketing",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 80.0,
+          "ytd": 80.0,
+          "vendors": [
+            {
+              "name": "Joshua Levitan (josh.levitan@medallion.co)",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 80.0,
+              "ytd": 80.0
+            }
+          ]
+        }
       }
     },
     {
@@ -2351,6 +4158,206 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 79821.01999999999,
+          "qtd": 251627.66999999995,
+          "ytd": 503525.7799999999,
+          "vendors": [
+            {
+              "name": "Salesforce, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 15432.94,
+              "qtd": 44846.6,
+              "ytd": 87329.82
+            },
+            {
+              "name": "DocuSign Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 5209.59,
+              "ytd": 14778.25
+            },
+            {
+              "name": "HubSpot, Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 3323.4400000000005,
+              "ytd": 14005.92
+            },
+            {
+              "name": "Gong.Io Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 11475.390000000001,
+              "qtd": 34808.66,
+              "ytd": 63701.759999999995
+            },
+            {
+              "name": "LEANDATA, INC.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 10315.63
+            },
+            {
+              "name": "Lusha Systems Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 1661.12,
+              "ytd": 8615.27
+            },
+            {
+              "name": "6Sense Insights Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 7176.74,
+              "qtd": 21840.21,
+              "ytd": 43539.14
+            },
+            {
+              "name": "LinkedIn Corporation",
+              "account": "67400 Software Subscriptions",
+              "mtd": 6755.360000000001,
+              "qtd": 19755.36,
+              "ytd": 37258.7
+            },
+            {
+              "name": "Outreach Corporation",
+              "account": "67400 Software Subscriptions",
+              "mtd": 6210.879999999999,
+              "qtd": 19239.17,
+              "ytd": 38064.61
+            },
+            {
+              "name": "Clay Labs Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4532.95,
+              "qtd": 13598.91,
+              "ytd": 13598.91
+            },
+            {
+              "name": "Potential energy labs, inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4385.19,
+              "qtd": 13301.719999999998,
+              "ytd": 26347.559999999998
+            },
+            {
+              "name": "Nooks Communications, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4101.599999999999,
+              "qtd": 11818.899999999998,
+              "ytd": 24137.35
+            },
+            {
+              "name": "Maxio Llc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3617.9999999999995,
+              "qtd": 10883.8,
+              "ytd": 21998.489999999998
+            },
+            {
+              "name": "Spekit, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3463.0699999999997,
+              "qtd": 11991.189999999999,
+              "ytd": 24573.69
+            },
+            {
+              "name": "Clari Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2939.7,
+              "qtd": 8917.09,
+              "ytd": 17736.19
+            },
+            {
+              "name": "CaptivateiIQ, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2886.25,
+              "qtd": 9722.96,
+              "ytd": 19329.48
+            },
+            {
+              "name": "Frontier Talent, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1449.9,
+              "qtd": 4311.24,
+              "ytd": 4852.92
+            },
+            {
+              "name": "Managed Markets Insight & Technology, LLC",
+              "account": "67400 Software Subscriptions",
+              "mtd": 987.25,
+              "qtd": 2994.65,
+              "ytd": 5956.41
+            },
+            {
+              "name": "Chili Piper, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 939.55,
+              "qtd": 3177.08,
+              "ytd": 8805.43
+            },
+            {
+              "name": "Loom",
+              "account": "67400 Software Subscriptions",
+              "mtd": 839.63,
+              "qtd": 2463.65,
+              "ytd": 5188.77
+            },
+            {
+              "name": "Zapier",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 828.0,
+              "ytd": 828.0
+            },
+            {
+              "name": "Sonar Software Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 824.1400000000001,
+              "qtd": 2499.6900000000005,
+              "ytd": 4999.990000000001
+            },
+            {
+              "name": "Seismic Software, Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 575.53,
+              "qtd": 1745.7699999999998,
+              "ytd": 3543.1399999999994
+            },
+            {
+              "name": "Outreach",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 458.68,
+              "ytd": 458.68
+            },
+            {
+              "name": "Cloudingo",
+              "account": "67400 Software Subscriptions",
+              "mtd": 443.82,
+              "qtd": 1346.25,
+              "ytd": 2677.7300000000005
+            },
+            {
+              "name": "Go Nimbly Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 416.68,
+              "qtd": 416.68,
+              "ytd": 416.68
+            },
+            {
+              "name": "Scratchpad, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 366.45000000000005,
+              "qtd": 467.26000000000005,
+              "ytd": 467.26000000000005
+            }
+          ]
+        }
       }
     },
     {
@@ -2525,6 +4532,938 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 35036.72,
+          "qtd": 77299.46,
+          "ytd": 137851.11,
+          "vendors": [
+            {
+              "name": "Sendoso",
+              "account": "67400 Software Subscriptions",
+              "mtd": 12700.0,
+              "qtd": 12700.0,
+              "ytd": 12700.0
+            },
+            {
+              "name": "HubSpot, Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 5749.9800000000005,
+              "qtd": 12356.510000000002,
+              "ytd": 13877.37
+            },
+            {
+              "name": "Qualified.com, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 5636.41,
+              "qtd": 17097.09,
+              "ytd": 34373.66
+            },
+            {
+              "name": "HockeyStack, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2769.21,
+              "qtd": 8399.93,
+              "ytd": 13846.05
+            },
+            {
+              "name": "Goldcast Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2447.79,
+              "qtd": 7426.849999999999,
+              "ytd": 14850.0
+            },
+            {
+              "name": "Reachdesk LTD",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1906.06,
+              "qtd": 7392.32,
+              "ytd": 24637.269999999997
+            },
+            {
+              "name": "Oktopost Technologies Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1339.53,
+              "qtd": 4172.099999999999,
+              "ytd": 8351.3
+            },
+            {
+              "name": "Asana",
+              "account": "67400 Software Subscriptions",
+              "mtd": 914.7,
+              "qtd": 2744.1000000000004,
+              "ytd": 5488.2
+            },
+            {
+              "name": "Vimeo",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 900.0
+            },
+            {
+              "name": "Canva",
+              "account": "67400 Software Subscriptions",
+              "mtd": 883.0,
+              "qtd": 2791.75,
+              "ytd": 3861.75
+            },
+            {
+              "name": "Genesis Exhibits",
+              "account": "67400 Software Subscriptions",
+              "mtd": 224.95000000000002,
+              "qtd": 682.34,
+              "ytd": 2264.62
+            },
+            {
+              "name": "Semrush",
+              "account": "67400 Software Subscriptions",
+              "mtd": 211.23999999999998,
+              "qtd": 640.76,
+              "ytd": 1211.4099999999999
+            },
+            {
+              "name": "BIDSYNC",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 154.02
+            },
+            {
+              "name": "Godaddy",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 125.74,
+              "ytd": 147.93
+            },
+            {
+              "name": "Outgrow",
+              "account": "67400 Software Subscriptions",
+              "mtd": 143.82,
+              "qtd": 436.25,
+              "ytd": 680.95
+            },
+            {
+              "name": "Periscope",
+              "account": "67400 Software Subscriptions",
+              "mtd": 110.02000000000001,
+              "qtd": 333.71000000000004,
+              "ytd": 506.57000000000005
+            },
+            {
+              "name": "Gong.Io Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.01,
+              "qtd": 0.01,
+              "ytd": 0.01
+            }
+          ]
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 2956.25,
+          "qtd": 8212.5,
+          "ytd": 15527.7,
+          "vendors": [
+            {
+              "name": "SuperSkills LLC",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 2250.0,
+              "qtd": 4650.0,
+              "ytd": 7350.0
+            },
+            {
+              "name": "Craft Crew",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 706.25,
+              "qtd": 3562.5,
+              "ytd": 8177.7
+            }
+          ]
+        },
+        "marketing": {
+          "label": "Marketing",
+          "metricBucket": "nonPeople",
+          "mtd": 105913.69000000002,
+          "qtd": 365472.30999999994,
+          "ytd": 817715.33,
+          "vendors": [
+            {
+              "name": "Solage, Auberge Resorts Collection",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 15299.45,
+              "ytd": 58610.149999999994
+            },
+            {
+              "name": "Everest Global, Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 48600.0,
+              "ytd": 48600.0
+            },
+            {
+              "name": "Bridgemark Media Group LLC",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 25000.0,
+              "ytd": 25000.0
+            },
+            {
+              "name": "McDermott Will & Emery LLP",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 25000.0,
+              "ytd": 25000.0
+            },
+            {
+              "name": "VIVE Event LLC",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 23750.0
+            },
+            {
+              "name": "David Quach",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 19000.0
+            },
+            {
+              "name": "Industry Drive, Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 18000.0,
+              "qtd": 18000.0,
+              "ytd": 24000.0
+            },
+            {
+              "name": "HIMSS Media, LLC",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 17507.5
+            },
+            {
+              "name": "Freeman",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 278.1,
+              "ytd": 16559.38
+            },
+            {
+              "name": "Crypto.com Arena",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 15360.0
+            },
+            {
+              "name": "Stanly ranch",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 13937.11
+            },
+            {
+              "name": "Farmstead at Long Meadow Ranch",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": -438.93,
+              "ytd": 13775.939999999999
+            },
+            {
+              "name": "ASC Communications, LLC",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 13636.33,
+              "qtd": 33500.0,
+              "ytd": 33500.0
+            },
+            {
+              "name": "Google Ads",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 13058.46,
+              "qtd": 46934.53,
+              "ytd": 127869.22
+            },
+            {
+              "name": "MultiMedia Medical, LLC",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 13000.0
+            },
+            {
+              "name": "Workweek",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 12925.0,
+              "ytd": 12925.0
+            },
+            {
+              "name": "MSG Sphere Box Office",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 8775.0
+            },
+            {
+              "name": "5Crypto.Com Restaurant",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 8099.34
+            },
+            {
+              "name": "Illinois Health and Hospital Association",
+              "account": "65200 Marketing Events",
+              "mtd": 7750.0,
+              "qtd": 7750.0,
+              "ytd": 7750.0
+            },
+            {
+              "name": "Sands Expo",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 7676.64
+            },
+            {
+              "name": "Microsoft Advertising",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 7511.38,
+              "qtd": 20053.0,
+              "ytd": 40154.939999999995
+            },
+            {
+              "name": "Bamberg Summits LLC",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 7500.0,
+              "ytd": 7500.0
+            },
+            {
+              "name": "Breaking Media, Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 7000.0
+            },
+            {
+              "name": "Medical Group Management Association",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 7000.0,
+              "qtd": 7000.0,
+              "ytd": 23500.0
+            },
+            {
+              "name": "Hotel Swexan",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 6914.63,
+              "ytd": 6914.63
+            },
+            {
+              "name": "Get Whys Inc",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 6903.24,
+              "qtd": 8132.66,
+              "ytd": 16832.66
+            },
+            {
+              "name": "Ivy Rehab - Vendor",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 6000.0
+            },
+            {
+              "name": "The Venetian",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 5586.83
+            },
+            {
+              "name": "Healthcare Huddle",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 2750.0,
+              "ytd": 5500.0
+            },
+            {
+              "name": "Simplify Compliance, LLC",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 5500.0
+            },
+            {
+              "name": "America's Physician Groups",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 5500.0,
+              "ytd": 5500.0
+            },
+            {
+              "name": "MGL Limo",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 316.0,
+              "ytd": 5086.0
+            },
+            {
+              "name": "Endeavor Business Media, LLC",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 5000.0,
+              "qtd": 5000.0,
+              "ytd": 5000.0
+            },
+            {
+              "name": "Capterra",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 965.5,
+              "ytd": 4676.5
+            },
+            {
+              "name": "Texas Hospital Association",
+              "account": "65200 Marketing Events",
+              "mtd": 4500.0,
+              "qtd": 4500.0,
+              "ytd": 4500.0
+            },
+            {
+              "name": "Juniper & Ivy",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 4476.62,
+              "ytd": 4476.62
+            },
+            {
+              "name": "National Association Medical Staff Services",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 3500.0,
+              "qtd": 7000.0,
+              "ytd": 7000.0
+            },
+            {
+              "name": "National Association Medical Staff Services (NAMSS)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 3500.0
+            },
+            {
+              "name": "Flour + Water",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 3488.41
+            },
+            {
+              "name": "Webflow Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 2983.41,
+              "qtd": 9049.67,
+              "ytd": 17975.67
+            },
+            {
+              "name": "Genesis Exhibits",
+              "account": "65200 Marketing Events",
+              "mtd": 2963.0,
+              "qtd": 5003.0,
+              "ytd": 7569.0
+            },
+            {
+              "name": "Fast Company",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 2885.0
+            },
+            {
+              "name": "HockeyStack, Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 2861.52
+            },
+            {
+              "name": "Sheraton",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 2826.79,
+              "ytd": 2826.79
+            },
+            {
+              "name": "Reachdesk",
+              "account": "65200 Marketing Events",
+              "mtd": 2599.75,
+              "qtd": 2599.75,
+              "ytd": 2599.75
+            },
+            {
+              "name": "Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 2495.0,
+              "ytd": 2495.0
+            },
+            {
+              "name": "LAHP",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 2262.9900000000002
+            },
+            {
+              "name": "G2",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 382.42,
+              "ytd": 2107.1
+            },
+            {
+              "name": "Priority Wine Pass",
+              "account": "65200 Marketing Events",
+              "mtd": 2087.17,
+              "qtd": 2607.17,
+              "ytd": 2607.17
+            },
+            {
+              "name": "American Tradeshow Services",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 842.54,
+              "ytd": 1714.9499999999998
+            },
+            {
+              "name": "Marriott",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 1600.6,
+              "ytd": 1600.6
+            },
+            {
+              "name": "William Moore",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 1462.8600000000001,
+              "ytd": 1462.8600000000001
+            },
+            {
+              "name": "Delta Air Lines, Inc.",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 685.9,
+              "ytd": 1371.8
+            },
+            {
+              "name": "Milo's Catering",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1339.81
+            },
+            {
+              "name": "Insight Links",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 1318.66,
+              "qtd": 4001.0,
+              "ytd": 8000.0
+            },
+            {
+              "name": "Biga on the Banks",
+              "account": "65200 Marketing Events",
+              "mtd": 1250.11,
+              "qtd": 1650.11,
+              "ytd": 1650.11
+            },
+            {
+              "name": "SF BLACK CAR",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1152.32
+            },
+            {
+              "name": "Faust",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 1122.32,
+              "ytd": 1122.32
+            },
+            {
+              "name": "Clay Labs Inc",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1117.5
+            },
+            {
+              "name": "Matt Varghese",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1111.0700000000002
+            },
+            {
+              "name": "Leadretreiv",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1105.0
+            },
+            {
+              "name": "Hyatt",
+              "account": "65200 Marketing Events",
+              "mtd": 1076.75,
+              "qtd": 1076.75,
+              "ytd": 1076.75
+            },
+            {
+              "name": "Chandra Mouli - vendor",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1029.74
+            },
+            {
+              "name": "Fsp Limousine Service",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1010.32
+            },
+            {
+              "name": "Bestia",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1009.55
+            },
+            {
+              "name": "VEGAS GOLDEN KNIGHTS",
+              "account": "65200 Marketing Events",
+              "mtd": 1000.0,
+              "qtd": 1000.0,
+              "ytd": 1000.0
+            },
+            {
+              "name": "Alliance Exposition Services",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 907.2,
+              "ytd": 907.2
+            },
+            {
+              "name": "4imprint",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 844.17
+            },
+            {
+              "name": "Michelle Stevens - BCBSLA",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 838.41
+            },
+            {
+              "name": "Delta Air Lines",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 826.79
+            },
+            {
+              "name": "Healthcare Association of New York State, Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 821.91,
+              "qtd": 2493.1099999999997,
+              "ytd": 4137.07
+            },
+            {
+              "name": "Napa Sonoma Supply",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 799.84
+            },
+            {
+              "name": "Hotel Indigo",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 787.84
+            },
+            {
+              "name": "The Pulse Network, Inc",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 733.25
+            },
+            {
+              "name": "MICHIGAN ASSOCIATION OF HEALTH",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 719.0999999999999
+            },
+            {
+              "name": "Canva",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 717.7,
+              "qtd": 736.7,
+              "ytd": 736.7
+            },
+            {
+              "name": "CNBC",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 695.0
+            },
+            {
+              "name": "G2.com, Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 637.3400000000001
+            },
+            {
+              "name": "Staples",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 630.5
+            },
+            {
+              "name": "Geiger",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 627.14,
+              "qtd": 2793.16,
+              "ytd": 23169.440000000002
+            },
+            {
+              "name": "South Carolina Alliance",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 587.6
+            },
+            {
+              "name": "Cision Us Inc.",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 578.0,
+              "qtd": 1793.73,
+              "ytd": 5247.62
+            },
+            {
+              "name": "Hilton Chicago",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 571.6
+            },
+            {
+              "name": "LinkedIn Corporation",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 550.87,
+              "qtd": 2583.56,
+              "ytd": 6119.66
+            },
+            {
+              "name": "Allstates WorldCargo",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 495.0
+            },
+            {
+              "name": "Matthew Ortiz",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 485.0
+            },
+            {
+              "name": "Cvent",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 448.0,
+              "ytd": 448.0
+            },
+            {
+              "name": "United",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 421.28
+            },
+            {
+              "name": "Global Experience Specialists",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 310.86,
+              "ytd": 310.86
+            },
+            {
+              "name": "T3 Expo",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 240.0
+            },
+            {
+              "name": "Fedex",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 219.64999999999998,
+              "qtd": 1159.53,
+              "ytd": 1839.18
+            },
+            {
+              "name": "Jiffy Steamer",
+              "account": "65200 Marketing Events",
+              "mtd": 192.96,
+              "qtd": 192.96,
+              "ytd": 192.96
+            },
+            {
+              "name": "Outgrow",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 186.97
+            },
+            {
+              "name": "Fsp Lvha Lv Hosp Assn",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 175.0,
+              "ytd": 175.0
+            },
+            {
+              "name": "Office Depot",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 137.81
+            },
+            {
+              "name": "Tekka Bar Handroll & Sake",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 134.71
+            },
+            {
+              "name": "Exhibitor Insurance",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 125.0
+            },
+            {
+              "name": "GLOBAL EXPERIENCE SPECIALISTS, LLC.",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 121.44,
+              "ytd": 121.44
+            },
+            {
+              "name": "Doordash",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "Audiogram",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 19.0,
+              "ytd": 76.0
+            },
+            {
+              "name": "Sp Happyhyggegifts",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 71.73
+            },
+            {
+              "name": "Paypal",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 55.58,
+              "ytd": 55.58
+            },
+            {
+              "name": "Allianz Travel Insurance",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 53.74
+            },
+            {
+              "name": "Miznon",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 50.68
+            },
+            {
+              "name": "Godaddy",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 44.739999999999995,
+              "qtd": 135.7,
+              "ytd": 269.91999999999996
+            },
+            {
+              "name": "Mikayla Pickford (kayla@medallion.co)",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 34.68,
+              "ytd": 34.68
+            },
+            {
+              "name": "Emporia Main Street",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 34.42
+            },
+            {
+              "name": "Noelle Morris (noelle.morris@medallion.co)",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 24.76
+            },
+            {
+              "name": "Amazon",
+              "account": "65100 Advertising & Marketing",
+              "mtd": 22.46,
+              "qtd": 149.66,
+              "ytd": 149.66
+            },
+            {
+              "name": "Hudson News",
+              "account": "65200 Marketing Events",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 15.26
+            }
+          ]
+        }
       }
     },
     {
@@ -2691,6 +5630,109 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 46615.369999999995,
+          "qtd": 92925.67999999998,
+          "ytd": 138403.53,
+          "vendors": [
+            {
+              "name": "CE Broker Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 42321.229999999996,
+              "qtd": 77609.31,
+              "ytd": 108551.68999999999
+            },
+            {
+              "name": "Hex Technologies",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 2790.37,
+              "ytd": 4345.14
+            },
+            {
+              "name": "Figma",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2451.89,
+              "qtd": 7351.68,
+              "ytd": 14234.220000000001
+            },
+            {
+              "name": "Tresorit",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1776.0
+            },
+            {
+              "name": "Sprig Technologies Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 824.1400000000001,
+              "qtd": 2499.9000000000005,
+              "ytd": 4972.320000000001
+            },
+            {
+              "name": "Retool",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 541.81
+            },
+            {
+              "name": "Zapier",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 501.4200000000001
+            },
+            {
+              "name": "Svix",
+              "account": "67400 Software Subscriptions",
+              "mtd": 490.0,
+              "qtd": 1470.0,
+              "ytd": 1470.0
+            },
+            {
+              "name": "Granola",
+              "account": "67400 Software Subscriptions",
+              "mtd": 251.97,
+              "qtd": 454.99,
+              "ytd": 454.99
+            },
+            {
+              "name": "Dovetail",
+              "account": "67400 Software Subscriptions",
+              "mtd": 195.0,
+              "qtd": 585.0,
+              "ytd": 1170.0
+            },
+            {
+              "name": "Heroku",
+              "account": "67400 Software Subscriptions",
+              "mtd": 70.24,
+              "qtd": 131.73,
+              "ytd": 320.54
+            },
+            {
+              "name": "Jetbrains",
+              "account": "67400 Software Subscriptions",
+              "mtd": 10.9,
+              "qtd": 32.7,
+              "ytd": 65.4
+            }
+          ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 1269.9,
+          "qtd": 1269.9,
+          "ytd": 1269.9,
+          "vendors": []
+        }
       }
     },
     {
@@ -2897,6 +5939,564 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 74206.85,
+          "qtd": 195618.37000000002,
+          "ytd": 371163.98,
+          "vendors": [
+            {
+              "name": "CAQH Solutions",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 33835.51,
+              "qtd": 50829.83,
+              "ytd": 101812.79000000001
+            },
+            {
+              "name": "OpenPhone",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 15858.869999999999,
+              "qtd": 47457.520000000004,
+              "ytd": 92701.13
+            },
+            {
+              "name": "Bland Al",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 10000.0,
+              "qtd": 30000.0,
+              "ytd": 40000.0
+            },
+            {
+              "name": "Cloudinary",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 8790.71,
+              "qtd": 25893.05,
+              "ytd": 49653.549999999996
+            },
+            {
+              "name": "CloudAvail Technology Consulting",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 8437.5,
+              "ytd": 8437.5
+            },
+            {
+              "name": "Temporal Technologies",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 2362.89,
+              "qtd": 23241.09,
+              "ytd": 61058.09
+            },
+            {
+              "name": "Reducto",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 1575.0,
+              "qtd": 4725.0,
+              "ytd": 9450.0
+            },
+            {
+              "name": "Mailgun",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 1361.8899999999999,
+              "qtd": 3682.74,
+              "ytd": 5874.3499999999985
+            },
+            {
+              "name": "Bright Data",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 100.0,
+              "ytd": 200.0
+            },
+            {
+              "name": "Zyte",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 200.0,
+              "qtd": 600.0,
+              "ytd": 1200.0
+            },
+            {
+              "name": "Cypress.Io",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 117.0,
+              "qtd": 393.0,
+              "ytd": 393.0
+            },
+            {
+              "name": "Amazon Web Services, Inc",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 104.98,
+              "qtd": 258.64,
+              "ytd": 383.57
+            }
+          ]
+        },
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 128048.11000000003,
+          "qtd": 349685.6000000001,
+          "ytd": 532656.04,
+          "vendors": [
+            {
+              "name": "Circle Internet Services, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 46589.38000000002,
+              "qtd": 96951.93000000001,
+              "ytd": 130825.04
+            },
+            {
+              "name": "Datadog",
+              "account": "67400 Software Subscriptions",
+              "mtd": 19965.379999999997,
+              "qtd": 59442.09,
+              "ytd": 131742.99000000002
+            },
+            {
+              "name": "Snowflake Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 12742.03,
+              "qtd": 30111.760000000002,
+              "ytd": 30111.760000000002
+            },
+            {
+              "name": "Anthropic",
+              "account": "67400 Software Subscriptions",
+              "mtd": 8212.69,
+              "qtd": 46396.110000000015,
+              "ytd": 64954.360000000015
+            },
+            {
+              "name": "Cognition",
+              "account": "67400 Software Subscriptions",
+              "mtd": 5617.099999999999,
+              "qtd": 15696.45,
+              "ytd": 20546.949999999997
+            },
+            {
+              "name": "Sigma Computing",
+              "account": "67400 Software Subscriptions",
+              "mtd": 5066.02,
+              "qtd": 15648.730000000001,
+              "ytd": 15648.730000000001
+            },
+            {
+              "name": "Slab",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 1545.92,
+              "ytd": 4726.37
+            },
+            {
+              "name": "Microsoft",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 3063.25,
+              "ytd": 4396.92
+            },
+            {
+              "name": "Customer.io",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3286.4599999999996,
+              "qtd": 10840.869999999999,
+              "ytd": 19065.07
+            },
+            {
+              "name": "Github",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3231.51,
+              "qtd": 8792.23,
+              "ytd": 18241.82
+            },
+            {
+              "name": "Vanta Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3131.83,
+              "qtd": 9395.720000000001,
+              "ytd": 9395.720000000001
+            },
+            {
+              "name": "OpenAI",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2805.24,
+              "qtd": 5225.439999999999,
+              "ytd": 5225.439999999999
+            },
+            {
+              "name": "Vercel",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1880.8600000000001,
+              "qtd": 3048.52,
+              "ytd": 3218.52
+            },
+            {
+              "name": "Hex Technologies",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1738.34,
+              "qtd": 1913.28,
+              "ytd": 1913.28
+            },
+            {
+              "name": "PostHog",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1515.3,
+              "qtd": 4550.57,
+              "ytd": 7796.23
+            },
+            {
+              "name": "QlikTech Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1499.1399999999999,
+              "qtd": 4547.4,
+              "ytd": 4547.4
+            },
+            {
+              "name": "ClawCloud",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1425.0000000000002,
+              "qtd": 1450.0000000000002,
+              "ytd": 1450.0000000000002
+            },
+            {
+              "name": "Incident.Io",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": -847.18,
+              "ytd": 1411.9900000000002
+            },
+            {
+              "name": "CircleCI",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1245.52,
+              "qtd": 4284.610000000001,
+              "ytd": 8768.53
+            },
+            {
+              "name": "Postman",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1104.0,
+              "qtd": 3312.0,
+              "ytd": 6240.0
+            },
+            {
+              "name": "Hightouch",
+              "account": "67400 Software Subscriptions",
+              "mtd": 988.98,
+              "qtd": 2999.88,
+              "ytd": 2999.88
+            },
+            {
+              "name": "OpenVPN",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 830.6999999999999
+            },
+            {
+              "name": "Okta Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 792.0,
+              "qtd": 2402.4,
+              "ytd": 4012.9300000000003
+            },
+            {
+              "name": "Sentry",
+              "account": "67400 Software Subscriptions",
+              "mtd": 789.0,
+              "qtd": 3669.82,
+              "ytd": 6022.0
+            },
+            {
+              "name": "Deel",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 588.0
+            },
+            {
+              "name": "Granola",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 208.55,
+              "ytd": 565.5699999999999
+            },
+            {
+              "name": "Jetbrains",
+              "account": "67400 Software Subscriptions",
+              "mtd": 559.02,
+              "qtd": 1695.69,
+              "ytd": 2896.2400000000002
+            },
+            {
+              "name": "DBT CLOUD SUBSCRIPTION",
+              "account": "67400 Software Subscriptions",
+              "mtd": 400.0,
+              "qtd": 1149.69,
+              "ytd": 1149.69
+            },
+            {
+              "name": "Cypress.Io",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 399.0
+            },
+            {
+              "name": "CONFIGCAT.COM",
+              "account": "67400 Software Subscriptions",
+              "mtd": 360.0,
+              "qtd": 1080.0,
+              "ytd": 2160.0
+            },
+            {
+              "name": "Metaplane",
+              "account": "67400 Software Subscriptions",
+              "mtd": 360.0,
+              "qtd": 1080.0,
+              "ytd": 1080.0
+            },
+            {
+              "name": "Modal",
+              "account": "67400 Software Subscriptions",
+              "mtd": 316.75,
+              "qtd": 2209.51,
+              "ytd": 2742.09
+            },
+            {
+              "name": "Messagebird",
+              "account": "67400 Software Subscriptions",
+              "mtd": 299.0,
+              "qtd": 897.0,
+              "ytd": 1794.0
+            },
+            {
+              "name": "AUGMENT CODE",
+              "account": "67400 Software Subscriptions",
+              "mtd": 250.0,
+              "qtd": 750.0,
+              "ytd": 1500.0
+            },
+            {
+              "name": "SCREENPLAY STUDIOS",
+              "account": "67400 Software Subscriptions",
+              "mtd": 225.0,
+              "qtd": 720.49,
+              "ytd": 2345.48
+            },
+            {
+              "name": "dmarcian",
+              "account": "67400 Software Subscriptions",
+              "mtd": 221.51999999999998,
+              "qtd": 310.36,
+              "ytd": 310.36
+            },
+            {
+              "name": "CLAUDE.AI",
+              "account": "67400 Software Subscriptions",
+              "mtd": 200.0,
+              "qtd": 600.0,
+              "ytd": 1200.0
+            },
+            {
+              "name": "Langfuse",
+              "account": "67400 Software Subscriptions",
+              "mtd": 199.0,
+              "qtd": 597.0,
+              "ytd": 995.0
+            },
+            {
+              "name": "CURSOR AI POWERED IDE",
+              "account": "67400 Software Subscriptions",
+              "mtd": 149.75,
+              "qtd": 1390.78,
+              "ytd": 4673.95
+            },
+            {
+              "name": "Algolia",
+              "account": "67400 Software Subscriptions",
+              "mtd": 135.0,
+              "qtd": 371.0,
+              "ytd": 724.0
+            },
+            {
+              "name": "Daytona IO",
+              "account": "67400 Software Subscriptions",
+              "mtd": 100.95,
+              "qtd": 125.95,
+              "ytd": 731.19
+            },
+            {
+              "name": "Cloudflare",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 100.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "ReadMe",
+              "account": "67400 Software Subscriptions",
+              "mtd": 99.0,
+              "qtd": 297.0,
+              "ytd": 594.0
+            },
+            {
+              "name": "Neon Tech",
+              "account": "67400 Software Subscriptions",
+              "mtd": 78.72,
+              "qtd": 181.76,
+              "ytd": 185.57
+            },
+            {
+              "name": "Supabase",
+              "account": "67400 Software Subscriptions",
+              "mtd": 65.55,
+              "qtd": 90.55,
+              "ytd": 90.55
+            },
+            {
+              "name": "Anvil",
+              "account": "67400 Software Subscriptions",
+              "mtd": 60.0,
+              "qtd": 91.5,
+              "ytd": 91.5
+            },
+            {
+              "name": "Superhuman",
+              "account": "67400 Software Subscriptions",
+              "mtd": 60.0,
+              "qtd": 180.0,
+              "ytd": 360.0
+            },
+            {
+              "name": "Fivetran",
+              "account": "67400 Software Subscriptions",
+              "mtd": 59.84,
+              "qtd": 185.24,
+              "ytd": 185.24
+            },
+            {
+              "name": "Browser Use",
+              "account": "67400 Software Subscriptions",
+              "mtd": 54.0,
+              "qtd": 533.0,
+              "ytd": 533.0
+            },
+            {
+              "name": "removebg",
+              "account": "67400 Software Subscriptions",
+              "mtd": 39.0,
+              "qtd": 117.0,
+              "ytd": 156.0
+            },
+            {
+              "name": "REETRO APS",
+              "account": "67400 Software Subscriptions",
+              "mtd": 33.75,
+              "qtd": 101.25,
+              "ytd": 202.5
+            },
+            {
+              "name": "skyvern",
+              "account": "67400 Software Subscriptions",
+              "mtd": 29.0,
+              "qtd": 53.0,
+              "ytd": 53.0
+            },
+            {
+              "name": "Browserbase",
+              "account": "67400 Software Subscriptions",
+              "mtd": 20.0,
+              "qtd": 40.0,
+              "ytd": 40.0
+            },
+            {
+              "name": "Railway",
+              "account": "67400 Software Subscriptions",
+              "mtd": 20.0,
+              "qtd": 40.0,
+              "ytd": 40.0
+            },
+            {
+              "name": "Docker, Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 16.0,
+              "qtd": 16.0,
+              "ytd": 16.0
+            },
+            {
+              "name": "Gamma",
+              "account": "67400 Software Subscriptions",
+              "mtd": 10.0,
+              "qtd": 30.0,
+              "ytd": 60.0
+            },
+            {
+              "name": "Render",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1.48,
+              "qtd": 1.48,
+              "ytd": 1.48
+            }
+          ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": -14563.309999999998,
+          "qtd": 191990.07,
+          "ytd": 384638.36000000004,
+          "vendors": [
+            {
+              "name": "Genzeon",
+              "account": "68500 Contractors",
+              "mtd": -48640.0,
+              "qtd": 89760.0,
+              "ytd": 177480.0
+            },
+            {
+              "name": "Deel",
+              "account": "68500 Contractors",
+              "mtd": 34076.69,
+              "qtd": 102230.07,
+              "ytd": 203258.92
+            }
+          ]
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 3025.0,
+          "qtd": 15163.33,
+          "ytd": 39093.32,
+          "vendors": [
+            {
+              "name": "BARR Advisory, P.A",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 3025.0,
+              "qtd": 15163.33,
+              "ytd": 39093.32
+            }
+          ]
+        },
+        "bpo_services": {
+          "label": "BPO Services",
+          "metricBucket": "cogs",
+          "mtd": 2144.3499999999985,
+          "qtd": 24725.0,
+          "ytd": 49225.0,
+          "vendors": [
+            {
+              "name": "CloudAvail Technology Consulting",
+              "account": "51425 Cost of Goods Sold:COGS - Onshore BPO & Consulting Services",
+              "mtd": 2144.3499999999985,
+              "qtd": 24725.0,
+              "ytd": 49225.0
+            }
+          ]
+        }
       }
     },
     {
@@ -3026,6 +6626,45 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 371.76,
+          "qtd": 1445.02,
+          "ytd": 1445.02,
+          "vendors": [
+            {
+              "name": "Parallels",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 299.98,
+              "ytd": 299.98
+            },
+            {
+              "name": "Retool",
+              "account": "67400 Software Subscriptions",
+              "mtd": 204.63,
+              "qtd": 576.66,
+              "ytd": 576.66
+            },
+            {
+              "name": "Zapier",
+              "account": "67400 Software Subscriptions",
+              "mtd": 167.13,
+              "qtd": 506.96999999999997,
+              "ytd": 506.96999999999997
+            },
+            {
+              "name": "Heroku",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 61.41,
+              "ytd": 61.41
+            }
+          ]
+        }
       }
     },
     {
@@ -3155,6 +6794,129 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 92952.72000000002,
+          "qtd": 254938.81,
+          "ytd": 513037.74999999994,
+          "vendors": [
+            {
+              "name": "Rippling",
+              "account": "67400 Software Subscriptions",
+              "mtd": 49917.69,
+              "qtd": 142761.96,
+              "ytd": 261256.14
+            },
+            {
+              "name": "Microsoft",
+              "account": "67400 Software Subscriptions",
+              "mtd": 10152.75,
+              "qtd": 26487.75,
+              "ytd": 43286.78
+            },
+            {
+              "name": "Atlassian",
+              "account": "67400 Software Subscriptions",
+              "mtd": 8978.82,
+              "qtd": 20952.83,
+              "ytd": 38556.200000000004
+            },
+            {
+              "name": "Salesforce, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 7082.28,
+              "qtd": 21601.059999999998,
+              "ytd": 42574.369999999995
+            },
+            {
+              "name": "Formagrid Inc dba Airtable",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 4799.25
+            },
+            {
+              "name": "OpenAI",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3692.4399999999996,
+              "qtd": 10853.670000000002,
+              "ytd": 21769.97
+            },
+            {
+              "name": "Zoom Video Communications Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3486.32,
+              "qtd": 10341.88,
+              "ytd": 22938.61
+            },
+            {
+              "name": "Adobe",
+              "account": "67400 Software Subscriptions",
+              "mtd": 3116.9100000000003,
+              "qtd": 9550.43,
+              "ytd": 60060.51
+            },
+            {
+              "name": "Slab",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2766.2700000000004,
+              "qtd": 3803.4100000000008,
+              "ytd": 3803.4100000000008
+            },
+            {
+              "name": "Nord Security",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2465.8,
+              "qtd": 4984.01,
+              "ytd": 6676.929999999999
+            },
+            {
+              "name": "Okta Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 482.13000000000005,
+              "qtd": 1462.47,
+              "ytd": 2892.92
+            },
+            {
+              "name": "FAXPLUS",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 399.98
+            },
+            {
+              "name": "Couchdrop",
+              "account": "67400 Software Subscriptions",
+              "mtd": 382.5,
+              "qtd": 1147.5,
+              "ytd": 2295.0
+            },
+            {
+              "name": "OpenVPN",
+              "account": "67400 Software Subscriptions",
+              "mtd": 276.9,
+              "qtd": 839.93,
+              "ytd": 839.93
+            },
+            {
+              "name": "Anthropic",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 169.57
+            },
+            {
+              "name": "CURSOR AI POWERED IDE",
+              "account": "67400 Software Subscriptions",
+              "mtd": 151.91,
+              "qtd": 151.91,
+              "ytd": 718.18
+            }
+          ]
+        }
       }
     },
     {
@@ -3291,6 +7053,45 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_cogs": {
+          "label": "Software (COGS)",
+          "metricBucket": "cogs",
+          "mtd": 6540.9,
+          "qtd": 14402.18,
+          "ytd": 25274.410000000003,
+          "vendors": [
+            {
+              "name": "Flatfile Inc.",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 3296.0,
+              "qtd": 4144.0,
+              "ytd": 4144.0
+            },
+            {
+              "name": "Mango Technologies, Inc. dba ClickUp",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 2010.04,
+              "qtd": 6097.1,
+              "ytd": 12438.900000000001
+            },
+            {
+              "name": "Windmill Labs Inc.",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 1234.86,
+              "qtd": 4161.08,
+              "ytd": 8551.51
+            },
+            {
+              "name": "Channeled",
+              "account": "51400 Cost of Goods Sold:COGS - Software & Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 140.0
+            }
+          ]
+        }
       }
     },
     {
@@ -3465,6 +7266,154 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 18014.33,
+          "qtd": 55604.57,
+          "ytd": 98300.95,
+          "vendors": [
+            {
+              "name": "Tabs Platform, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4945.03,
+              "qtd": 14999.919999999998,
+              "ytd": 29834.999999999996
+            },
+            {
+              "name": "Carta",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4817.14,
+              "qtd": 14612.0,
+              "ytd": 28909.28
+            },
+            {
+              "name": "Vertice Technology Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4120.84,
+              "qtd": 12362.74,
+              "ytd": 12362.74
+            },
+            {
+              "name": "Ramp",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2402.61,
+              "qtd": 7287.910000000002,
+              "ytd": 16086.880000000003
+            },
+            {
+              "name": "ANROK",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1140.68,
+              "qtd": 4512.58,
+              "ytd": 6914.65
+            },
+            {
+              "name": "Synder",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 290.0
+            },
+            {
+              "name": "Stable",
+              "account": "67400 Software Subscriptions",
+              "mtd": 260.78,
+              "qtd": 847.67,
+              "ytd": 1725.8799999999999
+            },
+            {
+              "name": "Bill.com",
+              "account": "67400 Software Subscriptions",
+              "mtd": 162.25,
+              "qtd": 486.75,
+              "ytd": 974.6800000000001
+            },
+            {
+              "name": "Intuit",
+              "account": "67400 Software Subscriptions",
+              "mtd": 115.0,
+              "qtd": 345.0,
+              "ytd": 901.84
+            },
+            {
+              "name": "SaasAnt",
+              "account": "67400 Software Subscriptions",
+              "mtd": 50.0,
+              "qtd": 150.0,
+              "ytd": 300.0
+            }
+          ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 5040.0,
+          "qtd": 5040.0,
+          "ytd": 5040.0,
+          "vendors": [
+            {
+              "name": "Robert Half",
+              "account": "68500 Contractors",
+              "mtd": 5040.0,
+              "qtd": 5040.0,
+              "ytd": 5040.0
+            }
+          ]
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 38314.6,
+          "qtd": 70329.6,
+          "ytd": 167088.26,
+          "vendors": [
+            {
+              "name": "PricewaterhouseCoopers LLP",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 25000.0,
+              "ytd": 65000.0
+            },
+            {
+              "name": "Vector Advisory Services LLC",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 20400.0,
+              "qtd": 20400.0,
+              "ytd": 20400.0
+            },
+            {
+              "name": "Withum Advisory Tax Audit",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 16317.0,
+              "qtd": 21042.0,
+              "ytd": 72324.0
+            },
+            {
+              "name": "STATE TAX SOLUTIONS, INC.",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 250.0,
+              "ytd": 1500.0
+            },
+            {
+              "name": "Jonathan Neil & Associates, Inc.",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 1417.6,
+              "qtd": 3457.6,
+              "ytd": 7684.26
+            },
+            {
+              "name": "Intuit",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 180.0,
+              "qtd": 180.0,
+              "ytd": 180.0
+            }
+          ]
+        }
       }
     },
     {
@@ -3572,6 +7521,73 @@
         "raw": [],
         "movers": [],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 0.0,
+          "ytd": 43314.35,
+          "vendors": [
+            {
+              "name": "Sigma Computing",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 15605.8
+            },
+            {
+              "name": "Snowflake Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 14962.54
+            },
+            {
+              "name": "QlikTech Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 4497.42
+            },
+            {
+              "name": "Hex Technologies",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 3102.7200000000003
+            },
+            {
+              "name": "Hightouch",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 2966.92
+            },
+            {
+              "name": "Metaplane",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1080.0
+            },
+            {
+              "name": "DBT CLOUD SUBSCRIPTION",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 900.0
+            },
+            {
+              "name": "Fivetran",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 198.95
+            }
+          ]
+        }
       }
     },
     {
@@ -3715,6 +7731,126 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 25463.989999999998,
+          "qtd": 53333.899999999994,
+          "ytd": 107540.61000000002,
+          "vendors": [
+            {
+              "name": "TrySparrow.com, Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 9250.0,
+              "qtd": 12950.0,
+              "ytd": 18500.0
+            },
+            {
+              "name": "LinkedIn Corporation",
+              "account": "67400 Software Subscriptions",
+              "mtd": 7346.09,
+              "qtd": 22798.16,
+              "ytd": 39911.72
+            },
+            {
+              "name": "Checkr",
+              "account": "67400 Software Subscriptions",
+              "mtd": 4244.61,
+              "qtd": 3696.6299999999997,
+              "ytd": 21578.050000000003
+            },
+            {
+              "name": "Degree, Inc (DBA Lattice)",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2652.69,
+              "qtd": 7467.98,
+              "ytd": 14814.55
+            },
+            {
+              "name": "Greenhouse Software, Inc",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1369.4199999999998,
+              "qtd": 4249.92,
+              "ytd": 8499.869999999999
+            },
+            {
+              "name": "Formagrid Inc dba Airtable",
+              "account": "67400 Software Subscriptions",
+              "mtd": 256.40999999999997,
+              "qtd": 878.9199999999998,
+              "ytd": 2111.4399999999996
+            },
+            {
+              "name": "Deel",
+              "account": "67400 Software Subscriptions",
+              "mtd": 196.0,
+              "qtd": 588.0,
+              "ytd": 588.0
+            },
+            {
+              "name": "Simple Work Apps",
+              "account": "67400 Software Subscriptions",
+              "mtd": 79.99,
+              "qtd": 239.96999999999997,
+              "ytd": 479.94
+            },
+            {
+              "name": "Julia Masera (julia@medallion.co)",
+              "account": "67400 Software Subscriptions",
+              "mtd": 75.76,
+              "qtd": 75.76,
+              "ytd": 75.76
+            },
+            {
+              "name": "Mineral",
+              "account": "67400 Software Subscriptions",
+              "mtd": -6.980000000000018,
+              "qtd": 388.55999999999995,
+              "ytd": 981.28
+            }
+          ]
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 0.0,
+          "ytd": 1425.0,
+          "vendors": [
+            {
+              "name": "Andrew Kim",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1425.0
+            }
+          ]
+        },
+        "legal": {
+          "label": "Legal",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 6209.0,
+          "ytd": 6209.0,
+          "vendors": [
+            {
+              "name": "McCown & Evans LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 3185.0,
+              "ytd": 3185.0
+            },
+            {
+              "name": "Cooley LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 3024.0,
+              "ytd": 3024.0
+            }
+          ]
+        }
       }
     },
     {
@@ -3867,6 +8003,112 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 478.59,
+          "qtd": 947.19,
+          "ytd": 2659.26,
+          "vendors": [
+            {
+              "name": "Prospect",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 515.0
+            },
+            {
+              "name": "DocSend",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 360.0
+            },
+            {
+              "name": "Google Play",
+              "account": "67400 Software Subscriptions",
+              "mtd": 180.84,
+              "qtd": 180.84,
+              "ytd": 180.84
+            },
+            {
+              "name": "SLI DO",
+              "account": "67400 Software Subscriptions",
+              "mtd": 92.76,
+              "qtd": 201.38,
+              "ytd": 538.48
+            },
+            {
+              "name": "Superhuman",
+              "account": "67400 Software Subscriptions",
+              "mtd": 80.0,
+              "qtd": 240.0,
+              "ytd": 480.0
+            },
+            {
+              "name": "LinkedIn",
+              "account": "67400 Software Subscriptions",
+              "mtd": 79.99,
+              "qtd": 239.96999999999997,
+              "ytd": 479.94
+            },
+            {
+              "name": "Browser Use",
+              "account": "67400 Software Subscriptions",
+              "mtd": 25.0,
+              "qtd": 25.0,
+              "ytd": 25.0
+            },
+            {
+              "name": "Anthropic",
+              "account": "67400 Software Subscriptions",
+              "mtd": 20.0,
+              "qtd": 60.0,
+              "ytd": 80.0
+            }
+          ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 0.0,
+          "ytd": 16687.35,
+          "vendors": [
+            {
+              "name": "Mackenzie & Partners, Inc. d.b.a. Truex Metier",
+              "account": "68500 Contractors",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 16687.35
+            }
+          ]
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 1160.67,
+          "ytd": 1910.67,
+          "vendors": [
+            {
+              "name": "Jasminkempphotograph",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 1160.67,
+              "ytd": 1160.67
+            },
+            {
+              "name": "Golden Gate Mobile Notary & Apostille",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 750.0
+            }
+          ]
+        }
       }
     },
     {
@@ -3996,6 +8238,289 @@
           }
         ],
         "summary": []
+      },
+      "subCategories": {
+        "software_opex": {
+          "label": "Software (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 4059.43,
+          "qtd": 15741.6,
+          "ytd": 24965.299999999996,
+          "vendors": [
+            {
+              "name": "Trove Information Technologies, Inc. dba Pave",
+              "account": "67400 Software Subscriptions",
+              "mtd": 2466.33,
+              "qtd": 5015.030000000001,
+              "ytd": 5015.030000000001
+            },
+            {
+              "name": "Draftspotting Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 1376.35,
+              "qtd": 4129.199999999999,
+              "ytd": 4129.199999999999
+            },
+            {
+              "name": "Juro Online Limited",
+              "account": "67400 Software Subscriptions",
+              "mtd": 204.97,
+              "qtd": 6456.59,
+              "ytd": 15680.289999999999
+            },
+            {
+              "name": "InCorp Services, Inc.",
+              "account": "67400 Software Subscriptions",
+              "mtd": 0.0,
+              "qtd": 129.0,
+              "ytd": 129.0
+            },
+            {
+              "name": "Amanda Bradley (amanda.bradley@medallion.co)",
+              "account": "67400 Software Subscriptions",
+              "mtd": 11.78,
+              "qtd": 11.78,
+              "ytd": 11.78
+            }
+          ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 0.0,
+          "ytd": 1437.5,
+          "vendors": [
+            {
+              "name": "Emily Olson",
+              "account": "68500 Contractors",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1437.5
+            }
+          ]
+        },
+        "consulting": {
+          "label": "Consulting",
+          "metricBucket": "nonPeople",
+          "mtd": 0.0,
+          "qtd": 0.0,
+          "ytd": 8250.0,
+          "vendors": [
+            {
+              "name": "Wecore Advisors LLP",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 6000.0
+            },
+            {
+              "name": "Jonathan Neil & Associates, Inc.",
+              "account": "68100 Professional & Consulting Fees",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 2250.0
+            }
+          ]
+        },
+        "legal": {
+          "label": "Legal",
+          "metricBucket": "nonPeople",
+          "mtd": 44610.95,
+          "qtd": 164429.91,
+          "ytd": 320937.12999999995,
+          "vendors": [
+            {
+              "name": "McDermott Will & Emery LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": -201.75,
+              "ytd": 29091.72
+            },
+            {
+              "name": "Ogletree, Deakins, Nash, Smoak & Stewart, P.C.",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 13080.65,
+              "ytd": 18800.65
+            },
+            {
+              "name": "Quinn Emanuel Urquhart & Sullivan, LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 18480.0,
+              "ytd": 18480.0
+            },
+            {
+              "name": "J. SAGAR ASSOCIATES",
+              "account": "68300 Legal Corporate",
+              "mtd": 18164.0,
+              "qtd": 38720.0,
+              "ytd": 41831.0
+            },
+            {
+              "name": "Plymouth Street",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 15620.0,
+              "ytd": 15620.0
+            },
+            {
+              "name": "Lawtrades, Inc.",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 13501.960000000001
+            },
+            {
+              "name": "O'Melveny & Myers LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 3184.2,
+              "ytd": 12040.650000000001
+            },
+            {
+              "name": "Latham & Watkins LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 9638.0,
+              "qtd": 16524.85,
+              "ytd": 36093.85
+            },
+            {
+              "name": "Cooley LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 7320.0
+            },
+            {
+              "name": "Silicon Valley Bank",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 6833.48,
+              "ytd": 6833.48
+            },
+            {
+              "name": "Kornerstone Advisors",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 6000.0
+            },
+            {
+              "name": "Payne and Fears LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 5168.0,
+              "qtd": 17272.0,
+              "ytd": 26543.0
+            },
+            {
+              "name": "Jones & Associates",
+              "account": "68300 Legal Corporate",
+              "mtd": 4355.7,
+              "qtd": 13919.52,
+              "ytd": 25945.35
+            },
+            {
+              "name": "Mitchell Stein Carey Chapman PC",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 0.0,
+              "ytd": 1982.5
+            },
+            {
+              "name": "TARANG AGARWAL",
+              "account": "68300 Legal Corporate",
+              "mtd": 1771.97,
+              "qtd": 3168.8,
+              "ytd": 3168.8
+            },
+            {
+              "name": "Patent Law Works",
+              "account": "68300 Legal Corporate",
+              "mtd": 0.0,
+              "qtd": 57.679999999999986,
+              "ytd": 1362.19
+            },
+            {
+              "name": "Carrington, Coleman, Sloman & Blumenthal, L.L.P.",
+              "account": "68300 Legal Corporate",
+              "mtd": 1237.0,
+              "qtd": 2653.5,
+              "ytd": 2653.5
+            },
+            {
+              "name": "Conrad Metlitzky Kane",
+              "account": "68300 Legal Corporate",
+              "mtd": 1060.0,
+              "qtd": 3478.0,
+              "ytd": 7093.66
+            },
+            {
+              "name": "ROLAND GARY JONES, ESQ. LLC",
+              "account": "68300 Legal Corporate",
+              "mtd": 994.16,
+              "qtd": 994.16,
+              "ytd": 994.16
+            },
+            {
+              "name": "SILICON COUNSEL LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 522.0,
+              "qtd": 2436.0,
+              "ytd": 4567.5
+            },
+            {
+              "name": "Tech Law Partners LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 480.0,
+              "qtd": 5160.0,
+              "ytd": 6360.0
+            },
+            {
+              "name": "Lighthouse Document Technologies",
+              "account": "68300 Legal Corporate",
+              "mtd": 315.6,
+              "qtd": 315.6,
+              "ytd": 315.6
+            },
+            {
+              "name": "The Suite Inc.",
+              "account": "68300 Legal Corporate",
+              "mtd": 309.07,
+              "qtd": 831.03,
+              "ytd": 1758.2700000000002
+            },
+            {
+              "name": "McCown & Evans LLP",
+              "account": "68300 Legal Corporate",
+              "mtd": 300.0,
+              "qtd": 795.0,
+              "ytd": 29740.0
+            },
+            {
+              "name": "SACHIN AGARWAL HUF",
+              "account": "68300 Legal Corporate",
+              "mtd": 110.0,
+              "qtd": 815.24,
+              "ytd": 815.24
+            },
+            {
+              "name": "JPMorgan Chase",
+              "account": "68300 Legal Corporate",
+              "mtd": 100.0,
+              "qtd": 100.0,
+              "ytd": 100.0
+            },
+            {
+              "name": "Sahzad Banth (sahzad.banth@medallion.co)",
+              "account": "68300 Legal Corporate",
+              "mtd": 85.45,
+              "qtd": 85.45,
+              "ytd": 85.45
+            }
+          ]
+        }
       }
     }
   ],
@@ -6413,12 +10938,7 @@
             "department": "Product Operations"
           }
         ],
-        "summary": [
-          "Engineering contractor spend swung -$116K MoM as May's Genzeon estimate was reversed and re-booked at actual (Genzeon didn't provide a May estimate). Underlying activity is unchanged.",
-          "AWS cloud +$7K MoM from higher June consumption, not a rate change. Capitalized software amortization jumped +$57K as Q1/Q2 project releases caught up their amortization schedules.",
-          "IT software subscriptions +$10K on Atlassian, Slab, and Microsoft seat expansions.",
-          "Engineering salaries roughly flat (1 hire, 2 terms). Q3 offsite flights ($9.8K) hit June travel."
-        ],
+        "summary": [],
         "children": [
           "Engineering",
           "Product Operations",
@@ -8211,12 +12731,7 @@
             "department": "Marketing"
           }
         ],
-        "summary": [
-          "Commissions moved sharply across GTM on June activity: Solutions Consultants +$61K, Sales +$32K, Customer Success -$26K (final commission paid for a departure), BDR -$41K (May over-accrual settled in June).",
-          "Marketing events -$52K MoM \u2014 May carried one-time sponsorships (Bridgemark $25K, McDermott $25K) that didn't repeat. Ad spend -$19K as the Everest Global whitepaper project wrapped.",
-          "Marketing software +$11K on a Sendoso true-up (prior-period amortization catch-up as part of prepaid clean-up).",
-          "Heads-up: DocuSign is being booked to Sales instead of Rev Ops going forward \u2014 Rev Ops software will look lower and Sales software higher on that reclassification."
-        ],
+        "summary": [],
         "children": [
           "Sales",
           "Customer Success",
@@ -9956,11 +14471,7 @@
             "department": "Executive"
           }
         ],
-        "summary": [
-          "Professional & consulting +$13K MoM: PwC didn't bill an audit milestone in June (-$25K), offset by two new engagements \u2014 Vector Advisory ($20K) and Withum tax prep ($16K).",
-          "Executive payroll +$15K as Emily M returned from parental leave.",
-          "Two one-time items to note: Hartford workers' comp true-up ($9.9K catch-up as a prepaid window closed in April) and Robert Half labor services ($5K for June)."
-        ],
+        "summary": [],
         "children": [
           "Accounting & Finance",
           "Executive"
@@ -11869,12 +16380,7 @@
             "department": "Payer Enrollment"
           }
         ],
-        "summary": [
-          "Streamline Verify LLC amortization ($11K/mo) reclassified from Credentialing to Ongoing Monitoring \u2014 Ongoing Monitoring software +$21K, Credentialing software -$16K, net-zero across Ops.",
-          "Licensing onshore COGS +$75K MoM on journal-entry activity (Passthrough Fee credit memos) \u2014 Q1 catch-up, not run-rate.",
-          "India Ops footprint growing: Awfis rent +$9K (+18 fixed-desk seats), new RUDHRA IT accrual +$11K.",
-          "Multiple headcount moves: 6 new hires in Payer Enrollment offset by 17 terms (mostly India team); Kate Sanders transferred from Ops Mgmt to Business Ops mid-month."
-        ],
+        "summary": [],
         "children": [
           "Licensing",
           "Payer Enrollment",
@@ -13070,10 +17576,7 @@
             "department": "HR"
           }
         ],
-        "summary": [
-          "Legal fees +$13K MoM: Latham & Watkins under-accrued May services ($7K catch-up in June); J. Sagar Associates +$6K on expanded India entity setup and equity-share advice.",
-          "HR benefit admin -$10K as June Rippling charges came in lower and a prior-period World Investment Advisors accrual was reversed as part of the prepaids clean-up."
-        ],
+        "summary": [],
         "children": [
           "Legal",
           "HR"

@@ -463,9 +463,203 @@ def _compute_movers_by_dept(
     return by_dept
 
 
-def attach_commentary(data: dict, monthly_path: Path, class_map_path: Path) -> None:
-    """Merge finance notes + top movers from the monthly file into each
-    department/leader record in `data` (in place)."""
+# =====================================================================
+# Sub-category (Software / Contractors / Consulting / Legal / Marketing /
+# BPO Services) extraction from the monthly Opex file.
+# Powers the third-level expand on leader dashboards:
+#   metric row → child department → sub-category row.
+# =====================================================================
+
+# Sheet name → base category id. Software and Contractors are split later into
+# _cogs / _opex variants based on the row's account code.
+_SUBCAT_SHEETS = {
+    "Software": "software",
+    "Contractors": "contractors",
+    "Consulting": "consulting",
+    "Legal": "legal",
+    "Marketing": "marketing",
+    "BPO Services": "bpo_services",
+}
+
+_SUBCAT_LABELS = {
+    "software_cogs": "Software (COGS)",
+    "software_opex": "Software (Opex)",
+    "contractors_cogs": "Contractors (COGS)",
+    "contractors_opex": "Contractors (Opex)",
+    "consulting": "Consulting",
+    "legal": "Legal",
+    "marketing": "Marketing",
+    "bpo_services": "BPO Services",
+}
+
+# Which metric bucket each sub-category feeds. UI uses this to filter which
+# sub-categories to show under a given metric row.
+_SUBCAT_TO_METRIC = {
+    "software_cogs": "cogs",
+    "software_opex": "nonPeople",
+    "contractors_cogs": "cogs",
+    "contractors_opex": "nonPeople",
+    "consulting": "nonPeople",
+    "legal": "nonPeople",
+    "marketing": "nonPeople",
+    "bpo_services": "cogs",
+}
+
+
+def _account_side(account: str) -> str:
+    """'cogs' when the account code starts with '51' (Cost of Goods Sold),
+    otherwise 'opex'. Used to split Software/Contractors rows."""
+    m = re.match(r"^(\d+)", account or "")
+    if m and m.group(1).startswith("51"):
+        return "cogs"
+    return "opex"
+
+
+def _period_matchers(month_key: str):
+    """Given 'YYYY-MM', return (is_mtd, is_qtd, is_ytd) predicates over 'YYYY-MM'
+    keys. QTD = current quarter through the report month; YTD = Jan through
+    the report month, same year."""
+    year_s, mm_s = month_key.split("-")
+    y, m = int(year_s), int(mm_s)
+    q_start = ((m - 1) // 3) * 3 + 1
+
+    def parse(s: str):
+        a, b = s.split("-")
+        return int(a), int(b)
+
+    def is_mtd(s):
+        yy, mmm = parse(s)
+        return yy == y and mmm == m
+
+    def is_qtd(s):
+        yy, mmm = parse(s)
+        return yy == y and q_start <= mmm <= m
+
+    def is_ytd(s):
+        yy, mmm = parse(s)
+        return yy == y and mmm <= m
+
+    return is_mtd, is_qtd, is_ytd
+
+
+def extract_sub_categories(
+    monthly_wb, class_map: dict[str, str], month_key: str,
+) -> dict[str, dict]:
+    """Return {dept_name: {cat_id: {label, metricBucket, mtd/qtd/ytd, vendors}}}.
+
+    Reads each sub-category sheet in the monthly file. Rows are pivoted from
+    QBO by (Account, Class, Vendor, Month). We group by department (via
+    class_map) and by category id, summing monthly $ into MTD/QTD/YTD."""
+    is_mtd, is_qtd, is_ytd = _period_matchers(month_key)
+    result: dict[str, dict] = {}
+
+    for sheet_name, base_cat in _SUBCAT_SHEETS.items():
+        if sheet_name not in monthly_wb.sheetnames:
+            continue
+        snap = _snapshot_full_sheet(monthly_wb[sheet_name], max_rows=400)
+        hdr_row = _find_header_row(snap, ["Account", "Class", "Vendor"])
+        if hdr_row is None:
+            continue
+        hdr = snap[hdr_row - 1]
+        col_idx = {v.strip(): i + 1 for i, v in enumerate(hdr) if isinstance(v, str)}
+        account_col = col_idx.get("Account")
+        class_col = col_idx.get("Class")
+        vendor_col = col_idx.get("Vendor")
+        if not (account_col and class_col and vendor_col):
+            continue
+        month_cols = [
+            (i, f"{v.year:04d}-{v.month:02d}")
+            for i, v in enumerate(hdr, start=1)
+            if hasattr(v, "year")
+        ]
+
+        for r in range(hdr_row + 1, len(snap) + 1):
+            row = snap[r - 1]
+
+            def at(c):
+                return row[c - 1] if c - 1 < len(row) else None
+
+            klass = at(class_col)
+            if not isinstance(klass, str) or not klass.strip():
+                continue
+            cls = klass.strip()
+            if cls.endswith(" Total") or cls == "Grand Total":
+                continue
+            dept = class_map.get(cls)
+            if dept is None:
+                continue
+
+            account = at(account_col)
+            account_s = str(account).strip() if isinstance(account, str) else ""
+            if base_cat in ("software", "contractors"):
+                cat_id = f"{base_cat}_{_account_side(account_s)}"
+            else:
+                cat_id = base_cat
+
+            mtd_val = qtd_val = ytd_val = 0.0
+            for c_idx, m_str in month_cols:
+                v = at(c_idx)
+                if not isinstance(v, (int, float)):
+                    continue
+                if is_ytd(m_str):
+                    ytd_val += v
+                    if is_qtd(m_str):
+                        qtd_val += v
+                    if is_mtd(m_str):
+                        mtd_val += v
+            if mtd_val == 0 and qtd_val == 0 and ytd_val == 0:
+                continue
+
+            dept_bucket = result.setdefault(dept, {})
+            cat_bucket = dept_bucket.setdefault(
+                cat_id,
+                {
+                    "label": _SUBCAT_LABELS[cat_id],
+                    "metricBucket": _SUBCAT_TO_METRIC[cat_id],
+                    "mtd": 0.0,
+                    "qtd": 0.0,
+                    "ytd": 0.0,
+                    "vendors": [],
+                },
+            )
+            cat_bucket["mtd"] += mtd_val
+            cat_bucket["qtd"] += qtd_val
+            cat_bucket["ytd"] += ytd_val
+
+            vendor = at(vendor_col)
+            vname = str(vendor).strip() if isinstance(vendor, str) else ""
+            if vname and vname.lower() not in {"(blank)", "blank"}:
+                # Merge duplicates within the same (dept, category, vendor).
+                v_entry = next(
+                    (x for x in cat_bucket["vendors"] if x["name"] == vname),
+                    None,
+                )
+                if v_entry is None:
+                    v_entry = {
+                        "name": vname,
+                        "account": account_s or None,
+                        "mtd": 0.0,
+                        "qtd": 0.0,
+                        "ytd": 0.0,
+                    }
+                    cat_bucket["vendors"].append(v_entry)
+                v_entry["mtd"] += mtd_val
+                v_entry["qtd"] += qtd_val
+                v_entry["ytd"] += ytd_val
+
+    # Order vendors by absolute MTD (or YTD when MTD is zero — the vendor may
+    # have YTD activity but no June spend).
+    for dept in result.values():
+        for cat in dept.values():
+            cat["vendors"].sort(key=lambda v: -(abs(v["mtd"]) or abs(v["ytd"])))
+    return result
+
+
+def attach_commentary(
+    data: dict, monthly_path: Path, class_map_path: Path, month_key: str,
+) -> None:
+    """Merge finance notes + top movers + sub-category detail from the monthly
+    file into each department/leader record in `data` (in place)."""
     class_map = _load_class_to_dept(class_map_path)
     wb = load_workbook_unlocked(monthly_path)
 
@@ -510,6 +704,10 @@ def attach_commentary(data: dict, monthly_path: Path, class_map_path: Path) -> N
         all_movers[dept].sort(key=lambda x: abs(x["momDelta"] or 0), reverse=True)
         all_movers[dept] = all_movers[dept][:5]
 
+    # Sub-categories: per (dept, category) totals for MTD/QTD/YTD, with
+    # vendor detail. Feeds the third-level expand on leader dashboards.
+    sub_by_dept = extract_sub_categories(wb, class_map, month_key)
+
     # Attach to each department record. Missing = empty block so the frontend
     # can still render the section without checking for presence.
     for dept in data.get("departments", []):
@@ -519,6 +717,7 @@ def attach_commentary(data: dict, monthly_path: Path, class_map_path: Path) -> N
             "movers": all_movers.get(name, []),
             "summary": [],
         }
+        dept["subCategories"] = sub_by_dept.get(name, {})
 
     # For leaders, roll up their children's commentary (from dashboard-config
     # `children` — same source truth used by breakdownTable). Load the config
@@ -550,8 +749,14 @@ def attach_commentary(data: dict, monthly_path: Path, class_map_path: Path) -> N
         }
 
     total_notes = sum(len(v) for v in combined_notes.values())
+    total_subcat_rows = sum(len(cats) for cats in sub_by_dept.values())
+    total_vendors = sum(
+        len(cat["vendors"]) for cats in sub_by_dept.values() for cat in cats.values()
+    )
     print(f"  commentary: {total_notes} finance notes across {len(combined_notes)} depts; "
           f"{sum(len(v) for v in all_movers.values())} movers")
+    print(f"  sub-categories: {total_subcat_rows} (dept, category) buckets across "
+          f"{len(sub_by_dept)} depts; {total_vendors} vendor rows")
 
 
 def load_workbook_unlocked(xlsx_path: Path):
@@ -636,7 +841,7 @@ def main() -> int:
         class_map_path = Path(__file__).resolve().parent / "class-to-department.json"
         if not class_map_path.exists():
             sys.exit(f"Missing class map: {class_map_path}")
-        attach_commentary(data, detail_path, class_map_path)
+        attach_commentary(data, detail_path, class_map_path, month_key)
 
     SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
     data_path = SAMPLE_DIR / f"dashboard-data-{month_key}.json"

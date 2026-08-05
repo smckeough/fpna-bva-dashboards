@@ -81,6 +81,27 @@ export type CommentaryBlock = {
   children?: string[];
 };
 
+export type SubCategoryVendor = {
+  name: string;
+  account?: string | null;
+  mtd: number | null;
+  qtd: number | null;
+  ytd: number | null;
+};
+
+// Which metric bucket a sub-category feeds — drives filtering in the UI so
+// that expanding 'Non-People Opex' only shows Non-People sub-cats.
+export type SubCategoryBucket = 'cogs' | 'nonPeople';
+
+export type SubCategory = {
+  label: string;
+  metricBucket: SubCategoryBucket;
+  mtd: number;
+  qtd: number;
+  ytd: number;
+  vendors: SubCategoryVendor[];
+};
+
 export type DashboardRecord = {
   name: string;
   sourceTab?: string;
@@ -91,6 +112,10 @@ export type DashboardRecord = {
   metrics: Metrics;
   software?: SoftwareBlock;
   commentary?: CommentaryBlock;
+  // Sub-category detail sourced from the monthly Opex file: Software (COGS/
+  // Opex), Contractors (COGS/Opex), Consulting, Legal, Marketing, BPO Services.
+  // Actuals only — budgets aren't carried at this granularity.
+  subCategories?: Record<string, SubCategory>;
 };
 
 export type DashboardData = {
