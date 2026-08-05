@@ -470,15 +470,15 @@ def _compute_movers_by_dept(
 #   metric row → child department → sub-category row.
 # =====================================================================
 
-# Sheet name → base category id. Software and Contractors are split later into
-# _cogs / _opex variants based on the row's account code.
+# The monthly file organizes spend into per-category sheets. Each sheet feeds
+# a sub-category id; some sheets are split by account code.
 _SUBCAT_SHEETS = {
-    "Software": "software",
-    "Contractors": "contractors",
+    "Software": "software",         # split by account: 51xxx → cogs, else opex
+    "Contractors": "contractors",   # 51430 → contractors_cogs, 68500 → contractors_opex
     "Consulting": "consulting",
     "Legal": "legal",
     "Marketing": "marketing",
-    "BPO Services": "bpo_services",
+    "BPO Services": "bpo_services", # 51420 / 51425 offshore + onshore BPO
 }
 
 _SUBCAT_LABELS = {
@@ -492,8 +492,6 @@ _SUBCAT_LABELS = {
     "bpo_services": "BPO Services",
 }
 
-# Which metric bucket each sub-category feeds. UI uses this to filter which
-# sub-categories to show under a given metric row.
 _SUBCAT_TO_METRIC = {
     "software_cogs": "cogs",
     "software_opex": "nonPeople",
@@ -506,9 +504,36 @@ _SUBCAT_TO_METRIC = {
 }
 
 
+# QBO account code (first 5 digits) → sub-category id. Used by the budget-side
+# extractor which reads '2026 Budget Opex' where all accounts share one sheet.
+def _account_code_to_subcat(account: str) -> str | None:
+    m = re.match(r"^\s*(\d{5})", account or "")
+    if not m:
+        return None
+    code = m.group(1)
+    if code in ("51400", "51410"):
+        return "software_cogs"
+    if code == "67400":
+        return "software_opex"
+    if code == "51430":
+        return "contractors_cogs"
+    if code == "68500":
+        return "contractors_opex"
+    if code in ("51420", "51425"):
+        return "bpo_services"
+    if code == "68100":
+        return "consulting"
+    if code == "68300":
+        return "legal"
+    if code.startswith("65"):
+        return "marketing"
+    return None
+
+
 def _account_side(account: str) -> str:
     """'cogs' when the account code starts with '51' (Cost of Goods Sold),
-    otherwise 'opex'. Used to split Software/Contractors rows."""
+    otherwise 'opex'. Used to split the monthly file's Software / Contractors
+    sheets by row."""
     m = re.match(r"^(\d+)", account or "")
     if m and m.group(1).startswith("51"):
         return "cogs"
@@ -542,14 +567,42 @@ def _period_matchers(month_key: str):
     return is_mtd, is_qtd, is_ytd
 
 
+def _empty_subcat(cat_id: str) -> dict:
+    """Fresh sub-category bucket with the standard window shape."""
+    return {
+        "label": _SUBCAT_LABELS[cat_id],
+        "metricBucket": _SUBCAT_TO_METRIC[cat_id],
+        "mtd": {"actual": 0.0, "budget": None, "varPct": None},
+        "qtd": {"actual": 0.0, "budget": None, "varPct": None},
+        "ytd": {"actual": 0.0, "budget": None, "varPct": None},
+        "vendors": [],
+    }
+
+
+def _finalize_subcats(dept_map: dict[str, dict]) -> None:
+    """Compute varPct for each (dept, cat) window from final actual/budget, and
+    order vendors by absolute MTD (or YTD when MTD is zero)."""
+    for cats in dept_map.values():
+        for cat in cats.values():
+            for w in ("mtd", "qtd", "ytd"):
+                actual = cat[w].get("actual")
+                budget = cat[w].get("budget")
+                if actual is not None and budget not in (None, 0):
+                    cat[w]["varPct"] = (actual - budget) / budget
+                else:
+                    cat[w]["varPct"] = None
+            cat["vendors"].sort(
+                key=lambda v: -(abs(v.get("mtd") or 0) or abs(v.get("ytd") or 0))
+            )
+
+
 def extract_sub_categories(
     monthly_wb, class_map: dict[str, str], month_key: str,
 ) -> dict[str, dict]:
-    """Return {dept_name: {cat_id: {label, metricBucket, mtd/qtd/ytd, vendors}}}.
-
-    Reads each sub-category sheet in the monthly file. Rows are pivoted from
-    QBO by (Account, Class, Vendor, Month). We group by department (via
-    class_map) and by category id, summing monthly $ into MTD/QTD/YTD."""
+    """Actuals side: reads the per-category sheets in the monthly Opex file.
+    Returns {dept_name: {cat_id: {label, metricBucket, mtd/qtd/ytd, vendors}}}
+    where each mtd/qtd/ytd is a MetricWindow-shaped {actual, budget, varPct};
+    budget is None until _attach_subcat_budgets fills it in."""
     is_mtd, is_qtd, is_ytd = _period_matchers(month_key)
     result: dict[str, dict] = {}
 
@@ -611,25 +664,14 @@ def extract_sub_categories(
                 continue
 
             dept_bucket = result.setdefault(dept, {})
-            cat_bucket = dept_bucket.setdefault(
-                cat_id,
-                {
-                    "label": _SUBCAT_LABELS[cat_id],
-                    "metricBucket": _SUBCAT_TO_METRIC[cat_id],
-                    "mtd": 0.0,
-                    "qtd": 0.0,
-                    "ytd": 0.0,
-                    "vendors": [],
-                },
-            )
-            cat_bucket["mtd"] += mtd_val
-            cat_bucket["qtd"] += qtd_val
-            cat_bucket["ytd"] += ytd_val
+            cat_bucket = dept_bucket.setdefault(cat_id, _empty_subcat(cat_id))
+            cat_bucket["mtd"]["actual"] += mtd_val
+            cat_bucket["qtd"]["actual"] += qtd_val
+            cat_bucket["ytd"]["actual"] += ytd_val
 
             vendor = at(vendor_col)
             vname = str(vendor).strip() if isinstance(vendor, str) else ""
             if vname and vname.lower() not in {"(blank)", "blank"}:
-                # Merge duplicates within the same (dept, category, vendor).
                 v_entry = next(
                     (x for x in cat_bucket["vendors"] if x["name"] == vname),
                     None,
@@ -647,19 +689,119 @@ def extract_sub_categories(
                 v_entry["qtd"] += qtd_val
                 v_entry["ytd"] += ytd_val
 
-    # Order vendors by absolute MTD (or YTD when MTD is zero — the vendor may
-    # have YTD activity but no June spend).
-    for dept in result.values():
-        for cat in dept.values():
-            cat["vendors"].sort(key=lambda v: -(abs(v["mtd"]) or abs(v["ytd"])))
     return result
 
 
-def attach_commentary(
-    data: dict, monthly_path: Path, class_map_path: Path, month_key: str,
+def _attach_subcat_budgets(
+    subcats: dict[str, dict],
+    fp_wb,
+    class_map: dict[str, str],
+    month_key: str,
 ) -> None:
-    """Merge finance notes + top movers + sub-category detail from the monthly
-    file into each department/leader record in `data` (in place)."""
+    """Layer sub-category budget values on top of the actuals map, in place.
+
+    Reads '2026 Budget Opex' in the FP&A workbook. Each row has
+    Class + Account + one column per month. We route each row into a
+    sub-category via _account_code_to_subcat, and sum monthly $ into MTD /
+    QTD / YTD for the matching (department, category) bucket.
+
+    Budgets can create new (dept, cat) entries where actuals were zero — those
+    show up in the drilldown as "budgeted but nothing spent"."""
+    if "2026 Budget Opex" not in fp_wb.sheetnames:
+        print("  subcat budgets: '2026 Budget Opex' sheet not found — skipping")
+        return
+    is_mtd, is_qtd, is_ytd = _period_matchers(month_key)
+
+    snap = _snapshot_full_sheet(fp_wb["2026 Budget Opex"], max_rows=1400)
+    # The sheet's header row is where the 'Department (QBO)' and 'Account'
+    # labels sit (row 11 in the June file). Find it dynamically.
+    hdr_row = _find_header_row(snap, ["Department (QBO)", "Account"])
+    if hdr_row is None:
+        print("  subcat budgets: header row not found in '2026 Budget Opex'")
+        return
+    hdr = snap[hdr_row - 1]
+    col_idx = {v.strip(): i + 1 for i, v in enumerate(hdr) if isinstance(v, str)}
+    class_col = col_idx.get("Department (QBO)")
+    account_col = col_idx.get("Account")
+    if not (class_col and account_col):
+        return
+
+    # Month columns live several rows above the header (posting/month-end
+    # dates). Scan the 8 rows above the header for month-end datetimes.
+    month_cols: list[tuple[int, str]] = []
+    for r in range(max(1, hdr_row - 8), hdr_row):
+        for c_idx, v in enumerate(snap[r - 1], start=1):
+            if hasattr(v, "year"):
+                # Take month-end dates only (day >= 26 = end of month convention
+                # in this sheet); the sheet also has posting-date rows that use
+                # 26 as the day. Prefer the later (higher day) date per column.
+                key = (c_idx, f"{v.year:04d}-{v.month:02d}")
+                if key not in month_cols:
+                    month_cols.append(key)
+
+    # Dedupe by column index — later scans overwrite earlier ones.
+    month_by_col: dict[int, str] = {}
+    for c_idx, m in month_cols:
+        month_by_col[c_idx] = m
+    month_cols = sorted(month_by_col.items())
+
+    unmapped: set[str] = set()
+    budgeted_rows = 0
+    for r in range(hdr_row + 1, len(snap) + 1):
+        row = snap[r - 1]
+        klass = row[class_col - 1] if class_col - 1 < len(row) else None
+        account = row[account_col - 1] if account_col - 1 < len(row) else None
+        if not isinstance(klass, str) or not klass.strip():
+            continue
+        cls = klass.strip()
+        if cls.endswith(" Total") or cls == "Grand Total":
+            continue
+        dept = class_map.get(cls)
+        if dept is None:
+            unmapped.add(cls)
+            continue
+        cat_id = _account_code_to_subcat(str(account) if account else "")
+        if cat_id is None:
+            continue
+
+        mtd_val = qtd_val = ytd_val = 0.0
+        for c_idx, m_str in month_cols:
+            v = row[c_idx - 1] if c_idx - 1 < len(row) else None
+            if not isinstance(v, (int, float)):
+                continue
+            if is_ytd(m_str):
+                ytd_val += v
+                if is_qtd(m_str):
+                    qtd_val += v
+                if is_mtd(m_str):
+                    mtd_val += v
+        if mtd_val == 0 and qtd_val == 0 and ytd_val == 0:
+            continue
+
+        dept_bucket = subcats.setdefault(dept, {})
+        cat_bucket = dept_bucket.setdefault(cat_id, _empty_subcat(cat_id))
+        # Budget accumulates independently of actual across account rows.
+        for window_key, val in (("mtd", mtd_val), ("qtd", qtd_val), ("ytd", ytd_val)):
+            existing = cat_bucket[window_key].get("budget") or 0.0
+            cat_bucket[window_key]["budget"] = existing + val
+        budgeted_rows += 1
+
+    if unmapped:
+        print("  subcat budgets: unmapped Class labels — "
+              + ", ".join(sorted(unmapped)))
+    print(f"  subcat budgets: {budgeted_rows} budget rows applied")
+
+
+def attach_commentary(
+    data: dict,
+    monthly_path: Path,
+    class_map_path: Path,
+    month_key: str,
+    fp_wb=None,
+) -> None:
+    """Merge finance notes + top movers + sub-category detail (actuals from
+    the monthly file, budgets from `fp_wb`'s '2026 Budget Opex' sheet) into
+    each department/leader record in `data` (in place)."""
     class_map = _load_class_to_dept(class_map_path)
     wb = load_workbook_unlocked(monthly_path)
 
@@ -705,8 +847,12 @@ def attach_commentary(
         all_movers[dept] = all_movers[dept][:5]
 
     # Sub-categories: per (dept, category) totals for MTD/QTD/YTD, with
-    # vendor detail. Feeds the third-level expand on leader dashboards.
+    # vendor detail. Actuals come from the monthly file's per-category sheets;
+    # budgets come from the FP&A workbook's '2026 Budget Opex' pivot.
     sub_by_dept = extract_sub_categories(wb, class_map, month_key)
+    if fp_wb is not None:
+        _attach_subcat_budgets(sub_by_dept, fp_wb, class_map, month_key)
+    _finalize_subcats(sub_by_dept)
 
     # Attach to each department record. Missing = empty block so the frontend
     # can still render the section without checking for presence.
@@ -841,10 +987,28 @@ def main() -> int:
         class_map_path = Path(__file__).resolve().parent / "class-to-department.json"
         if not class_map_path.exists():
             sys.exit(f"Missing class map: {class_map_path}")
-        attach_commentary(data, detail_path, class_map_path, month_key)
+        attach_commentary(data, detail_path, class_map_path, month_key, fp_wb=wb)
 
+    # Preserve editorial commentary summaries from any prior export of this
+    # same month. Re-running the export shouldn't wipe hand-written bullets.
     SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
     data_path = SAMPLE_DIR / f"dashboard-data-{month_key}.json"
+    if data_path.exists():
+        try:
+            prior = json.loads(data_path.read_text(encoding="utf-8"))
+        except Exception:
+            prior = None
+        if prior:
+            for bucket in ("departments", "leaders"):
+                by_name = {r.get("name"): r for r in prior.get(bucket, [])}
+                for rec in data.get(bucket, []):
+                    old = by_name.get(rec.get("name"))
+                    if not old:
+                        continue
+                    old_summary = (old.get("commentary") or {}).get("summary") or []
+                    if old_summary:
+                        rec.setdefault("commentary", {}).setdefault("summary", [])
+                        rec["commentary"]["summary"] = old_summary
     data_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
     print(f"wrote {data_path.relative_to(REPO_ROOT)} "
           f"({len(data.get('departments', []))} depts, "

@@ -226,9 +226,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 17487.58,
-          "qtd": 47630.0,
-          "ytd": 97303.92,
+          "mtd": {
+            "actual": 17487.58,
+            "budget": 23448.06,
+            "varPct": -0.25419928130514846
+          },
+          "qtd": {
+            "actual": 47630.0,
+            "budget": 70344.18000000001,
+            "varPct": -0.32290062944795156
+          },
+          "ytd": {
+            "actual": 97303.92,
+            "budget": 128238.36,
+            "varPct": -0.24122610426396596
+          },
           "vendors": [
             {
               "name": "First Advantage",
@@ -277,9 +289,21 @@
         "bpo_services": {
           "label": "BPO Services",
           "metricBucket": "cogs",
-          "mtd": 140460.25,
-          "qtd": 301204.92,
-          "ytd": 597949.0700000001,
+          "mtd": {
+            "actual": 140460.25,
+            "budget": 93081.32,
+            "varPct": 0.5090057811814442
+          },
+          "qtd": {
+            "actual": 301204.92,
+            "budget": 269243.96,
+            "varPct": 0.11870632121143947
+          },
+          "ytd": {
+            "actual": 597949.0700000001,
+            "budget": 578487.92,
+            "varPct": 0.0336414112156396
+          },
           "vendors": [
             {
               "name": "Bold Business, LLC",
@@ -469,9 +493,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 7542.42,
-          "qtd": 22644.47,
-          "ytd": 43760.38,
+          "mtd": {
+            "actual": 7542.42,
+            "budget": 7500.0,
+            "varPct": 0.00565600000000001
+          },
+          "qtd": {
+            "actual": 22644.47,
+            "budget": 15000.0,
+            "varPct": 0.5096313333333334
+          },
+          "ytd": {
+            "actual": 43760.38,
+            "budget": 15000.0,
+            "varPct": 1.9173586666666664
+          },
           "vendors": [
             {
               "name": "UiPath Inc.",
@@ -485,9 +521,21 @@
         "contractors_cogs": {
           "label": "Contractors (COGS)",
           "metricBucket": "cogs",
-          "mtd": 30491.1,
-          "qtd": 124928.31,
-          "ytd": 187694.01,
+          "mtd": {
+            "actual": 30491.1,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 124928.31,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 187694.01,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Insight Global, LLC",
@@ -501,9 +549,21 @@
         "bpo_services": {
           "label": "BPO Services",
           "metricBucket": "cogs",
-          "mtd": 174322.0,
-          "qtd": 562067.56,
-          "ytd": 1242615.65,
+          "mtd": {
+            "actual": 174322.0,
+            "budget": 210000.0,
+            "varPct": -0.1698952380952381
+          },
+          "qtd": {
+            "actual": 562067.56,
+            "budget": 630000.0,
+            "varPct": -0.10782926984126975
+          },
+          "ytd": {
+            "actual": 1242615.65,
+            "budget": 1116000.0,
+            "varPct": 0.11345488351254472
+          },
           "vendors": [
             {
               "name": "Altermed RCM LLC",
@@ -685,9 +745,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 16103.85,
-          "qtd": 60628.119999999995,
-          "ytd": 154079.14,
+          "mtd": {
+            "actual": 16103.85,
+            "budget": 26277.333333333332,
+            "varPct": -0.3871581337527907
+          },
+          "qtd": {
+            "actual": 60628.119999999995,
+            "budget": 79612.0,
+            "varPct": -0.2384550067828971
+          },
+          "ytd": {
+            "actual": 154079.14,
+            "budget": 129943.99999999999,
+            "varPct": 0.18573493197069532
+          },
           "vendors": [
             {
               "name": "CE Broker Inc.",
@@ -736,9 +808,21 @@
         "bpo_services": {
           "label": "BPO Services",
           "metricBucket": "cogs",
-          "mtd": 12449.96,
-          "qtd": 36504.399999999994,
-          "ytd": 102047.48999999999,
+          "mtd": {
+            "actual": 12449.96,
+            "budget": 75000.0,
+            "varPct": -0.8340005333333333
+          },
+          "qtd": {
+            "actual": 36504.399999999994,
+            "budget": 225000.0,
+            "varPct": -0.8377582222222223
+          },
+          "ytd": {
+            "actual": 102047.48999999999,
+            "budget": 465843.96,
+            "varPct": -0.7809406179700172
+          },
           "vendors": [
             {
               "name": "NCQA",
@@ -1129,9 +1213,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 59828.02,
-          "qtd": 116316.92,
-          "ytd": 169861.82,
+          "mtd": {
+            "actual": 59828.02,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 116316.92,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 169861.82,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Streamline Verify LLC",
@@ -1166,9 +1262,21 @@
         "bpo_services": {
           "label": "BPO Services",
           "metricBucket": "cogs",
-          "mtd": -2717.0,
-          "qtd": 24165.82,
-          "ytd": 81193.16,
+          "mtd": {
+            "actual": -2717.0,
+            "budget": 3484.784074062105,
+            "varPct": -1.779675280377667
+          },
+          "qtd": {
+            "actual": 24165.82,
+            "budget": 10303.804770764289,
+            "varPct": 1.3453297629015044
+          },
+          "ytd": {
+            "actual": 81193.16,
+            "budget": 20451.08259962157,
+            "varPct": 2.970115498995755
+          },
           "vendors": [
             {
               "name": "Bold Business, LLC",
@@ -1358,9 +1466,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 28031.450000000004,
-          "qtd": 89321.3,
-          "ytd": 161151.31000000003,
+          "mtd": {
+            "actual": 28031.450000000004,
+            "budget": 23215.414552000002,
+            "varPct": 0.20744990089290058
+          },
+          "qtd": {
+            "actual": 89321.3,
+            "budget": 69837.68502500001,
+            "varPct": 0.27898426140593546
+          },
+          "ytd": {
+            "actual": 161151.31000000003,
+            "budget": 110963.23294300001,
+            "varPct": 0.4522946540569957
+          },
           "vendors": [
             {
               "name": "Formagrid Inc dba Airtable",
@@ -1402,17 +1522,41 @@
         "contractors_opex": {
           "label": "Contractors (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 6897.44,
-          "qtd": 6897.44,
-          "ytd": 6897.44,
+          "mtd": {
+            "actual": 6897.44,
+            "budget": 6500.0,
+            "varPct": 0.061144615384615325
+          },
+          "qtd": {
+            "actual": 6897.44,
+            "budget": 19500.0,
+            "varPct": -0.6462851282051283
+          },
+          "ytd": {
+            "actual": 6897.44,
+            "budget": 39000.0,
+            "varPct": -0.8231425641025641
+          },
           "vendors": []
         },
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 19770.0,
-          "qtd": 37833.75,
-          "ytd": 50880.0,
+          "mtd": {
+            "actual": 19770.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 37833.75,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 50880.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "DAVIS HEALTHCARE CONSULTING",
@@ -1594,9 +1738,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 48.3,
-          "qtd": 2485.95,
-          "ytd": 5084.919999999999,
+          "mtd": {
+            "actual": 48.3,
+            "budget": 9682.97,
+            "varPct": -0.9950118610302419
+          },
+          "qtd": {
+            "actual": 2485.95,
+            "budget": 28147.114999999998,
+            "varPct": -0.9116801135746949
+          },
+          "ytd": {
+            "actual": 5084.919999999999,
+            "budget": 51326.05500000001,
+            "varPct": -0.9009290700405477
+          },
           "vendors": [
             {
               "name": "Nord Security",
@@ -1785,9 +1941,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 6000.0,
-          "ytd": 6000.0,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 6000.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 6000.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "8flow Inc.",
@@ -1969,9 +2137,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 9632.54,
-          "qtd": 28940.31,
-          "ytd": 55641.31,
+          "mtd": {
+            "actual": 9632.54,
+            "budget": 5610.0,
+            "varPct": 0.7170303030303032
+          },
+          "qtd": {
+            "actual": 28940.31,
+            "budget": 16830.0,
+            "varPct": 0.7195668449197862
+          },
+          "ytd": {
+            "actual": 55641.31,
+            "budget": 33984.0,
+            "varPct": 0.637279602165725
+          },
           "vendors": [
             {
               "name": "Intercom",
@@ -1992,9 +2172,21 @@
         "bpo_services": {
           "label": "BPO Services",
           "metricBucket": "cogs",
-          "mtd": 2050.0,
-          "qtd": 6052.0,
-          "ytd": 11826.82,
+          "mtd": {
+            "actual": 2050.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 6052.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 11826.82,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Altermed RCM LLC",
@@ -2161,9 +2353,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 788.53,
-          "ytd": 2519.4700000000003,
+          "mtd": {
+            "actual": 0.0,
+            "budget": 787.0236,
+            "varPct": -1.0
+          },
+          "qtd": {
+            "actual": 788.53,
+            "budget": 2387.7779,
+            "varPct": -0.6697640932182177
+          },
+          "ytd": {
+            "actual": 2519.4700000000003,
+            "budget": 5533.1567,
+            "varPct": -0.5446595611506899
+          },
           "vendors": [
             {
               "name": "Scratchpad, Inc.",
@@ -2177,9 +2381,21 @@
         "marketing": {
           "label": "Marketing",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 0.0,
-          "ytd": 85.0,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 85.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Nic Schisler (nic.schisler@medallion.co)",
@@ -2345,9 +2561,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 3825.44,
-          "qtd": 5587.570000000001,
-          "ytd": 6807.110000000001,
+          "mtd": {
+            "actual": 3825.44,
+            "budget": 559.7197,
+            "varPct": 5.83456380041653
+          },
+          "qtd": {
+            "actual": 5587.570000000001,
+            "budget": 1196.3026,
+            "varPct": 3.670699537056929
+          },
+          "ytd": {
+            "actual": 6807.110000000001,
+            "budget": 2303.781,
+            "varPct": 1.9547556820722112
+          },
           "vendors": [
             {
               "name": "DocuSign Inc.",
@@ -2396,9 +2624,21 @@
         "marketing": {
           "label": "Marketing",
           "metricBucket": "nonPeople",
-          "mtd": 6482.870000000001,
-          "qtd": 19330.869999999995,
-          "ytd": 36477.17999999999,
+          "mtd": {
+            "actual": 6482.870000000001,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 19330.869999999995,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 36477.17999999999,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "VIVE",
@@ -3647,6 +3887,26 @@
               "ytd": 3.26
             }
           ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": {
+            "actual": 0.0,
+            "budget": 1000.0,
+            "varPct": -1.0
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": 3000.0,
+            "varPct": -1.0
+          },
+          "ytd": {
+            "actual": 0.0,
+            "budget": 6000.0,
+            "varPct": -1.0
+          },
+          "vendors": []
         }
       }
     },
@@ -3796,9 +4056,21 @@
         "marketing": {
           "label": "Marketing",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 93.53,
-          "ytd": 93.53,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 93.53,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 93.53,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Nneka-Shay Grant (nneka@medallion.co)",
@@ -3964,9 +4236,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 4931.94,
-          "qtd": 22891.440000000002,
-          "ytd": 30400.87,
+          "mtd": {
+            "actual": 4931.94,
+            "budget": 1250.0,
+            "varPct": 2.9455519999999997
+          },
+          "qtd": {
+            "actual": 22891.440000000002,
+            "budget": 3750.0,
+            "varPct": 5.1043840000000005
+          },
+          "ytd": {
+            "actual": 30400.87,
+            "budget": 3750.0,
+            "varPct": 7.106898666666666
+          },
           "vendors": [
             {
               "name": "Demostack, Inc.",
@@ -3987,9 +4271,21 @@
         "marketing": {
           "label": "Marketing",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 80.0,
-          "ytd": 80.0,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 80.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 80.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Joshua Levitan (josh.levitan@medallion.co)",
@@ -4163,9 +4459,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 79821.01999999999,
-          "qtd": 251627.66999999995,
-          "ytd": 503525.7799999999,
+          "mtd": {
+            "actual": 79821.01999999999,
+            "budget": 86941.86820000001,
+            "varPct": -0.08190355633512855
+          },
+          "qtd": {
+            "actual": 251627.66999999995,
+            "budget": 261593.6266666667,
+            "varPct": -0.03809709278340249
+          },
+          "ytd": {
+            "actual": 503525.7799999999,
+            "budget": 515218.29740000004,
+            "varPct": -0.022694297657915686
+          },
           "vendors": [
             {
               "name": "Salesforce, Inc.",
@@ -4357,6 +4665,26 @@
               "ytd": 467.26000000000005
             }
           ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": {
+            "actual": 0.0,
+            "budget": 2000.0,
+            "varPct": -1.0
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": 6000.0,
+            "varPct": -1.0
+          },
+          "ytd": {
+            "actual": 0.0,
+            "budget": 12000.0,
+            "varPct": -1.0
+          },
+          "vendors": []
         }
       }
     },
@@ -4537,9 +4865,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 35036.72,
-          "qtd": 77299.46,
-          "ytd": 137851.11,
+          "mtd": {
+            "actual": 35036.72,
+            "budget": 20510.74,
+            "varPct": 0.7082133555395855
+          },
+          "qtd": {
+            "actual": 77299.46,
+            "budget": 61692.72,
+            "varPct": 0.2529753915859117
+          },
+          "ytd": {
+            "actual": 137851.11,
+            "budget": 138740.21000000002,
+            "varPct": -0.006408380093990306
+          },
           "vendors": [
             {
               "name": "Sendoso",
@@ -4665,9 +5005,21 @@
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 2956.25,
-          "qtd": 8212.5,
-          "ytd": 15527.7,
+          "mtd": {
+            "actual": 2956.25,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 8212.5,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 15527.7,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "SuperSkills LLC",
@@ -4688,9 +5040,21 @@
         "marketing": {
           "label": "Marketing",
           "metricBucket": "nonPeople",
-          "mtd": 105913.69000000002,
-          "qtd": 365472.30999999994,
-          "ytd": 817715.33,
+          "mtd": {
+            "actual": 105913.69000000002,
+            "budget": 154571.0,
+            "varPct": -0.3147893848134513
+          },
+          "qtd": {
+            "actual": 365472.30999999994,
+            "budget": 582713.0,
+            "varPct": -0.3728090672423647
+          },
+          "ytd": {
+            "actual": 817715.33,
+            "budget": 1277426.0,
+            "varPct": -0.35987264232918387
+          },
           "vendors": [
             {
               "name": "Solage, Auberge Resorts Collection",
@@ -5463,6 +5827,26 @@
               "ytd": 15.26
             }
           ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": {
+            "actual": 0.0,
+            "budget": 3000.0,
+            "varPct": -1.0
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": 9000.0,
+            "varPct": -1.0
+          },
+          "ytd": {
+            "actual": 0.0,
+            "budget": 30000.0,
+            "varPct": -1.0
+          },
+          "vendors": []
         }
       }
     },
@@ -5635,9 +6019,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 46615.369999999995,
-          "qtd": 92925.67999999998,
-          "ytd": 138403.53,
+          "mtd": {
+            "actual": 46615.369999999995,
+            "budget": 23749.982161666667,
+            "varPct": 0.962753895252978
+          },
+          "qtd": {
+            "actual": 92925.67999999998,
+            "budget": 71149.17744033333,
+            "varPct": 0.30606822655017657
+          },
+          "ytd": {
+            "actual": 138403.53,
+            "budget": 103728.93360733334,
+            "varPct": 0.334280852861436
+          },
           "vendors": [
             {
               "name": "CE Broker Inc.",
@@ -5728,9 +6124,21 @@
         "contractors_opex": {
           "label": "Contractors (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 1269.9,
-          "qtd": 1269.9,
-          "ytd": 1269.9,
+          "mtd": {
+            "actual": 1269.9,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 1269.9,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 1269.9,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": []
         }
       }
@@ -5944,9 +6352,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 74206.85,
-          "qtd": 195618.37000000002,
-          "ytd": 371163.98,
+          "mtd": {
+            "actual": 74206.85,
+            "budget": 75409.0,
+            "varPct": -0.01594173109310552
+          },
+          "qtd": {
+            "actual": 195618.37000000002,
+            "budget": 216762.0,
+            "varPct": -0.09754306566649125
+          },
+          "ytd": {
+            "actual": 371163.98,
+            "budget": 416022.0,
+            "varPct": -0.10782607650556947
+          },
           "vendors": [
             {
               "name": "CAQH Solutions",
@@ -6037,9 +6457,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 128048.11000000003,
-          "qtd": 349685.6000000001,
-          "ytd": 532656.04,
+          "mtd": {
+            "actual": 128048.11000000003,
+            "budget": 95703.0,
+            "varPct": 0.3379738357209286
+          },
+          "qtd": {
+            "actual": 349685.6000000001,
+            "budget": 275818.0,
+            "varPct": 0.2678128331000881
+          },
+          "ytd": {
+            "actual": 532656.04,
+            "budget": 513718.0,
+            "varPct": 0.03686466115651006
+          },
           "vendors": [
             {
               "name": "Circle Internet Services, Inc.",
@@ -6445,9 +6877,21 @@
         "contractors_opex": {
           "label": "Contractors (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": -14563.309999999998,
-          "qtd": 191990.07,
-          "ytd": 384638.36000000004,
+          "mtd": {
+            "actual": -14563.309999999998,
+            "budget": 101546.81210000001,
+            "varPct": -1.1434147433959672
+          },
+          "qtd": {
+            "actual": 191990.07,
+            "budget": 304640.43630000006,
+            "varPct": -0.36978139759839895
+          },
+          "ytd": {
+            "actual": 384638.36000000004,
+            "budget": 617785.8726,
+            "varPct": -0.3773921077521253
+          },
           "vendors": [
             {
               "name": "Genzeon",
@@ -6468,9 +6912,21 @@
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 3025.0,
-          "qtd": 15163.33,
-          "ytd": 39093.32,
+          "mtd": {
+            "actual": 3025.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 15163.33,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 39093.32,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "BARR Advisory, P.A",
@@ -6484,9 +6940,21 @@
         "bpo_services": {
           "label": "BPO Services",
           "metricBucket": "cogs",
-          "mtd": 2144.3499999999985,
-          "qtd": 24725.0,
-          "ytd": 49225.0,
+          "mtd": {
+            "actual": 2144.3499999999985,
+            "budget": 11000.0,
+            "varPct": -0.805059090909091
+          },
+          "qtd": {
+            "actual": 24725.0,
+            "budget": 33000.0,
+            "varPct": -0.25075757575757573
+          },
+          "ytd": {
+            "actual": 49225.0,
+            "budget": 66000.0,
+            "varPct": -0.25416666666666665
+          },
           "vendors": [
             {
               "name": "CloudAvail Technology Consulting",
@@ -6631,9 +7099,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 371.76,
-          "qtd": 1445.02,
-          "ytd": 1445.02,
+          "mtd": {
+            "actual": 371.76,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 1445.02,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 1445.02,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Parallels",
@@ -6799,9 +7279,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 92952.72000000002,
-          "qtd": 254938.81,
-          "ytd": 513037.74999999994,
+          "mtd": {
+            "actual": 92952.72000000002,
+            "budget": 78174.8674,
+            "varPct": 0.18903585118201316
+          },
+          "qtd": {
+            "actual": 254938.81,
+            "budget": 234326.7416,
+            "varPct": 0.08796293696254763
+          },
+          "ytd": {
+            "actual": 513037.74999999994,
+            "budget": 454726.8467,
+            "varPct": 0.12823281432175873
+          },
           "vendors": [
             {
               "name": "Rippling",
@@ -7058,9 +7550,21 @@
         "software_cogs": {
           "label": "Software (COGS)",
           "metricBucket": "cogs",
-          "mtd": 6540.9,
-          "qtd": 14402.18,
-          "ytd": 25274.410000000003,
+          "mtd": {
+            "actual": 6540.9,
+            "budget": 5610.0,
+            "varPct": 0.16593582887700528
+          },
+          "qtd": {
+            "actual": 14402.18,
+            "budget": 16830.0,
+            "varPct": -0.14425549613784905
+          },
+          "ytd": {
+            "actual": 25274.410000000003,
+            "budget": 33984.0,
+            "varPct": -0.2562850164783426
+          },
           "vendors": [
             {
               "name": "Flatfile Inc.",
@@ -7271,9 +7775,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 18014.33,
-          "qtd": 55604.57,
-          "ytd": 98300.95,
+          "mtd": {
+            "actual": 18014.33,
+            "budget": 18615.93743066667,
+            "varPct": -0.03231679483814865
+          },
+          "qtd": {
+            "actual": 55604.57,
+            "budget": 55636.15859200001,
+            "varPct": -0.0005677709029420572
+          },
+          "ytd": {
+            "actual": 98300.95,
+            "budget": 97832.12988400001,
+            "varPct": 0.004792087390470494
+          },
           "vendors": [
             {
               "name": "Tabs Platform, Inc.",
@@ -7350,9 +7866,21 @@
         "contractors_opex": {
           "label": "Contractors (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 5040.0,
-          "qtd": 5040.0,
-          "ytd": 5040.0,
+          "mtd": {
+            "actual": 5040.0,
+            "budget": 39999.66666666667,
+            "varPct": -0.8739989499912499
+          },
+          "qtd": {
+            "actual": 5040.0,
+            "budget": 139999.0,
+            "varPct": -0.9639997428553061
+          },
+          "ytd": {
+            "actual": 5040.0,
+            "budget": 304998.00000000006,
+            "varPct": -0.9834753014773867
+          },
           "vendors": [
             {
               "name": "Robert Half",
@@ -7366,9 +7894,21 @@
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 38314.6,
-          "qtd": 70329.6,
-          "ytd": 167088.26,
+          "mtd": {
+            "actual": 38314.6,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 70329.6,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 167088.26,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "PricewaterhouseCoopers LLP",
@@ -7526,9 +8066,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 0.0,
-          "ytd": 43314.35,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 43314.35,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Sigma Computing",
@@ -7736,9 +8288,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 25463.989999999998,
-          "qtd": 53333.899999999994,
-          "ytd": 107540.61000000002,
+          "mtd": {
+            "actual": 25463.989999999998,
+            "budget": 21891.923398666666,
+            "varPct": 0.1631682395504312
+          },
+          "qtd": {
+            "actual": 53333.899999999994,
+            "budget": 64947.432016666666,
+            "varPct": -0.1788143373195484
+          },
+          "ytd": {
+            "actual": 107540.61000000002,
+            "budget": 129901.25884833332,
+            "varPct": -0.17213573637835614
+          },
           "vendors": [
             {
               "name": "TrySparrow.com, Inc",
@@ -7815,9 +8379,21 @@
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 0.0,
-          "ytd": 1425.0,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 1425.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Andrew Kim",
@@ -7831,9 +8407,21 @@
         "legal": {
           "label": "Legal",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 6209.0,
-          "ytd": 6209.0,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 6209.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 6209.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "McCown & Evans LLP",
@@ -7850,6 +8438,26 @@
               "ytd": 3024.0
             }
           ]
+        },
+        "contractors_opex": {
+          "label": "Contractors (Opex)",
+          "metricBucket": "nonPeople",
+          "mtd": {
+            "actual": 0.0,
+            "budget": 31000.0,
+            "varPct": -1.0
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": 80500.0,
+            "varPct": -1.0
+          },
+          "ytd": {
+            "actual": 0.0,
+            "budget": 136000.0,
+            "varPct": -1.0
+          },
+          "vendors": []
         }
       }
     },
@@ -8008,9 +8616,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 478.59,
-          "qtd": 947.19,
-          "ytd": 2659.26,
+          "mtd": {
+            "actual": 478.59,
+            "budget": 799.0,
+            "varPct": -0.4010137672090113
+          },
+          "qtd": {
+            "actual": 947.19,
+            "budget": 2440.0,
+            "varPct": -0.6118073770491803
+          },
+          "ytd": {
+            "actual": 2659.26,
+            "budget": 2857.0,
+            "varPct": -0.06921246062303107
+          },
           "vendors": [
             {
               "name": "Prospect",
@@ -8073,9 +8693,21 @@
         "contractors_opex": {
           "label": "Contractors (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 0.0,
-          "ytd": 16687.35,
+          "mtd": {
+            "actual": 0.0,
+            "budget": 10000.0,
+            "varPct": -1.0
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": 30000.0,
+            "varPct": -1.0
+          },
+          "ytd": {
+            "actual": 16687.35,
+            "budget": 60000.0,
+            "varPct": -0.7218775000000001
+          },
           "vendors": [
             {
               "name": "Mackenzie & Partners, Inc. d.b.a. Truex Metier",
@@ -8089,9 +8721,21 @@
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 1160.67,
-          "ytd": 1910.67,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 1160.67,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 1910.67,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Jasminkempphotograph",
@@ -8243,9 +8887,21 @@
         "software_opex": {
           "label": "Software (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 4059.43,
-          "qtd": 15741.6,
-          "ytd": 24965.299999999996,
+          "mtd": {
+            "actual": 4059.43,
+            "budget": 2392.0,
+            "varPct": 0.6970861204013378
+          },
+          "qtd": {
+            "actual": 15741.6,
+            "budget": 7176.0,
+            "varPct": 1.1936454849498328
+          },
+          "ytd": {
+            "actual": 24965.299999999996,
+            "budget": 19545.0,
+            "varPct": 0.27732412381683275
+          },
           "vendors": [
             {
               "name": "Trove Information Technologies, Inc. dba Pave",
@@ -8287,9 +8943,21 @@
         "contractors_opex": {
           "label": "Contractors (Opex)",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 0.0,
-          "ytd": 1437.5,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 1437.5,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Emily Olson",
@@ -8303,9 +8971,21 @@
         "consulting": {
           "label": "Consulting",
           "metricBucket": "nonPeople",
-          "mtd": 0.0,
-          "qtd": 0.0,
-          "ytd": 8250.0,
+          "mtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "qtd": {
+            "actual": 0.0,
+            "budget": null,
+            "varPct": null
+          },
+          "ytd": {
+            "actual": 8250.0,
+            "budget": null,
+            "varPct": null
+          },
           "vendors": [
             {
               "name": "Wecore Advisors LLP",
@@ -8326,9 +9006,21 @@
         "legal": {
           "label": "Legal",
           "metricBucket": "nonPeople",
-          "mtd": 44610.95,
-          "qtd": 164429.91,
-          "ytd": 320937.12999999995,
+          "mtd": {
+            "actual": 44610.95,
+            "budget": 38313.0,
+            "varPct": 0.16438154151332438
+          },
+          "qtd": {
+            "actual": 164429.91,
+            "budget": 115537.0,
+            "varPct": 0.42317967404381285
+          },
+          "ytd": {
+            "actual": 320937.12999999995,
+            "budget": 245851.0,
+            "varPct": 0.30541315674941305
+          },
           "vendors": [
             {
               "name": "McDermott Will & Emery LLP",
@@ -10938,7 +11630,12 @@
             "department": "Product Operations"
           }
         ],
-        "summary": [],
+        "summary": [
+          "Engineering contractor spend swung -$116K MoM as May's Genzeon estimate was reversed and re-booked at actual (Genzeon didn't provide a May estimate). Underlying activity is unchanged.",
+          "AWS cloud +$7K MoM from higher June consumption, not a rate change. Capitalized software amortization jumped +$57K as Q1/Q2 project releases caught up their amortization schedules.",
+          "IT software subscriptions +$10K on Atlassian, Slab, and Microsoft seat expansions.",
+          "Engineering salaries roughly flat (1 hire, 2 terms). Q3 offsite flights ($9.8K) hit June travel."
+        ],
         "children": [
           "Engineering",
           "Product Operations",
@@ -12731,7 +13428,12 @@
             "department": "Marketing"
           }
         ],
-        "summary": [],
+        "summary": [
+          "Commissions moved sharply across GTM on June activity: Solutions Consultants +$61K, Sales +$32K, Customer Success -$26K (final commission paid for a departure), BDR -$41K (May over-accrual settled in June).",
+          "Marketing events -$52K MoM \u2014 May carried one-time sponsorships (Bridgemark $25K, McDermott $25K) that didn't repeat. Ad spend -$19K as the Everest Global whitepaper project wrapped.",
+          "Marketing software +$11K on a Sendoso true-up (prior-period amortization catch-up as part of prepaid clean-up).",
+          "Heads-up: DocuSign is being booked to Sales instead of Rev Ops going forward \u2014 Rev Ops software will look lower and Sales software higher on that reclassification."
+        ],
         "children": [
           "Sales",
           "Customer Success",
@@ -14471,7 +15173,11 @@
             "department": "Executive"
           }
         ],
-        "summary": [],
+        "summary": [
+          "Professional & consulting +$13K MoM: PwC didn't bill an audit milestone in June (-$25K), offset by two new engagements \u2014 Vector Advisory ($20K) and Withum tax prep ($16K).",
+          "Executive payroll +$15K as Emily M returned from parental leave.",
+          "Two one-time items to note: Hartford workers' comp true-up ($9.9K catch-up as a prepaid window closed in April) and Robert Half labor services ($5K for June)."
+        ],
         "children": [
           "Accounting & Finance",
           "Executive"
@@ -16380,7 +17086,12 @@
             "department": "Payer Enrollment"
           }
         ],
-        "summary": [],
+        "summary": [
+          "Streamline Verify LLC amortization ($11K/mo) reclassified from Credentialing to Ongoing Monitoring \u2014 Ongoing Monitoring software +$21K, Credentialing software -$16K, net-zero across Ops.",
+          "Licensing onshore COGS +$75K MoM on journal-entry activity (Passthrough Fee credit memos) \u2014 Q1 catch-up, not run-rate.",
+          "India Ops footprint growing: Awfis rent +$9K (+18 fixed-desk seats), new RUDHRA IT accrual +$11K.",
+          "Multiple headcount moves: 6 new hires in Payer Enrollment offset by 17 terms (mostly India team); Kate Sanders transferred from Ops Mgmt to Business Ops mid-month."
+        ],
         "children": [
           "Licensing",
           "Payer Enrollment",
@@ -17576,7 +18287,10 @@
             "department": "HR"
           }
         ],
-        "summary": [],
+        "summary": [
+          "Legal fees +$13K MoM: Latham & Watkins under-accrued May services ($7K catch-up in June); J. Sagar Associates +$6K on expanded India entity setup and equity-share advice.",
+          "HR benefit admin -$10K as June Rippling charges came in lower and a prior-period World Investment Advisors accrual was reversed as part of the prepaids clean-up."
+        ],
         "children": [
           "Legal",
           "HR"

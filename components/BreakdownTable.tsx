@@ -3,6 +3,7 @@
 import { Fragment, useState } from 'react';
 import type {
   DashboardRecord,
+  MetricWindow,
   PeriodKey,
   SubCategory,
   SubCategoryBucket,
@@ -170,7 +171,18 @@ export default function BreakdownTable({
                       applicableBuckets.length > 0
                         ? Object.entries(child.subCategories ?? {})
                             .filter(([, sc]) => applicableBuckets.includes(sc.metricBucket))
-                            .filter(([, sc]) => sc.mtd !== 0 || sc.qtd !== 0 || sc.ytd !== 0)
+                            // Show any sub-cat that has activity in *either*
+                            // actuals or budget in any period — so a budgeted-
+                            // but-unspent row still surfaces.
+                            .filter(([, sc]) =>
+                              (['mtd', 'qtd', 'ytd'] as PeriodKey[]).some((pp) => {
+                                const w = subWindow(sc, pp);
+                                return (
+                                  (w.actual ?? 0) !== 0 ||
+                                  (w.budget ?? 0) !== 0
+                                );
+                              }),
+                            )
                         : [];
                     const canDeptExpand = applicableSubs.length > 0;
 
@@ -234,19 +246,26 @@ export default function BreakdownTable({
                                   </span>
                                 )}
                               </td>
-                              {periods.map((p) => (
-                                <Fragment key={`${row}-${child.name}-${subId}-${p}`}>
-                                  <td className="px-4 py-1 text-right tabular-nums text-[11px] border-l border-gray-100">
-                                    {fmtValue(subActualForPeriod(sc, p), 'currency')}
-                                  </td>
-                                  <td className="px-4 py-1 text-right tabular-nums text-[11px] text-gray-400">
-                                    —
-                                  </td>
-                                  <td className="px-4 py-1 text-right tabular-nums text-[11px] text-gray-400">
-                                    —
-                                  </td>
-                                </Fragment>
-                              ))}
+                              {periods.map((p) => {
+                                const w = subWindow(sc, p);
+                                return (
+                                  <Fragment key={`${row}-${child.name}-${subId}-${p}`}>
+                                    <td className="px-4 py-1 text-right tabular-nums text-[11px] border-l border-gray-100">
+                                      {fmtValue(w.actual, 'currency')}
+                                    </td>
+                                    <td className="px-4 py-1 text-right tabular-nums text-[11px] text-gray-500">
+                                      {fmtValue(w.budget, 'currency')}
+                                    </td>
+                                    <td
+                                      className={`px-4 py-1 text-right tabular-nums text-[11px] font-medium ${varClass(
+                                        w.varPct,
+                                      )}`}
+                                    >
+                                      {fmtVarPct(w.varPct)}
+                                    </td>
+                                  </Fragment>
+                                );
+                              })}
                             </tr>
                           ))}
                         {deptOpen && !canDeptExpand && (
@@ -281,9 +300,8 @@ export default function BreakdownTable({
   );
 }
 
-function subActualForPeriod(sc: SubCategory, p: PeriodKey): number | null {
+function subWindow(sc: SubCategory, p: PeriodKey): MetricWindow {
   if (p === 'mtd') return sc.mtd;
   if (p === 'qtd') return sc.qtd;
-  if (p === 'ytd') return sc.ytd;
-  return null;
+  return sc.ytd;
 }

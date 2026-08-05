@@ -96,9 +96,12 @@ export type SubCategoryBucket = 'cogs' | 'nonPeople';
 export type SubCategory = {
   label: string;
   metricBucket: SubCategoryBucket;
-  mtd: number;
-  qtd: number;
-  ytd: number;
+  // Per-period actual + budget. Budget fields are populated when the
+  // '2026 Budget Opex' sheet in the FP&A workbook carries a matching account
+  // for the same department; otherwise budget is null and Var% shows em-dash.
+  mtd: MetricWindow;
+  qtd: MetricWindow;
+  ytd: MetricWindow;
   vendors: SubCategoryVendor[];
 };
 
